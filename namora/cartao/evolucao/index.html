@@ -1,0 +1,852 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+    <meta name="theme-color" content="#2b1029">
+    <title>A nossa história | Layza & Israel</title>
+    <style>
+        :root {
+            --bg-a: #2b1029;
+            --bg-b: #4a2536;
+            --bg-c: #7d4f3b;
+            --cream: #fffaf0;
+            --cream-soft: rgba(255, 250, 240, 0.78);
+            --gold: #ffd700;
+            --gold-soft: rgba(255, 215, 0, 0.22);
+            --rose: #f2a7b8;
+            --panel: rgba(22, 10, 17, 0.62);
+            --panel-strong: rgba(31, 13, 24, 0.86);
+            --line: rgba(255, 215, 0, 0.28);
+            --shadow: rgba(0, 0, 0, 0.48);
+            --safe-top: env(safe-area-inset-top, 0px);
+            --safe-right: env(safe-area-inset-right, 0px);
+            --safe-bottom: env(safe-area-inset-bottom, 0px);
+            --safe-left: env(safe-area-inset-left, 0px);
+        }
+
+        * {
+            box-sizing: border-box;
+        }
+
+        html {
+            min-height: 100%;
+            background: var(--bg-a);
+        }
+
+        body {
+            margin: 0;
+            min-height: 100vh;
+            min-height: 100dvh;
+            color: var(--cream);
+            background:
+                radial-gradient(circle at 18% 16%, rgba(255, 215, 0, 0.18), transparent 22rem),
+                radial-gradient(circle at 86% 20%, rgba(242, 167, 184, 0.18), transparent 22rem),
+                radial-gradient(circle at 54% 104%, rgba(255, 215, 0, 0.12), transparent 30rem),
+                linear-gradient(135deg, var(--bg-a), var(--bg-b) 52%, var(--bg-c));
+            font-family: Georgia, "Times New Roman", serif;
+            overflow: hidden;
+            -webkit-font-smoothing: antialiased;
+            text-rendering: optimizeLegibility;
+        }
+
+        body::before {
+            content: "";
+            position: fixed;
+            inset: 0;
+            pointer-events: none;
+            background-image:
+                linear-gradient(rgba(255, 255, 255, 0.028) 1px, transparent 1px),
+                linear-gradient(90deg, rgba(255, 255, 255, 0.028) 1px, transparent 1px);
+            background-size: 44px 44px;
+            mask-image: radial-gradient(circle at center, black, transparent 78%);
+        }
+
+        button {
+            font: inherit;
+        }
+
+        .page {
+            position: relative;
+            display: grid;
+            min-height: 100vh;
+            min-height: 100dvh;
+            place-items: center;
+            padding:
+                calc(14px + var(--safe-top))
+                calc(14px + var(--safe-right))
+                calc(14px + var(--safe-bottom))
+                calc(14px + var(--safe-left));
+            isolation: isolate;
+        }
+
+        .ambient {
+            position: fixed;
+            inset: 0;
+            z-index: -1;
+            overflow: hidden;
+            pointer-events: none;
+        }
+
+        .spark {
+            position: absolute;
+            width: 5px;
+            height: 5px;
+            border-radius: 999px;
+            background: var(--gold);
+            box-shadow: 0 0 20px rgba(255, 215, 0, 0.55);
+            opacity: 0.5;
+            animation: floatSpark infinite ease-in-out;
+        }
+
+        .shell {
+            width: min(100%, 1080px);
+            height: min(760px, calc(100vh - 28px - var(--safe-top) - var(--safe-bottom)));
+            height: min(760px, calc(100dvh - 28px - var(--safe-top) - var(--safe-bottom)));
+            min-height: 0;
+            display: grid;
+            grid-template-columns: minmax(230px, 0.42fr) minmax(0, 1fr);
+            gap: clamp(16px, 3vw, 28px);
+            align-items: stretch;
+        }
+
+        .story-map,
+        .stage-card {
+            border: 1px solid var(--line);
+            background: var(--panel);
+            box-shadow: 0 22px 70px var(--shadow), inset 0 0 36px rgba(255, 215, 0, 0.045);
+            backdrop-filter: blur(14px);
+            -webkit-backdrop-filter: blur(14px);
+        }
+
+        .story-map {
+            border-radius: 18px;
+            padding: clamp(18px, 3vw, 28px);
+            display: flex;
+            flex-direction: column;
+            justify-content: flex-start;
+            overflow: hidden;
+        }
+
+        .brand-mark {
+            width: 54px;
+            height: 54px;
+            color: var(--gold);
+            fill: currentColor;
+            filter: drop-shadow(0 0 18px rgba(255, 215, 0, 0.42));
+        }
+
+        .eyebrow {
+            margin: 20px 0 6px;
+            color: var(--gold);
+            font-size: 0.76rem;
+            font-weight: 700;
+            letter-spacing: 0.12em;
+            text-transform: uppercase;
+        }
+
+        .map-title {
+            margin: 0;
+            font-size: clamp(1.8rem, 3.2vw, 2.55rem);
+            line-height: 1.08;
+        }
+
+        .map-copy {
+            margin: 14px 0 0;
+            color: var(--cream-soft);
+            font-size: clamp(1rem, 2vw, 1.08rem);
+            line-height: 1.55;
+        }
+
+        .timeline {
+            display: grid;
+            gap: 6px;
+            margin: 22px 0;
+        }
+
+        .timeline button {
+            width: 100%;
+            min-height: 36px;
+            display: grid;
+            grid-template-columns: 26px 1fr;
+            align-items: center;
+            gap: 10px;
+            padding: 6px 10px;
+            border: 1px solid transparent;
+            border-radius: 12px;
+            color: rgba(255, 250, 240, 0.72);
+            background: transparent;
+            text-align: left;
+            cursor: pointer;
+            transition: background 180ms ease, border-color 180ms ease, color 180ms ease, transform 180ms ease;
+        }
+
+        .timeline button:hover,
+        .timeline button:focus-visible,
+        .timeline button.active {
+            color: var(--cream);
+            background: rgba(255, 215, 0, 0.08);
+            border-color: rgba(255, 215, 0, 0.28);
+            outline: none;
+        }
+
+        .timeline button.active {
+            transform: translateX(3px);
+        }
+
+        .dot {
+            width: 24px;
+            height: 24px;
+            display: grid;
+            place-items: center;
+            border-radius: 999px;
+            border: 1px solid rgba(255, 215, 0, 0.45);
+            color: var(--gold);
+            font-size: 0.78rem;
+        }
+
+        .timeline-label {
+            overflow: hidden;
+            white-space: nowrap;
+            text-overflow: ellipsis;
+            font-size: 0.98rem;
+        }
+
+        .counter {
+            margin-top: auto;
+            color: rgba(255, 250, 240, 0.72);
+            font-size: 0.95rem;
+        }
+
+        .stage-card {
+            position: relative;
+            border-radius: 22px;
+            display: grid;
+            grid-template-rows: auto 1fr auto;
+            overflow: hidden;
+        }
+
+        .progress {
+            height: 5px;
+            background: rgba(255, 255, 255, 0.08);
+        }
+
+        .progress-fill {
+            height: 100%;
+            width: 0%;
+            background: linear-gradient(90deg, var(--gold), var(--rose));
+            box-shadow: 0 0 18px rgba(255, 215, 0, 0.45);
+            transition: width 360ms ease;
+        }
+
+        .stage {
+            min-height: 0;
+            display: none;
+            align-content: center;
+            gap: clamp(14px, 3vw, 24px);
+            padding: clamp(24px, 5vw, 58px);
+            overflow-y: auto;
+            scrollbar-width: thin;
+            scrollbar-color: rgba(255, 215, 0, 0.45) transparent;
+        }
+
+        .stage.active {
+            display: grid;
+            animation: stageIn 420ms ease both;
+        }
+
+        .stage::-webkit-scrollbar {
+            width: 6px;
+        }
+
+        .stage::-webkit-scrollbar-thumb {
+            background: rgba(255, 215, 0, 0.48);
+            border-radius: 999px;
+        }
+
+        .stage-kicker {
+            display: inline-flex;
+            align-items: center;
+            gap: 10px;
+            width: fit-content;
+            padding: 7px 12px;
+            border: 1px solid rgba(255, 215, 0, 0.28);
+            border-radius: 999px;
+            color: var(--gold);
+            background: rgba(255, 215, 0, 0.07);
+            font-size: 0.83rem;
+            font-weight: 700;
+            letter-spacing: 0.09em;
+            text-transform: uppercase;
+        }
+
+        .stage h1,
+        .stage h2 {
+            margin: 0;
+            max-width: 780px;
+            font-weight: 700;
+            letter-spacing: 0;
+            line-height: 1.08;
+        }
+
+        .stage h1 {
+            font-size: clamp(2.3rem, 6.5vw, 5rem);
+        }
+
+        .stage h2 {
+            color: var(--cream);
+            font-size: clamp(1.8rem, 4.6vw, 3.7rem);
+        }
+
+        .stage p {
+            margin: 0;
+            max-width: 760px;
+            color: rgba(255, 250, 240, 0.88);
+            font-size: clamp(1.08rem, 2.45vw, 1.35rem);
+            line-height: 1.65;
+            text-wrap: pretty;
+        }
+
+        .quote {
+            max-width: 760px;
+            padding: clamp(16px, 3vw, 22px);
+            border-left: 3px solid var(--gold);
+            border-radius: 14px;
+            color: var(--cream);
+            background: rgba(255, 215, 0, 0.075);
+            font-size: clamp(1.12rem, 2.7vw, 1.48rem);
+            font-style: italic;
+            line-height: 1.48;
+        }
+
+        .mini-grid {
+            display: grid;
+            grid-template-columns: repeat(3, minmax(0, 1fr));
+            gap: 10px;
+            max-width: 760px;
+        }
+
+        .mini-card {
+            min-height: 82px;
+            display: grid;
+            place-items: center;
+            padding: 14px;
+            border: 1px solid rgba(255, 215, 0, 0.18);
+            border-radius: 14px;
+            color: rgba(255, 250, 240, 0.9);
+            background: rgba(255, 255, 255, 0.055);
+            text-align: center;
+            font-size: clamp(0.98rem, 2vw, 1.08rem);
+        }
+
+        .controls {
+            display: grid;
+            grid-template-columns: 1fr auto 1fr;
+            gap: 12px;
+            align-items: center;
+            padding: 18px clamp(18px, 4vw, 28px);
+            border-top: 1px solid rgba(255, 215, 0, 0.14);
+            background: rgba(15, 7, 12, 0.5);
+        }
+
+        .nav-button,
+        .heart-button {
+            min-height: 46px;
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            gap: 10px;
+            border-radius: 999px;
+            border: 1px solid rgba(255, 215, 0, 0.42);
+            color: var(--gold);
+            background: rgba(255, 215, 0, 0.035);
+            cursor: pointer;
+            transition: background 180ms ease, color 180ms ease, transform 180ms ease, box-shadow 180ms ease;
+        }
+
+        .nav-button {
+            padding: 11px 18px;
+            font-size: 1rem;
+        }
+
+        .heart-button {
+            width: 50px;
+            height: 50px;
+            font-size: 1.18rem;
+        }
+
+        .nav-button:hover,
+        .nav-button:focus-visible,
+        .heart-button:hover,
+        .heart-button:focus-visible {
+            background: var(--gold);
+            color: var(--bg-a);
+            box-shadow: 0 0 24px rgba(255, 215, 0, 0.38);
+            transform: translateY(-1px);
+            outline: none;
+        }
+
+        .nav-button:disabled {
+            cursor: default;
+            opacity: 0.4;
+            transform: none;
+            box-shadow: none;
+            background: transparent;
+            color: rgba(255, 250, 240, 0.6);
+        }
+
+        .nav-button.next {
+            justify-self: end;
+        }
+
+        .nav-button.prev {
+            justify-self: start;
+        }
+
+        .heart-burst {
+            position: fixed;
+            z-index: 5;
+            color: var(--gold);
+            font-size: 1.35rem;
+            pointer-events: none;
+            animation: riseHeart 980ms ease-out forwards;
+        }
+
+        @keyframes floatSpark {
+            0%,
+            100% {
+                opacity: 0.28;
+                transform: translate3d(0, 0, 0) scale(1);
+            }
+
+            50% {
+                opacity: 0.78;
+                transform: translate3d(0, -30px, 0) scale(1.5);
+            }
+        }
+
+        @keyframes stageIn {
+            from {
+                opacity: 0;
+                transform: translateY(12px) scale(0.985);
+            }
+
+            to {
+                opacity: 1;
+                transform: translateY(0) scale(1);
+            }
+        }
+
+        @keyframes riseHeart {
+            from {
+                opacity: 1;
+                transform: translate(-50%, -50%) scale(0.8);
+            }
+
+            to {
+                opacity: 0;
+                transform: translate(-50%, -150%) scale(1.65);
+            }
+        }
+
+        @media (max-width: 820px) {
+            body {
+                overflow: hidden;
+            }
+
+            .page {
+                align-items: stretch;
+            }
+
+            .shell {
+                width: 100%;
+                height: calc(100vh - 28px - var(--safe-top) - var(--safe-bottom));
+                height: calc(100dvh - 28px - var(--safe-top) - var(--safe-bottom));
+                grid-template-columns: 1fr;
+                grid-template-rows: auto 1fr;
+                gap: 12px;
+            }
+
+            .story-map {
+                min-height: 0;
+                padding: 14px;
+                border-radius: 16px;
+            }
+
+            .story-map header {
+                display: grid;
+                grid-template-columns: 38px 1fr;
+                gap: 12px;
+                align-items: center;
+            }
+
+            .brand-mark {
+                width: 38px;
+                height: 38px;
+            }
+
+            .eyebrow {
+                margin: 0 0 3px;
+                font-size: 0.68rem;
+            }
+
+            .map-title {
+                font-size: 1.28rem;
+            }
+
+            .map-copy,
+            .counter {
+                display: none;
+            }
+
+            .timeline {
+                grid-auto-flow: column;
+                grid-auto-columns: 34px;
+                gap: 6px;
+                margin: 12px 0 0;
+                overflow-x: auto;
+                padding-bottom: 2px;
+                scrollbar-width: none;
+            }
+
+            .timeline::-webkit-scrollbar {
+                display: none;
+            }
+
+            .timeline button {
+                min-height: 34px;
+                grid-template-columns: 1fr;
+                padding: 4px;
+                justify-items: center;
+            }
+
+            .timeline-label {
+                display: none;
+            }
+
+            .dot {
+                width: 24px;
+                height: 24px;
+            }
+
+            .stage-card {
+                border-radius: 16px;
+            }
+
+            .stage {
+                align-content: start;
+                padding: clamp(22px, 6vw, 30px);
+            }
+
+            .stage h1 {
+                font-size: clamp(2.15rem, 12vw, 3.3rem);
+            }
+
+            .stage h2 {
+                font-size: clamp(1.65rem, 9.6vw, 2.7rem);
+            }
+
+            .stage p {
+                font-size: clamp(1.03rem, 4.7vw, 1.2rem);
+                line-height: 1.58;
+            }
+
+            .mini-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .controls {
+                grid-template-columns: 1fr 50px 1fr;
+                padding: 12px;
+            }
+
+            .nav-button {
+                padding-inline: 12px;
+                font-size: 0.95rem;
+            }
+        }
+
+        @media (max-width: 390px) {
+            .stage {
+                padding: 20px;
+            }
+
+            .stage p {
+                font-size: 1rem;
+            }
+
+            .nav-button span {
+                display: none;
+            }
+        }
+
+        @media (prefers-reduced-motion: reduce) {
+            *,
+            *::before,
+            *::after {
+                animation-duration: 0.001ms !important;
+                animation-iteration-count: 1 !important;
+                scroll-behavior: auto !important;
+                transition-duration: 0.001ms !important;
+            }
+        }
+    </style>
+</head>
+<body>
+    <main class="page">
+        <div class="ambient" id="ambient" aria-hidden="true"></div>
+
+        <div class="shell">
+            <aside class="story-map" aria-label="Evolução da história">
+                <header>
+                    <svg class="brand-mark" viewBox="0 0 64 64" aria-hidden="true">
+                        <circle cx="32" cy="32" r="10"></circle>
+                        <path d="M32 2l5.2 15.7L32 23l-5.2-5.3L32 2zM32 62l-5.2-15.7L32 41l5.2 5.3L32 62zM2 32l15.7-5.2L23 32l-5.3 5.2L2 32zM62 32l-15.7 5.2L41 32l5.3-5.2L62 32zM10.8 10.8l14.8 7.4v7.4h-7.4L10.8 10.8zM53.2 53.2l-14.8-7.4v-7.4h7.4l7.4 14.8zM10.8 53.2l7.4-14.8h7.4v7.4l-14.8 7.4zM53.2 10.8l-7.4 14.8h-7.4v-7.4l14.8-7.4z"></path>
+                    </svg>
+                    <div>
+                        <p class="eyebrow">15/05/2025 - 15/05/2026</p>
+                        <h1 class="map-title">A nossa história</h1>
+                        <p class="map-copy">Uma dedicação em etapas: presença, verdade, reconstrução e amor.</p>
+                    </div>
+                </header>
+
+                <nav class="timeline" id="timeline" aria-label="Capítulos"></nav>
+
+                <p class="counter" id="counter">Etapa 1 de 10</p>
+            </aside>
+
+            <section class="stage-card" aria-live="polite">
+                <div class="progress" aria-hidden="true">
+                    <div class="progress-fill" id="progressFill"></div>
+                </div>
+
+                <article class="stage active" data-title="Começar">
+                    <span class="stage-kicker">Um ano de nós</span>
+                    <h1>A nossa história</h1>
+                    <p>Layza, hoje completamos um ano desde que começamos a caminhar juntos.</p>
+                    <p>Esta não é uma carta para ser lida com pressa. É uma pequena jornada sobre o que você representa na minha vida e sobre o que nós começamos a construir.</p>
+                    <div class="quote">Você não encontrou um Israel pronto. Encontrou um Israel em reconstrução.</div>
+                </article>
+
+                <article class="stage" data-title="O início">
+                    <span class="stage-kicker">O início</span>
+                    <h2>Você não encontrou um Israel pronto.</h2>
+                    <p>Quando olho para tudo que vivemos, eu vejo que a nossa história não começou em uma fase simples da minha vida. Você encontrou um homem tentando equilibrar responsabilidades, família, trabalho, sonhos, medos, cansaços e uma vontade enorme de continuar de pé.</p>
+                    <p>E mesmo assim, você ficou.</p>
+                </article>
+
+                <article class="stage" data-title="A presença">
+                    <span class="stage-kicker">A presença</span>
+                    <h2>Você chegou como escuta, verdade e carinho.</h2>
+                    <p>Você não chegou como alguém querendo me salvar, nem tomar o controle da minha vida. Você chegou como presença. Como escuta. Como verdade.</p>
+                    <p>Você me apoia sem me infantilizar, me acolhe sem passar pano, me ama de um jeito que não me tira da luta, mas me lembra que eu não preciso enfrentá-la sozinho.</p>
+                </article>
+
+                <article class="stage" data-title="O espelho">
+                    <span class="stage-kicker">O espelho</span>
+                    <h2>Com você, eu posso ser mais verdadeiro.</h2>
+                    <p>Uma das coisas que mais admiro em você é isso: você consegue enxergar minha força, mas também não ignora minhas falhas.</p>
+                    <p>Perto de você, eu posso admitir o cansaço, reconhecer meus erros, organizar meus pensamentos e tentar ser melhor.</p>
+                </article>
+
+                <article class="stage" data-title="Reconstrução">
+                    <span class="stage-kicker">A reconstrução</span>
+                    <h2>Eu quero ser melhor.</h2>
+                    <p>Não porque você exige isso de mim, mas porque estar ao seu lado me lembra do homem que eu ainda posso construir.</p>
+                    <p>Você me ajudou a acordar para muitas coisas. Mas eu entendi que a mudança precisa nascer em mim, para que eu possa amar você de um jeito mais inteiro, mais maduro e mais honesto.</p>
+                </article>
+
+                <article class="stage" data-title="Vida real">
+                    <span class="stage-kicker">A história real</span>
+                    <h2>Não foi conto de fadas, foi vida.</h2>
+                    <p>A nossa história é mais bonita porque é real. Teve intensidade, ajustes, conversas difíceis, inseguranças, aprendizados e momentos em que a vida parecia pesada demais.</p>
+                    <div class="mini-grid" aria-label="O que também existiu entre nós">
+                        <div class="mini-card">Carinho</div>
+                        <div class="mini-card">Parceria</div>
+                        <div class="mini-card">Vontade de continuar</div>
+                    </div>
+                </article>
+
+                <article class="stage" data-title="As peças">
+                    <span class="stage-kicker">As peças</span>
+                    <h2>Começamos a montar algo nosso.</h2>
+                    <p>Você entrou em uma vida cheia de peças espalhadas. Algumas antigas, algumas quebradas, algumas que eu ainda estou tentando entender.</p>
+                    <p>E, mesmo assim, de algum jeito, nós começamos a montar algo nosso. Não perfeito. Não pronto. Mas verdadeiro.</p>
+                </article>
+
+                <article class="stage" data-title="Admiração">
+                    <span class="stage-kicker">A admiração</span>
+                    <h2>Eu admiro a mulher que você é.</h2>
+                    <p>Admiro sua forma de pensar, sua coragem, sua racionalidade, seu carinho, sua firmeza e esse jeito de estar ao meu lado sem me diminuir.</p>
+                    <p>Você me trata como homem adulto, mesmo quando eu estou atravessando desafios sérios. Você me lembra que eu sou capaz, mas também me chama para a realidade quando preciso.</p>
+                </article>
+
+                <article class="stage" data-title="O futuro">
+                    <span class="stage-kicker">O futuro</span>
+                    <h2>Ainda temos muito a construir.</h2>
+                    <p>Eu amo você com admiração, gratidão, desejo de futuro e vontade de construir uma vida mais leve, mais verdadeira e mais nossa.</p>
+                    <p>Ainda existem ajustes, conversas, medos, família, trabalho, passado e futuro atravessando a nossa relação. Mas existe algo muito forte entre nós: a vontade de não viver de aparência.</p>
+                </article>
+
+                <article class="stage" data-title="Te amo">
+                    <span class="stage-kicker">A assinatura</span>
+                    <h2>Feliz um ano de nós dois.</h2>
+                    <p>Obrigado por estar comigo. Obrigado por acreditar em mim. Obrigado por me enxergar além da fase difícil. Obrigado por ser carinho, firmeza, presença e amor.</p>
+                    <div class="quote">Que este seja apenas o primeiro capítulo de uma história cada vez mais madura, leve, verdadeira e cheia de amor.</div>
+                    <p>Com amor,<br>Israel.</p>
+                </article>
+
+                <footer class="controls">
+                    <button class="nav-button prev" id="prevButton" type="button">
+                        ← <span>Voltar</span>
+                    </button>
+                    <button class="heart-button" id="heartButton" type="button" aria-label="Enviar amor">♥</button>
+                    <button class="nav-button next" id="nextButton" type="button">
+                        <span>Avançar</span> →
+                    </button>
+                </footer>
+            </section>
+        </div>
+    </main>
+
+    <script>
+        const prefersReducedMotion = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
+        const ambient = document.getElementById("ambient");
+        const stages = Array.from(document.querySelectorAll(".stage"));
+        const timeline = document.getElementById("timeline");
+        const progressFill = document.getElementById("progressFill");
+        const counter = document.getElementById("counter");
+        const prevButton = document.getElementById("prevButton");
+        const nextButton = document.getElementById("nextButton");
+        const heartButton = document.getElementById("heartButton");
+
+        let currentStage = 0;
+        let touchStartX = 0;
+        let touchStartY = 0;
+
+        function createAmbient() {
+            if (prefersReducedMotion) {
+                return;
+            }
+
+            for (let index = 0; index < 34; index += 1) {
+                const spark = document.createElement("span");
+                const size = Math.random() * 5 + 2;
+
+                spark.className = "spark";
+                spark.style.width = `${size}px`;
+                spark.style.height = `${size}px`;
+                spark.style.left = `${Math.random() * 100}vw`;
+                spark.style.top = `${Math.random() * 100}vh`;
+                spark.style.animationDuration = `${Math.random() * 5 + 4}s`;
+                spark.style.animationDelay = `${Math.random() * 5}s`;
+                ambient.appendChild(spark);
+            }
+        }
+
+        function buildTimeline() {
+            stages.forEach((stage, index) => {
+                const button = document.createElement("button");
+                const dot = document.createElement("span");
+                const label = document.createElement("span");
+
+                button.type = "button";
+                button.setAttribute("aria-label", `Ir para ${stage.dataset.title}`);
+                button.addEventListener("click", () => goToStage(index));
+
+                dot.className = "dot";
+                dot.textContent = index + 1;
+
+                label.className = "timeline-label";
+                label.textContent = stage.dataset.title;
+
+                button.append(dot, label);
+                timeline.appendChild(button);
+            });
+        }
+
+        function goToStage(index) {
+            const nextIndex = Math.max(0, Math.min(index, stages.length - 1));
+
+            if (nextIndex === currentStage) {
+                return;
+            }
+
+            stages[currentStage].classList.remove("active");
+            currentStage = nextIndex;
+            stages[currentStage].classList.add("active");
+            stages[currentStage].scrollTop = 0;
+            updateControls();
+        }
+
+        function updateControls() {
+            const progress = ((currentStage + 1) / stages.length) * 100;
+            const timelineButtons = Array.from(timeline.querySelectorAll("button"));
+
+            progressFill.style.width = `${progress}%`;
+            counter.textContent = `Etapa ${currentStage + 1} de ${stages.length}`;
+            prevButton.disabled = currentStage === 0;
+            if (currentStage === 0) {
+                nextButton.textContent = "Começar →";
+            } else if (currentStage === stages.length - 1) {
+                nextButton.textContent = "Recomeçar →";
+            } else {
+                nextButton.textContent = "Avançar →";
+            }
+
+            timelineButtons.forEach((button, index) => {
+                const isActive = index === currentStage;
+                button.classList.toggle("active", isActive);
+                button.setAttribute("aria-current", isActive ? "step" : "false");
+            });
+        }
+
+        function burstHeart() {
+            const heart = document.createElement("span");
+            const rect = heartButton.getBoundingClientRect();
+
+            heart.className = "heart-burst";
+            heart.textContent = "♥";
+            heart.style.left = `${rect.left + rect.width / 2}px`;
+            heart.style.top = `${rect.top + rect.height / 2}px`;
+            document.body.appendChild(heart);
+            window.setTimeout(() => heart.remove(), 1000);
+        }
+
+        prevButton.addEventListener("click", () => goToStage(currentStage - 1));
+        nextButton.addEventListener("click", () => {
+            goToStage(currentStage === stages.length - 1 ? 0 : currentStage + 1);
+        });
+        heartButton.addEventListener("click", burstHeart);
+
+        document.addEventListener("keydown", (event) => {
+            if (event.key === "ArrowRight") {
+                goToStage(currentStage === stages.length - 1 ? 0 : currentStage + 1);
+            }
+
+            if (event.key === "ArrowLeft") {
+                goToStage(currentStage - 1);
+            }
+        });
+
+        document.addEventListener("touchstart", (event) => {
+            touchStartX = event.changedTouches[0].clientX;
+            touchStartY = event.changedTouches[0].clientY;
+        }, { passive: true });
+
+        document.addEventListener("touchend", (event) => {
+            const touch = event.changedTouches[0];
+            const deltaX = touch.clientX - touchStartX;
+            const deltaY = touch.clientY - touchStartY;
+
+            if (Math.abs(deltaX) > 54 && Math.abs(deltaX) > Math.abs(deltaY) * 1.2) {
+                goToStage(deltaX < 0 ? currentStage + 1 : currentStage - 1);
+            }
+        }, { passive: true });
+
+        createAmbient();
+        buildTimeline();
+        updateControls();
+    </script>
+</body>
+</html>

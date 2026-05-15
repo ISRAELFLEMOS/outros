@@ -7,6 +7,79 @@
     <title>A nossa história | Layza & Israel</title>
     <style>
         :root {
+            --bg-a: #173326;
+            --bg-b: #2f6847;
+            --bg-c: #d5a63f;
+            --cream: #fffaf0;
+            --cream-soft: rgba(255, 250, 240, 0.78);
+            --gold: #ffd700;
+            --gold-soft: rgba(255, 215, 0, 0.22);
+            --rose: #f2a7b8;
+            --panel: rgba(12, 38, 25, 0.66);
+            --panel-strong: rgba(13, 44, 28, 0.86);
+            --line: rgba(255, 215, 0, 0.28);
+            --shadow: rgba(0, 0, 0, 0.48);
+            --glow-a: rgba(255, 215, 0, 0.20);
+            --glow-b: rgba(98, 180, 108, 0.20);
+            --glow-c: rgba(255, 215, 0, 0.14);
+            --grid-line: rgba(255, 255, 255, 0.028);
+            --quote-bg: rgba(255, 215, 0, 0.075);
+            --mini-bg: rgba(255, 255, 255, 0.055);
+            --control-bg: rgba(9, 25, 17, 0.52);
+            --theme-bg: rgba(255, 255, 255, 0.06);
+            --theme-active: rgba(255, 215, 0, 0.16);
+            --theme-text: rgba(255, 250, 240, 0.86);
+            --safe-top: env(safe-area-inset-top, 0px);
+            --safe-right: env(safe-area-inset-right, 0px);
+            --safe-bottom: env(safe-area-inset-bottom, 0px);
+            --safe-left: env(safe-area-inset-left, 0px);
+        }
+
+        body[data-theme="claro"] {
+            --bg-a: #eef7df;
+            --bg-b: #f9f5d8;
+            --bg-c: #dbeec7;
+            --cream: #203a2a;
+            --cream-soft: rgba(32, 58, 42, 0.76);
+            --gold: #b98500;
+            --gold-soft: rgba(185, 133, 0, 0.18);
+            --rose: #cc7f72;
+            --panel: rgba(255, 255, 247, 0.76);
+            --panel-strong: rgba(255, 255, 247, 0.92);
+            --line: rgba(92, 132, 75, 0.38);
+            --shadow: rgba(71, 92, 60, 0.24);
+            --glow-a: rgba(255, 212, 64, 0.42);
+            --glow-b: rgba(82, 160, 93, 0.30);
+            --glow-c: rgba(255, 246, 177, 0.40);
+            --grid-line: rgba(67, 96, 56, 0.08);
+            --quote-bg: rgba(255, 226, 102, 0.30);
+            --mini-bg: rgba(54, 112, 67, 0.08);
+            --control-bg: rgba(255, 255, 247, 0.78);
+            --theme-bg: rgba(54, 112, 67, 0.08);
+            --theme-active: rgba(255, 215, 0, 0.28);
+            --theme-text: rgba(32, 58, 42, 0.84);
+        }
+
+        body[data-theme="girassol"] {
+            --bg-a: #3f2a11;
+            --bg-b: #8a661d;
+            --bg-c: #f3cf4c;
+            --cream: #fff9de;
+            --cream-soft: rgba(255, 249, 222, 0.80);
+            --gold: #ffd447;
+            --rose: #ffb28d;
+            --panel: rgba(51, 32, 12, 0.62);
+            --panel-strong: rgba(63, 39, 13, 0.86);
+            --line: rgba(255, 212, 71, 0.34);
+            --glow-a: rgba(255, 212, 71, 0.24);
+            --glow-b: rgba(255, 178, 141, 0.16);
+            --glow-c: rgba(246, 199, 40, 0.17);
+            --control-bg: rgba(35, 21, 8, 0.54);
+            --theme-bg: rgba(255, 212, 71, 0.08);
+            --theme-active: rgba(255, 212, 71, 0.18);
+        }
+
+        body[data-theme="noite"] {
             --bg-a: #2b1029;
             --bg-b: #4a2536;
             --bg-c: #7d4f3b;
@@ -19,10 +92,16 @@
             --panel-strong: rgba(31, 13, 24, 0.86);
             --line: rgba(255, 215, 0, 0.28);
             --shadow: rgba(0, 0, 0, 0.48);
-            --safe-top: env(safe-area-inset-top, 0px);
-            --safe-right: env(safe-area-inset-right, 0px);
-            --safe-bottom: env(safe-area-inset-bottom, 0px);
-            --safe-left: env(safe-area-inset-left, 0px);
+            --glow-a: rgba(255, 215, 0, 0.18);
+            --glow-b: rgba(242, 167, 184, 0.18);
+            --glow-c: rgba(255, 215, 0, 0.12);
+            --grid-line: rgba(255, 255, 255, 0.028);
+            --quote-bg: rgba(255, 215, 0, 0.075);
+            --mini-bg: rgba(255, 255, 255, 0.055);
+            --control-bg: rgba(15, 7, 12, 0.5);
+            --theme-bg: rgba(255, 255, 255, 0.06);
+            --theme-active: rgba(255, 215, 0, 0.16);
+            --theme-text: rgba(255, 250, 240, 0.86);
         }
 
         * {
@@ -40,9 +119,9 @@
             min-height: 100dvh;
             color: var(--cream);
             background:
-                radial-gradient(circle at 18% 16%, rgba(255, 215, 0, 0.18), transparent 22rem),
-                radial-gradient(circle at 86% 20%, rgba(242, 167, 184, 0.18), transparent 22rem),
-                radial-gradient(circle at 54% 104%, rgba(255, 215, 0, 0.12), transparent 30rem),
+                radial-gradient(circle at 18% 16%, var(--glow-a), transparent 22rem),
+                radial-gradient(circle at 86% 20%, var(--glow-b), transparent 22rem),
+                radial-gradient(circle at 54% 104%, var(--glow-c), transparent 30rem),
                 linear-gradient(135deg, var(--bg-a), var(--bg-b) 52%, var(--bg-c));
             font-family: Georgia, "Times New Roman", serif;
             overflow: hidden;
@@ -56,8 +135,8 @@
             inset: 0;
             pointer-events: none;
             background-image:
-                linear-gradient(rgba(255, 255, 255, 0.028) 1px, transparent 1px),
-                linear-gradient(90deg, rgba(255, 255, 255, 0.028) 1px, transparent 1px);
+                linear-gradient(var(--grid-line) 1px, transparent 1px),
+                linear-gradient(90deg, var(--grid-line) 1px, transparent 1px);
             background-size: 44px 44px;
             mask-image: radial-gradient(circle at center, black, transparent 78%);
         }
@@ -159,9 +238,24 @@
         }
 
         .timeline {
+            flex: 1 1 auto;
+            min-height: 0;
             display: grid;
             gap: 6px;
-            margin: 22px 0;
+            margin: 16px 0 22px;
+            overflow-y: auto;
+            padding-right: 2px;
+            scrollbar-width: thin;
+            scrollbar-color: var(--line) transparent;
+        }
+
+        .timeline::-webkit-scrollbar {
+            width: 4px;
+        }
+
+        .timeline::-webkit-scrollbar-thumb {
+            background: var(--line);
+            border-radius: 999px;
         }
 
         .timeline button {
@@ -174,7 +268,7 @@
             padding: 6px 10px;
             border: 1px solid transparent;
             border-radius: 12px;
-            color: rgba(255, 250, 240, 0.72);
+            color: var(--cream-soft);
             background: transparent;
             text-align: left;
             cursor: pointer;
@@ -185,8 +279,8 @@
         .timeline button:focus-visible,
         .timeline button.active {
             color: var(--cream);
-            background: rgba(255, 215, 0, 0.08);
-            border-color: rgba(255, 215, 0, 0.28);
+            background: var(--theme-active);
+            border-color: var(--line);
             outline: none;
         }
 
@@ -200,7 +294,7 @@
             display: grid;
             place-items: center;
             border-radius: 999px;
-            border: 1px solid rgba(255, 215, 0, 0.45);
+            border: 1px solid var(--line);
             color: var(--gold);
             font-size: 0.78rem;
         }
@@ -214,8 +308,68 @@
 
         .counter {
             margin-top: auto;
-            color: rgba(255, 250, 240, 0.72);
+            color: var(--cream-soft);
             font-size: 0.95rem;
+        }
+
+        .theme-picker {
+            display: grid;
+            grid-template-columns: repeat(2, minmax(0, 1fr));
+            gap: 8px;
+            margin-top: 18px;
+        }
+
+        .theme-picker button {
+            min-height: 38px;
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            padding: 7px 10px;
+            border: 1px solid var(--line);
+            border-radius: 12px;
+            color: var(--theme-text);
+            background: var(--theme-bg);
+            cursor: pointer;
+            text-align: left;
+            font-size: 0.92rem;
+            transition: background 180ms ease, transform 180ms ease, border-color 180ms ease;
+        }
+
+        .theme-picker button:hover,
+        .theme-picker button:focus-visible,
+        .theme-picker button.active {
+            background: var(--theme-active);
+            border-color: var(--gold);
+            outline: none;
+        }
+
+        .theme-picker button.active {
+            transform: translateY(-1px);
+        }
+
+        .swatch {
+            width: 16px;
+            height: 16px;
+            flex: 0 0 auto;
+            border: 1px solid rgba(255, 255, 255, 0.42);
+            border-radius: 999px;
+            box-shadow: 0 0 0 2px rgba(0, 0, 0, 0.06);
+        }
+
+        .theme-picker [data-theme-option="verde"] .swatch {
+            background: linear-gradient(135deg, #2f6847 0 52%, #ffd700 52% 100%);
+        }
+
+        .theme-picker [data-theme-option="claro"] .swatch {
+            background: linear-gradient(135deg, #eef7df 0 52%, #b98500 52% 100%);
+        }
+
+        .theme-picker [data-theme-option="girassol"] .swatch {
+            background: linear-gradient(135deg, #8a661d 0 52%, #ffd447 52% 100%);
+        }
+
+        .theme-picker [data-theme-option="noite"] .swatch {
+            background: linear-gradient(135deg, #2b1029 0 52%, #ffd700 52% 100%);
         }
 
         .stage-card {
@@ -301,7 +455,7 @@
         .stage p {
             margin: 0;
             max-width: 760px;
-            color: rgba(255, 250, 240, 0.88);
+            color: var(--cream-soft);
             font-size: clamp(1.08rem, 2.45vw, 1.35rem);
             line-height: 1.65;
             text-wrap: pretty;
@@ -313,7 +467,7 @@
             border-left: 3px solid var(--gold);
             border-radius: 14px;
             color: var(--cream);
-            background: rgba(255, 215, 0, 0.075);
+            background: var(--quote-bg);
             font-size: clamp(1.12rem, 2.7vw, 1.48rem);
             font-style: italic;
             line-height: 1.48;
@@ -333,8 +487,8 @@
             padding: 14px;
             border: 1px solid rgba(255, 215, 0, 0.18);
             border-radius: 14px;
-            color: rgba(255, 250, 240, 0.9);
-            background: rgba(255, 255, 255, 0.055);
+            color: var(--cream-soft);
+            background: var(--mini-bg);
             text-align: center;
             font-size: clamp(0.98rem, 2vw, 1.08rem);
         }
@@ -345,8 +499,8 @@
             gap: 12px;
             align-items: center;
             padding: 18px clamp(18px, 4vw, 28px);
-            border-top: 1px solid rgba(255, 215, 0, 0.14);
-            background: rgba(15, 7, 12, 0.5);
+            border-top: 1px solid var(--line);
+            background: var(--control-bg);
         }
 
         .nav-button,
@@ -392,7 +546,7 @@
             transform: none;
             box-shadow: none;
             background: transparent;
-            color: rgba(255, 250, 240, 0.6);
+            color: var(--cream-soft);
         }
 
         .nav-button.next {
@@ -499,6 +653,25 @@
                 display: none;
             }
 
+            .theme-picker {
+                grid-template-columns: repeat(4, minmax(0, 1fr));
+                gap: 6px;
+                margin-top: 12px;
+            }
+
+            .theme-picker button {
+                min-height: 34px;
+                justify-content: center;
+                gap: 5px;
+                padding: 6px 5px;
+                font-size: 0.78rem;
+            }
+
+            .swatch {
+                width: 13px;
+                height: 13px;
+            }
+
             .timeline {
                 grid-auto-flow: column;
                 grid-auto-columns: 34px;
@@ -592,7 +765,7 @@
         }
     </style>
 </head>
-<body>
+<body data-theme="verde">
     <main class="page">
         <div class="ambient" id="ambient" aria-hidden="true"></div>
 
@@ -609,6 +782,25 @@
                         <p class="map-copy">Uma dedicação em etapas: presença, verdade, reconstrução e amor.</p>
                     </div>
                 </header>
+
+                <div class="theme-picker" aria-label="Escolher cores do cartão">
+                    <button type="button" data-theme-option="verde">
+                        <span class="swatch" aria-hidden="true"></span>
+                        Verde
+                    </button>
+                    <button type="button" data-theme-option="claro">
+                        <span class="swatch" aria-hidden="true"></span>
+                        Claro
+                    </button>
+                    <button type="button" data-theme-option="girassol">
+                        <span class="swatch" aria-hidden="true"></span>
+                        Girassol
+                    </button>
+                    <button type="button" data-theme-option="noite">
+                        <span class="swatch" aria-hidden="true"></span>
+                        Noite
+                    </button>
+                </div>
 
                 <nav class="timeline" id="timeline" aria-label="Capítulos"></nav>
 
@@ -719,10 +911,36 @@
         const prevButton = document.getElementById("prevButton");
         const nextButton = document.getElementById("nextButton");
         const heartButton = document.getElementById("heartButton");
+        const themeButtons = Array.from(document.querySelectorAll("[data-theme-option]"));
+        const themeMeta = document.querySelector("meta[name='theme-color']");
+        const themeColors = {
+            verde: "#173326",
+            claro: "#eef7df",
+            girassol: "#3f2a11",
+            noite: "#2b1029"
+        };
 
         let currentStage = 0;
         let touchStartX = 0;
         let touchStartY = 0;
+
+        function setTheme(themeName) {
+            const selectedTheme = themeColors[themeName] ? themeName : "verde";
+
+            document.body.dataset.theme = selectedTheme;
+            themeMeta.setAttribute("content", themeColors[selectedTheme]);
+            themeButtons.forEach((button) => {
+                const isActive = button.dataset.themeOption === selectedTheme;
+                button.classList.toggle("active", isActive);
+                button.setAttribute("aria-pressed", isActive ? "true" : "false");
+            });
+
+            try {
+                localStorage.setItem("layza-card-theme", selectedTheme);
+            } catch (error) {
+                // Theme persistence is optional.
+            }
+        }
 
         function createAmbient() {
             if (prefersReducedMotion) {
@@ -818,6 +1036,9 @@
             goToStage(currentStage === stages.length - 1 ? 0 : currentStage + 1);
         });
         heartButton.addEventListener("click", burstHeart);
+        themeButtons.forEach((button) => {
+            button.addEventListener("click", () => setTheme(button.dataset.themeOption));
+        });
 
         document.addEventListener("keydown", (event) => {
             if (event.key === "ArrowRight") {
@@ -846,6 +1067,11 @@
 
         createAmbient();
         buildTimeline();
+        try {
+            setTheme(localStorage.getItem("layza-card-theme") || "verde");
+        } catch (error) {
+            setTheme("verde");
+        }
         updateControls();
     </script>
 </body>

@@ -1,51 +1,25 @@
 # Feliz 72 anos, Paizão!
 
-Uma carta de Israel Faria de Lemos para José Randolfo de Lemos, em 26 de novembro de 2026.
+Homenagem de Israel Faria de Lemos a José Randolfo de Lemos, em 26 de novembro de 2026.
 
-**Site:** https://israelflemos.github.io/outros/Niver_papai/
+**Abrir:** https://israelflemos.github.io/outros/Niver_papai/
 
-## Conteúdo
+## Versão restaurada
 
-- Texto integral da versão HTML escolhida por Israel, mantido conforme sua confirmação de 26/11/2026.
-- Envelope com abertura suave e carta em leitura contínua.
-- Tipografia local, sem dependência de Google Fonts ou de um framework em CDN.
-- Jingle instrumental original e discreto, iniciado ao abrir a carta.
-- Controles de pausa, volume, silenciar e fechar. O som pausa ao voltar ao envelope ou ao sair da aba.
-- Aumento de texto, foco de teclado, redução de movimento e compartilhamento.
-- Nenhuma identificação de ferramentas de criação na página.
+O arquivo HTML fornecido por Israel é a base desta versão. Foram preservados o envelope com o selo JR, a paleta de café e dourado, a tipografia, a vitrola com suas três trilhas instrumentais, os textos integrais e a carta em cinco slides.
 
-## Abrir e publicar
+A página não tem botão de compartilhar no WhatsApp nem de copiar o link. Israel envia o endereço diretamente.
 
-O GitHub Pages do repositório `ISRAELFLEMOS/outros` hospeda esta pasta em `/outros/Niver_papai/`.
+Os ajustes no celular mantêm o texto legível, deixam os botões de anterior e próxima página acessíveis e reiniciam a leitura no topo de cada slide. Se o texto ultrapassar a altura disponível, a área da mensagem permite rolagem. O modo opcional de ler a carta inteira já pertencia ao original e foi preservado.
 
-Não há compilação, chaves, cadastro ou backend. Os arquivos estáticos são publicados com seus caminhos relativos. Para testar localmente, use um servidor HTTP, por exemplo `python -m http.server 8000`, e abra `http://localhost:8000/`. O duplo clique em `index.html` pode bloquear os módulos JavaScript pelo protocolo `file:`; a carta continua disponível como texto.
+A música pausa ao voltar ao envelope, sair da aba ou sair da página. As trilhas originais são instrumentais geradas por Web Audio, não gravações de Roberto Carlos. Não há YouTube incorporado.
 
-## Roberto Carlos sem YouTube
+## Publicação e arquivos
 
-A gravação de **Meu Querido, Meu Velho, Meu Amigo** não acompanha o projeto: nenhum arquivo de áudio foi fornecido. Não há incorporação de YouTube nem abertura de outra página para tocar música.
+O GitHub Pages publica esta pasta a partir da branch `main`. O `index.html` contém a apresentação, os estilos e o JavaScript. As mesmas classes Tailwind do original foram compiladas e incorporadas ao HTML; não é necessário executar uma compilação para publicar. As fontes mantêm o carregamento do Google Fonts usado no arquivo original.
 
-Para ativar a segunda opção, adicione uma gravação que você tenha autorização para disponibilizar em `assets/audio/roberto-carlos.mp3`. Em `assets/app.js`, altere somente:
+A prévia do link usa `assets/compartilhamento.jpg` e o ícone usa `assets/favicon.png`. Os demais arquivos em `assets/` pertencem à versão anterior e não são carregados por esta página.
 
-```js
-const ROBERTO_CARLOS_AUDIO = './assets/audio/roberto-carlos.mp3';
-```
+Para verificar localmente, execute `python -m http.server 8000` na pasta do repositório e abra `http://localhost:8000/Niver_papai/`.
 
-A aplicação verifica a disponibilidade do arquivo e então exibe, no painel **Som**, as opções **Jingle do cartão** e **Roberto Carlos**. Ambas usam controles na própria página. Sem o arquivo, apenas o jingle aparece; o visitante não recebe botões de faixas ausentes.
-
-O jingle é uma composição instrumental independente feita com Web Audio; não é uma versão ou imitação da música de Roberto Carlos.
-
-## Estrutura
-
-- `index.html`: conteúdo e metadados.
-- `assets/style.css`: visual e responsividade.
-- `assets/app.js`: abertura, leitura, controles e compartilhamento.
-- `assets/music.js`: jingle e reprodução de gravação local opcional.
-- `assets/fonts/`: Cormorant Garamond e Lora, com suas licenças OFL.
-- `assets/compartilhamento.jpg`: prévia de compartilhamento de 1200 × 630.
-- `assets/favicon.png`: ícone do cartão.
-
-## Dados e autoria
-
-Autoria da homenagem: Israel Faria de Lemos. O site não usa rastreadores nem exige login. Nenhuma fotografia foi acrescentada, pois o HTML anexado apenas mencionava um arquivo opcional que não estava incluído.
-
-O botão de compartilhar abre o compartilhamento nativo quando disponível; em outros navegadores, prepara o texto no WhatsApp. Nenhuma mensagem é enviada automaticamente. A imagem de prévia depende também do processamento/cache do aplicativo que recebe o link.
+Nenhuma identificação de ferramentas de criação aparece na homenagem. A fotografia opcional não foi acrescentada, pois nenhum arquivo de foto foi fornecido.

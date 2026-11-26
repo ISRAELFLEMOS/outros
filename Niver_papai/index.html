@@ -1,117 +1,2476 @@
-<!doctype html>
-<html lang="pt-BR">
+<!DOCTYPE html>
+<!--
+================================================================================
+CARTÃO INTERATIVO DE ANIVERSÁRIO — JOSÉ RANDOLFO DE LEMOS (72 ANOS)
+Autor da homenagem: Israel Faria de Lemos
+Data comemorativa: 26 de novembro de 2026 (1954 — 2026)
+Conceito: Envelope 3D artesanal + Vitrola interativa (3 batidas Web Audio)
+          + Carta em 5 páginas interativas + Pronto para GitHub Pages
+================================================================================
+
+DICA RÁPIDA PARA O AUTOR (ISRAEL — INVISÍVEL AO SEU PAI):
+Para testar a fotografia local (pai.jpg) e baixar o pacote .ZIP completo já
+pronto para subir no GitHub (com index.html, README.md, .nojekyll e a imagem
+de prévia do WhatsApp):
+  • Toque 5 vezes seguidas sobre "1954 — 2026" no topo da tela, OU
+  • Pressione Alt + P no computador, OU
+  • Acesse o endereço adicionando ?preparar=1 ao final.
+================================================================================
+-->
+<html lang="pt-BR" class="scroll-smooth">
 <head>
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
-  <meta name="theme-color" content="#191613">
-  <meta name="description" content="Uma carta de Israel para seu pai, José Randolfo, em seus 72 anos.">
-  <meta name="author" content="Israel Faria de Lemos">
-  <meta name="robots" content="noindex, nofollow">
-  <meta property="og:type" content="website">
-  <meta property="og:locale" content="pt_BR">
-  <meta property="og:title" content="Feliz 72 anos, Paizão!">
-  <meta property="og:description" content="Uma vida de histórias. Um coração de pai. Com carinho, Israel.">
-  <meta property="og:url" content="https://israelflemos.github.io/outros/Niver_papai/">
-  <meta property="og:image" content="https://israelflemos.github.io/outros/Niver_papai/assets/compartilhamento.jpg">
-  <meta property="og:image:width" content="1200">
-  <meta property="og:image:height" content="630">
-  <meta property="og:image:alt" content="Feliz 72 anos, Paizão! Uma carta de Israel para José Randolfo.">
-  <meta name="twitter:card" content="summary_large_image">
-  <link rel="icon" href="./assets/favicon.png" type="image/png">
-  <link rel="stylesheet" href="./assets/style.css">
-  <title>Feliz 72 anos, Paizão! — De Israel para José Randolfo</title>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover" />
+  <title>Feliz 72 anos, Paizão!</title>
+  <meta name="description" content="Uma homenagem especial de um filho ao seu pai." />
+  <meta name="theme-color" content="#120E0B" />
+  <meta name="robots" content="noindex, nofollow" />
+
+  <!-- Metadados Open Graph para prévia elegante no WhatsApp -->
+  <meta property="og:type" content="website" />
+  <meta property="og:locale" content="pt_BR" />
+  <meta property="og:title" content="Feliz 72 anos, Paizão!" />
+  <meta property="og:description" content="Uma homenagem especial de um filho ao seu pai." />
+  <meta property="og:url" content="https://israelflemos.github.io/outros/Niver_papai/" />
+  <meta property="og:image" content="https://israelflemos.github.io/outros/Niver_papai/assets/compartilhamento.jpg" />
+  <meta property="og:image:width" content="1200" />
+  <meta property="og:image:height" content="630" />
+  <meta property="og:image:alt" content="Feliz 72 anos, Paizão! Uma homenagem especial." />
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="Feliz 72 anos, Paizão!" />
+  <meta name="twitter:description" content="Uma homenagem especial de um filho ao seu pai." />
+  <meta name="twitter:image" content="https://israelflemos.github.io/outros/Niver_papai/assets/compartilhamento.jpg" />
+  <link rel="icon" href="./assets/favicon.png" type="image/png" />
+
+  <!-- Fontes Clássicas e Contemporâneas de Alta Legibilidade -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,500;0,600;0,700;1,500;1,600&family=Inter:wght@400;500;600&family=Lora:ital,wght@0,400;0,500;0,600;1,400&display=swap" rel="stylesheet" />
+
+  <!-- Mesmas classes do arquivo original, compiladas para carregar sem CDN. -->
+  <style id="tailwind-utilities">*,:after,:before{--tw-border-spacing-x:0;--tw-border-spacing-y:0;--tw-translate-x:0;--tw-translate-y:0;--tw-rotate:0;--tw-skew-x:0;--tw-skew-y:0;--tw-scale-x:1;--tw-scale-y:1;--tw-pan-x: ;--tw-pan-y: ;--tw-pinch-zoom: ;--tw-scroll-snap-strictness:proximity;--tw-gradient-from-position: ;--tw-gradient-via-position: ;--tw-gradient-to-position: ;--tw-ordinal: ;--tw-slashed-zero: ;--tw-numeric-figure: ;--tw-numeric-spacing: ;--tw-numeric-fraction: ;--tw-ring-inset: ;--tw-ring-offset-width:0px;--tw-ring-offset-color:#fff;--tw-ring-color:rgba(59,130,246,.5);--tw-ring-offset-shadow:0 0 #0000;--tw-ring-shadow:0 0 #0000;--tw-shadow:0 0 #0000;--tw-shadow-colored:0 0 #0000;--tw-blur: ;--tw-brightness: ;--tw-contrast: ;--tw-grayscale: ;--tw-hue-rotate: ;--tw-invert: ;--tw-saturate: ;--tw-sepia: ;--tw-drop-shadow: ;--tw-backdrop-blur: ;--tw-backdrop-brightness: ;--tw-backdrop-contrast: ;--tw-backdrop-grayscale: ;--tw-backdrop-hue-rotate: ;--tw-backdrop-invert: ;--tw-backdrop-opacity: ;--tw-backdrop-saturate: ;--tw-backdrop-sepia: ;--tw-contain-size: ;--tw-contain-layout: ;--tw-contain-paint: ;--tw-contain-style: }::backdrop{--tw-border-spacing-x:0;--tw-border-spacing-y:0;--tw-translate-x:0;--tw-translate-y:0;--tw-rotate:0;--tw-skew-x:0;--tw-skew-y:0;--tw-scale-x:1;--tw-scale-y:1;--tw-pan-x: ;--tw-pan-y: ;--tw-pinch-zoom: ;--tw-scroll-snap-strictness:proximity;--tw-gradient-from-position: ;--tw-gradient-via-position: ;--tw-gradient-to-position: ;--tw-ordinal: ;--tw-slashed-zero: ;--tw-numeric-figure: ;--tw-numeric-spacing: ;--tw-numeric-fraction: ;--tw-ring-inset: ;--tw-ring-offset-width:0px;--tw-ring-offset-color:#fff;--tw-ring-color:rgba(59,130,246,.5);--tw-ring-offset-shadow:0 0 #0000;--tw-ring-shadow:0 0 #0000;--tw-shadow:0 0 #0000;--tw-shadow-colored:0 0 #0000;--tw-blur: ;--tw-brightness: ;--tw-contrast: ;--tw-grayscale: ;--tw-hue-rotate: ;--tw-invert: ;--tw-saturate: ;--tw-sepia: ;--tw-drop-shadow: ;--tw-backdrop-blur: ;--tw-backdrop-brightness: ;--tw-backdrop-contrast: ;--tw-backdrop-grayscale: ;--tw-backdrop-hue-rotate: ;--tw-backdrop-invert: ;--tw-backdrop-opacity: ;--tw-backdrop-saturate: ;--tw-backdrop-sepia: ;--tw-contain-size: ;--tw-contain-layout: ;--tw-contain-paint: ;--tw-contain-style: }/*! tailwindcss v3.4.17 | MIT License | https://tailwindcss.com*/*,:after,:before{box-sizing:border-box;border:0 solid #e5e7eb}:after,:before{--tw-content:""}:host,html{line-height:1.5;-webkit-text-size-adjust:100%;-moz-tab-size:4;-o-tab-size:4;tab-size:4;font-family:Inter,system-ui,-apple-system,sans-serif;font-feature-settings:normal;font-variation-settings:normal;-webkit-tap-highlight-color:transparent}body{margin:0;line-height:inherit}hr{height:0;color:inherit;border-top-width:1px}abbr:where([title]){-webkit-text-decoration:underline dotted;text-decoration:underline dotted}h1,h2,h3,h4,h5,h6{font-size:inherit;font-weight:inherit}a{color:inherit;text-decoration:inherit}b,strong{font-weight:bolder}code,kbd,pre,samp{font-family:ui-monospace,SFMono-Regular,Menlo,Monaco,Consolas,Liberation Mono,Courier New,monospace;font-feature-settings:normal;font-variation-settings:normal;font-size:1em}small{font-size:80%}sub,sup{font-size:75%;line-height:0;position:relative;vertical-align:baseline}sub{bottom:-.25em}sup{top:-.5em}table{text-indent:0;border-color:inherit;border-collapse:collapse}button,input,optgroup,select,textarea{font-family:inherit;font-feature-settings:inherit;font-variation-settings:inherit;font-size:100%;font-weight:inherit;line-height:inherit;letter-spacing:inherit;color:inherit;margin:0;padding:0}button,select{text-transform:none}button,input:where([type=button]),input:where([type=reset]),input:where([type=submit]){-webkit-appearance:button;background-color:transparent;background-image:none}:-moz-focusring{outline:auto}:-moz-ui-invalid{box-shadow:none}progress{vertical-align:baseline}::-webkit-inner-spin-button,::-webkit-outer-spin-button{height:auto}[type=search]{-webkit-appearance:textfield;outline-offset:-2px}::-webkit-search-decoration{-webkit-appearance:none}::-webkit-file-upload-button{-webkit-appearance:button;font:inherit}summary{display:list-item}blockquote,dd,dl,figure,h1,h2,h3,h4,h5,h6,hr,p,pre{margin:0}fieldset{margin:0}fieldset,legend{padding:0}menu,ol,ul{list-style:none;margin:0;padding:0}dialog{padding:0}textarea{resize:vertical}input::-moz-placeholder,textarea::-moz-placeholder{opacity:1;color:#9ca3af}input::placeholder,textarea::placeholder{opacity:1;color:#9ca3af}[role=button],button{cursor:pointer}:disabled{cursor:default}audio,canvas,embed,iframe,img,object,svg,video{display:block;vertical-align:middle}img,video{max-width:100%;height:auto}[hidden]:where(:not([hidden=until-found])){display:none}.container{width:100%}@media (min-width:640px){.container{max-width:640px}}@media (min-width:768px){.container{max-width:768px}}@media (min-width:1024px){.container{max-width:1024px}}@media (min-width:1280px){.container{max-width:1280px}}@media (min-width:1536px){.container{max-width:1536px}}.pointer-events-none{pointer-events:none}.visible{visibility:visible}.fixed{position:fixed}.absolute{position:absolute}.relative{position:relative}.sticky{position:sticky}.-inset-2\.5{inset:-.625rem}.-inset-4{inset:-1rem}.inset-0{inset:0}.inset-2{inset:.5rem}.inset-x-0{left:0;right:0}.-right-2{right:-.5rem}.-top-1{top:-.25rem}.bottom-6{bottom:1.5rem}.bottom-\[10\%\]{bottom:10%}.left-1\/2{left:50%}.left-\[6\%\]{left:6%}.right-\[6\%\]{right:6%}.top-0{top:0}.top-\[10\%\]{top:10%}.top-\[55\%\]{top:55%}.z-0{z-index:0}.z-10{z-index:10}.z-20{z-index:20}.z-30{z-index:30}.z-40{z-index:40}.z-50{z-index:50}.mx-auto{margin-left:auto;margin-right:auto}.my-2{margin-top:.5rem;margin-bottom:.5rem}.my-4{margin-top:1rem;margin-bottom:1rem}.my-6{margin-top:1.5rem;margin-bottom:1.5rem}.mb-1{margin-bottom:.25rem}.mb-1\.5{margin-bottom:.375rem}.mb-2{margin-bottom:.5rem}.mt-0\.5{margin-top:.125rem}.mt-1{margin-top:.25rem}.mt-1\.5{margin-top:.375rem}.mt-2{margin-top:.5rem}.mt-2\.5{margin-top:.625rem}.mt-5{margin-top:1.25rem}.mt-7{margin-top:1.75rem}.block{display:block}.flex{display:flex}.inline-flex{display:inline-flex}.table{display:table}.grid{display:grid}.hidden{display:none}.aspect-\[1\.48\/1\]{aspect-ratio:1.48/1}.h-1\.5{height:.375rem}.h-11{height:2.75rem}.h-14{height:3.5rem}.h-2\.5{height:.625rem}.h-20{height:5rem}.h-28{height:7rem}.h-32{height:8rem}.h-4{height:1rem}.h-5{height:1.25rem}.h-7{height:1.75rem}.h-9{height:2.25rem}.h-\[1px\]{height:1px}.h-\[58\%\]{height:58%}.h-\[74px\]{height:74px}.h-auto{height:auto}.h-full{height:100%}.max-h-\[470px\]{max-height:470px}.max-h-\[78vh\]{max-height:78vh}.min-h-\[100dvh\]{min-height:100dvh}.min-h-\[370px\]{min-height:370px}.min-h-\[40px\]{min-height:40px}.min-h-\[42px\]{min-height:42px}.min-h-\[46px\]{min-height:46px}.min-h-\[52px\]{min-height:52px}.min-h-\[54px\]{min-height:54px}.w-1{width:.25rem}.w-1\.5{width:.375rem}.w-10{width:2.5rem}.w-11{width:2.75rem}.w-12{width:3rem}.w-14{width:3.5rem}.w-2\.5{width:.625rem}.w-20{width:5rem}.w-24{width:6rem}.w-28{width:7rem}.w-32{width:8rem}.w-4{width:1rem}.w-5{width:1.25rem}.w-7{width:1.75rem}.w-8{width:2rem}.w-9{width:2.25rem}.w-\[74px\]{width:74px}.w-full{width:100%}.min-w-0{min-width:0}.min-w-\[42px\]{min-width:42px}.max-w-2xl{max-width:42rem}.max-w-\[350px\]{max-width:350px}.max-w-\[92vw\]{max-width:92vw}.max-w-lg{max-width:32rem}.max-w-md{max-width:28rem}.flex-1{flex:1 1 0%}.flex-shrink{flex-shrink:1}.shrink-0{flex-shrink:0}.-translate-x-1\/2{--tw-translate-x:-50%}.-translate-x-1\/2,.-translate-y-1\/2{transform:translate(var(--tw-translate-x),var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y))}.-translate-y-1\/2{--tw-translate-y:-50%}.translate-y-0{--tw-translate-y:0px}.translate-y-0,.translate-y-3{transform:translate(var(--tw-translate-x),var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y))}.translate-y-3{--tw-translate-y:0.75rem}.scale-\[0\.98\]{--tw-scale-x:0.98;--tw-scale-y:0.98}.scale-\[0\.98\],.transform{transform:translate(var(--tw-translate-x),var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y))}.cursor-pointer{cursor:pointer}.select-none{-webkit-user-select:none;-moz-user-select:none;user-select:none}.resize{resize:both}.scroll-mt-20{scroll-margin-top:5rem}.list-inside{list-style-position:inside}.list-decimal{list-style-type:decimal}.grid-cols-1{grid-template-columns:repeat(1,minmax(0,1fr))}.flex-col{flex-direction:column}.flex-wrap{flex-wrap:wrap}.items-start{align-items:flex-start}.items-end{align-items:flex-end}.items-center{align-items:center}.items-baseline{align-items:baseline}.justify-start{justify-content:flex-start}.justify-center{justify-content:center}.justify-between{justify-content:space-between}.gap-2{gap:.5rem}.gap-2\.5{gap:.625rem}.gap-3{gap:.75rem}.gap-3\.5{gap:.875rem}.gap-4{gap:1rem}.gap-5{gap:1.25rem}.gap-\[2\.5px\]{gap:2.5px}.space-y-0\.5>:not([hidden])~:not([hidden]){--tw-space-y-reverse:0;margin-top:calc(.125rem*(1 - var(--tw-space-y-reverse)));margin-bottom:calc(.125rem*var(--tw-space-y-reverse))}.space-y-1\.5>:not([hidden])~:not([hidden]){--tw-space-y-reverse:0;margin-top:calc(.375rem*(1 - var(--tw-space-y-reverse)));margin-bottom:calc(.375rem*var(--tw-space-y-reverse))}.space-y-10>:not([hidden])~:not([hidden]){--tw-space-y-reverse:0;margin-top:calc(2.5rem*(1 - var(--tw-space-y-reverse)));margin-bottom:calc(2.5rem*var(--tw-space-y-reverse))}.space-y-2>:not([hidden])~:not([hidden]){--tw-space-y-reverse:0;margin-top:calc(.5rem*(1 - var(--tw-space-y-reverse)));margin-bottom:calc(.5rem*var(--tw-space-y-reverse))}.space-y-2\.5>:not([hidden])~:not([hidden]){--tw-space-y-reverse:0;margin-top:calc(.625rem*(1 - var(--tw-space-y-reverse)));margin-bottom:calc(.625rem*var(--tw-space-y-reverse))}.space-y-3>:not([hidden])~:not([hidden]){--tw-space-y-reverse:0;margin-top:calc(.75rem*(1 - var(--tw-space-y-reverse)));margin-bottom:calc(.75rem*var(--tw-space-y-reverse))}.space-y-4>:not([hidden])~:not([hidden]){--tw-space-y-reverse:0;margin-top:calc(1rem*(1 - var(--tw-space-y-reverse)));margin-bottom:calc(1rem*var(--tw-space-y-reverse))}.space-y-6>:not([hidden])~:not([hidden]){--tw-space-y-reverse:0;margin-top:calc(1.5rem*(1 - var(--tw-space-y-reverse)));margin-bottom:calc(1.5rem*var(--tw-space-y-reverse))}.overflow-hidden{overflow:hidden}.overflow-y-auto{overflow-y:auto}.scroll-smooth{scroll-behavior:smooth}.truncate{overflow:hidden;text-overflow:ellipsis;white-space:nowrap}.rounded-2xl{border-radius:1rem}.rounded-3xl{border-radius:1.5rem}.rounded-full{border-radius:9999px}.rounded-lg{border-radius:.5rem}.rounded-md{border-radius:.375rem}.rounded-xl{border-radius:.75rem}.border{border-width:1px}.border-2{border-width:2px}.border-b{border-bottom-width:1px}.border-t{border-top-width:1px}.border-amberwarm-300{--tw-border-opacity:1;border-color:rgb(229 196 150/var(--tw-border-opacity,1))}.border-amberwarm-400\/15{border-color:hsla(34,55%,62%,.15)}.border-amberwarm-400\/20{border-color:hsla(34,55%,62%,.2)}.border-amberwarm-400\/25{border-color:hsla(34,55%,62%,.25)}.border-amberwarm-400\/30{border-color:hsla(34,55%,62%,.3)}.border-amberwarm-400\/35{border-color:hsla(34,55%,62%,.35)}.border-amberwarm-400\/40{border-color:hsla(34,55%,62%,.4)}.border-amberwarm-400\/45{border-color:hsla(34,55%,62%,.45)}.border-amberwarm-400\/50{border-color:hsla(34,55%,62%,.5)}.border-amberwarm-400\/60{border-color:hsla(34,55%,62%,.6)}.border-amberwarm-500\/30{border-color:rgba(184,131,70,.3)}.border-amberwarm-500\/35{border-color:rgba(184,131,70,.35)}.border-amberwarm-500\/40{border-color:rgba(184,131,70,.4)}.border-amberwarm-600\/20{border-color:rgba(142,95,45,.2)}.border-amberwarm-600\/25{border-color:rgba(142,95,45,.25)}.border-amberwarm-600\/30{border-color:rgba(142,95,45,.3)}.border-amberwarm-600\/35{border-color:rgba(142,95,45,.35)}.border-amberwarm-600\/40{border-color:rgba(142,95,45,.4)}.border-espresso-950{--tw-border-opacity:1;border-color:rgb(16 12 9/var(--tw-border-opacity,1))}.bg-amberwarm-200{--tw-bg-opacity:1;background-color:rgb(245 228 202/var(--tw-bg-opacity,1))}.bg-amberwarm-400{--tw-bg-opacity:1;background-color:rgb(212 166 106/var(--tw-bg-opacity,1))}.bg-amberwarm-400\/15{background-color:hsla(34,55%,62%,.15)}.bg-amberwarm-500\/50{background-color:rgba(184,131,70,.5)}.bg-amberwarm-600\/35{background-color:rgba(142,95,45,.35)}.bg-black\/80{background-color:rgba(0,0,0,.8)}.bg-espresso-800{--tw-bg-opacity:1;background-color:rgb(36 27 21/var(--tw-bg-opacity,1))}.bg-espresso-800\/70{background-color:rgba(36,27,21,.7)}.bg-espresso-800\/85{background-color:rgba(36,27,21,.85)}.bg-espresso-800\/90{background-color:rgba(36,27,21,.9)}.bg-espresso-800\/95{background-color:rgba(36,27,21,.95)}.bg-espresso-900{--tw-bg-opacity:1;background-color:rgb(24 18 14/var(--tw-bg-opacity,1))}.bg-espresso-900\/10{background-color:rgba(24,18,14,.1)}.bg-espresso-900\/80{background-color:rgba(24,18,14,.8)}.bg-espresso-900\/85{background-color:rgba(24,18,14,.85)}.bg-espresso-900\/90{background-color:rgba(24,18,14,.9)}.bg-espresso-950{--tw-bg-opacity:1;background-color:rgb(16 12 9/var(--tw-bg-opacity,1))}.bg-espresso-950\/80{background-color:rgba(16,12,9,.8)}.bg-espresso-950\/90{background-color:rgba(16,12,9,.9)}.bg-linen-100{--tw-bg-opacity:1;background-color:rgb(245 239 228/var(--tw-bg-opacity,1))}.bg-gradient-to-b{background-image:linear-gradient(to bottom,var(--tw-gradient-stops))}.bg-gradient-to-l{background-image:linear-gradient(to left,var(--tw-gradient-stops))}.bg-gradient-to-r{background-image:linear-gradient(to right,var(--tw-gradient-stops))}.bg-gradient-to-tr{background-image:linear-gradient(to top right,var(--tw-gradient-stops))}.from-\[\#332417\]{--tw-gradient-from:#332417 var(--tw-gradient-from-position);--tw-gradient-to:rgba(51,36,23,0) var(--tw-gradient-to-position);--tw-gradient-stops:var(--tw-gradient-from),var(--tw-gradient-to)}.from-amberwarm-200{--tw-gradient-from:#f5e4ca var(--tw-gradient-from-position);--tw-gradient-to:hsla(36,68%,88%,0) var(--tw-gradient-to-position);--tw-gradient-stops:var(--tw-gradient-from),var(--tw-gradient-to)}.from-linen-50{--tw-gradient-from:#fcf8f2 var(--tw-gradient-from-position);--tw-gradient-to:hsla(36,62%,97%,0) var(--tw-gradient-to-position);--tw-gradient-stops:var(--tw-gradient-from),var(--tw-gradient-to)}.from-transparent{--tw-gradient-from:transparent var(--tw-gradient-from-position);--tw-gradient-to:transparent var(--tw-gradient-to-position);--tw-gradient-stops:var(--tw-gradient-from),var(--tw-gradient-to)}.via-\[\#221811\]{--tw-gradient-to:rgba(34,24,17,0) var(--tw-gradient-to-position);--tw-gradient-stops:var(--tw-gradient-from),#221811 var(--tw-gradient-via-position),var(--tw-gradient-to)}.via-amberwarm-400\/50{--tw-gradient-to:hsla(34,55%,62%,0) var(--tw-gradient-to-position);--tw-gradient-stops:var(--tw-gradient-from),hsla(34,55%,62%,.5) var(--tw-gradient-via-position),var(--tw-gradient-to)}.via-white\/5{--tw-gradient-to:hsla(0,0%,100%,0) var(--tw-gradient-to-position);--tw-gradient-stops:var(--tw-gradient-from),hsla(0,0%,100%,.05) var(--tw-gradient-via-position),var(--tw-gradient-to)}.to-\[\#120D0A\]{--tw-gradient-to:#120d0a var(--tw-gradient-to-position)}.to-amberwarm-400\/60{--tw-gradient-to:hsla(34,55%,62%,.6) var(--tw-gradient-to-position)}.to-amberwarm-400\/70{--tw-gradient-to:hsla(34,55%,62%,.7) var(--tw-gradient-to-position)}.to-amberwarm-500{--tw-gradient-to:#b88346 var(--tw-gradient-to-position)}.to-linen-200{--tw-gradient-to:#eae0ce var(--tw-gradient-to-position)}.to-transparent{--tw-gradient-to:transparent var(--tw-gradient-to-position)}.fill-current{fill:currentColor}.object-contain{-o-object-fit:contain;object-fit:contain}.p-2{padding:.5rem}.p-2\.5{padding:.625rem}.p-3{padding:.75rem}.p-3\.5{padding:.875rem}.p-4{padding:1rem}.p-5{padding:1.25rem}.p-6{padding:1.5rem}.px-1{padding-left:.25rem;padding-right:.25rem}.px-3{padding-left:.75rem;padding-right:.75rem}.px-3\.5{padding-left:.875rem;padding-right:.875rem}.px-4{padding-left:1rem;padding-right:1rem}.px-5{padding-left:1.25rem;padding-right:1.25rem}.px-6{padding-left:1.5rem;padding-right:1.5rem}.py-1\.5{padding-top:.375rem;padding-bottom:.375rem}.py-2{padding-top:.5rem;padding-bottom:.5rem}.py-2\.5{padding-top:.625rem;padding-bottom:.625rem}.py-3{padding-top:.75rem;padding-bottom:.75rem}.py-3\.5{padding-top:.875rem;padding-bottom:.875rem}.py-4{padding-top:1rem;padding-bottom:1rem}.py-5{padding-top:1.25rem;padding-bottom:1.25rem}.py-6{padding-top:1.5rem;padding-bottom:1.5rem}.py-8{padding-top:2rem;padding-bottom:2rem}.pb-0\.5{padding-bottom:.125rem}.pb-1{padding-bottom:.25rem}.pb-16{padding-bottom:4rem}.pb-4{padding-bottom:1rem}.pb-7{padding-bottom:1.75rem}.pr-1{padding-right:.25rem}.pt-0\.5{padding-top:.125rem}.pt-1{padding-top:.25rem}.pt-2\.5{padding-top:.625rem}.pt-5{padding-top:1.25rem}.pt-6{padding-top:1.5rem}.pt-7{padding-top:1.75rem}.pt-9{padding-top:2.25rem}.text-center{text-align:center}.font-display{font-family:Cormorant Garamond,Georgia,serif}.font-sans{font-family:Inter,system-ui,-apple-system,sans-serif}.font-serif{font-family:Lora,Georgia,serif}.text-2xl{font-size:1.5rem;line-height:2rem}.text-3xl{font-size:1.875rem;line-height:2.25rem}.text-5xl{font-size:3rem;line-height:1}.text-6xl{font-size:3.75rem;line-height:1}.text-\[1\.14rem\]{font-size:1.14rem}.text-\[10px\]{font-size:10px}.text-\[11px\]{font-size:11px}.text-\[7px\]{font-size:7px}.text-base{font-size:1rem;line-height:1.5rem}.text-lg{font-size:1.125rem;line-height:1.75rem}.text-sm{font-size:.875rem;line-height:1.25rem}.text-xl{font-size:1.25rem;line-height:1.75rem}.text-xs{font-size:.75rem;line-height:1rem}.font-bold{font-weight:700}.font-medium{font-weight:500}.font-semibold{font-weight:600}.uppercase{text-transform:uppercase}.italic{font-style:italic}.leading-\[1\.85\]{line-height:1.85}.leading-none{line-height:1}.leading-relaxed{line-height:1.625}.leading-snug{line-height:1.375}.leading-tight{line-height:1.25}.tracking-\[0\.18em\]{letter-spacing:.18em}.tracking-\[0\.22em\]{letter-spacing:.22em}.tracking-\[0\.24em\]{letter-spacing:.24em}.tracking-\[0\.25em\]{letter-spacing:.25em}.tracking-\[0\.2em\]{letter-spacing:.2em}.tracking-tight{letter-spacing:-.025em}.tracking-wide{letter-spacing:.025em}.tracking-widest{letter-spacing:.1em}.text-amberwarm-200{--tw-text-opacity:1;color:rgb(245 228 202/var(--tw-text-opacity,1))}.text-amberwarm-200\/75{color:hsla(36,68%,88%,.75)}.text-amberwarm-200\/80{color:hsla(36,68%,88%,.8)}.text-amberwarm-200\/90{color:hsla(36,68%,88%,.9)}.text-amberwarm-300{--tw-text-opacity:1;color:rgb(229 196 150/var(--tw-text-opacity,1))}.text-amberwarm-300\/75{color:hsla(35,60%,74%,.75)}.text-amberwarm-300\/80{color:hsla(35,60%,74%,.8)}.text-amberwarm-300\/90{color:hsla(35,60%,74%,.9)}.text-amberwarm-400{--tw-text-opacity:1;color:rgb(212 166 106/var(--tw-text-opacity,1))}.text-amberwarm-600{--tw-text-opacity:1;color:rgb(142 95 45/var(--tw-text-opacity,1))}.text-espresso-900{--tw-text-opacity:1;color:rgb(24 18 14/var(--tw-text-opacity,1))}.text-espresso-950{--tw-text-opacity:1;color:rgb(16 12 9/var(--tw-text-opacity,1))}.text-linen-100{--tw-text-opacity:1;color:rgb(245 239 228/var(--tw-text-opacity,1))}.text-linen-200{--tw-text-opacity:1;color:rgb(234 224 206/var(--tw-text-opacity,1))}.text-linen-200\/85{color:hsla(39,40%,86%,.85)}.text-linen-300\/60{color:hsla(39,33%,80%,.6)}.text-linen-50{--tw-text-opacity:1;color:rgb(252 248 242/var(--tw-text-opacity,1))}.text-roast-700{--tw-text-opacity:1;color:rgb(74 59 49/var(--tw-text-opacity,1))}.text-roast-800{--tw-text-opacity:1;color:rgb(51 39 32/var(--tw-text-opacity,1))}.text-roast-900{--tw-text-opacity:1;color:rgb(33 25 20/var(--tw-text-opacity,1))}.antialiased{-webkit-font-smoothing:antialiased;-moz-osx-font-smoothing:grayscale}.opacity-0{opacity:0}.opacity-100{opacity:1}.opacity-40{opacity:.4}.opacity-75{opacity:.75}.shadow{--tw-shadow:0 1px 3px 0 rgba(0,0,0,.1),0 1px 2px -1px rgba(0,0,0,.1);--tw-shadow-colored:0 1px 3px 0 var(--tw-shadow-color),0 1px 2px -1px var(--tw-shadow-color)}.shadow,.shadow-2xl{box-shadow:var(--tw-ring-offset-shadow,0 0 #0000),var(--tw-ring-shadow,0 0 #0000),var(--tw-shadow)}.shadow-2xl{--tw-shadow:0 25px 50px -12px rgba(0,0,0,.25);--tw-shadow-colored:0 25px 50px -12px var(--tw-shadow-color)}.shadow-\[0_22px_50px_rgba\(0\2c 0\2c 0\2c 0\.68\)\]{--tw-shadow:0 22px 50px rgba(0,0,0,.68);--tw-shadow-colored:0 22px 50px var(--tw-shadow-color)}.shadow-\[0_22px_50px_rgba\(0\2c 0\2c 0\2c 0\.68\)\],.shadow-inner{box-shadow:var(--tw-ring-offset-shadow,0 0 #0000),var(--tw-ring-shadow,0 0 #0000),var(--tw-shadow)}.shadow-inner{--tw-shadow:inset 0 2px 4px 0 rgba(0,0,0,.05);--tw-shadow-colored:inset 0 2px 4px 0 var(--tw-shadow-color)}.shadow-lg{--tw-shadow:0 10px 15px -3px rgba(0,0,0,.1),0 4px 6px -4px rgba(0,0,0,.1);--tw-shadow-colored:0 10px 15px -3px var(--tw-shadow-color),0 4px 6px -4px var(--tw-shadow-color)}.shadow-lg,.shadow-md{box-shadow:var(--tw-ring-offset-shadow,0 0 #0000),var(--tw-ring-shadow,0 0 #0000),var(--tw-shadow)}.shadow-md{--tw-shadow:0 4px 6px -1px rgba(0,0,0,.1),0 2px 4px -2px rgba(0,0,0,.1);--tw-shadow-colored:0 4px 6px -1px var(--tw-shadow-color),0 2px 4px -2px var(--tw-shadow-color)}.shadow-xl{--tw-shadow:0 20px 25px -5px rgba(0,0,0,.1),0 8px 10px -6px rgba(0,0,0,.1);--tw-shadow-colored:0 20px 25px -5px var(--tw-shadow-color),0 8px 10px -6px var(--tw-shadow-color);box-shadow:var(--tw-ring-offset-shadow,0 0 #0000),var(--tw-ring-shadow,0 0 #0000),var(--tw-shadow)}.outline{outline-style:solid}.blur-2xl{--tw-blur:blur(40px)}.blur-2xl,.blur-xl{filter:var(--tw-blur) var(--tw-brightness) var(--tw-contrast) var(--tw-grayscale) var(--tw-hue-rotate) var(--tw-invert) var(--tw-saturate) var(--tw-sepia) var(--tw-drop-shadow)}.blur-xl{--tw-blur:blur(24px)}.drop-shadow{--tw-drop-shadow:drop-shadow(0 1px 2px rgba(0,0,0,.1)) drop-shadow(0 1px 1px rgba(0,0,0,.06))}.drop-shadow,.drop-shadow-\[0_10px_14px_rgba\(0\2c 0\2c 0\2c 0\.58\)\]{filter:var(--tw-blur) var(--tw-brightness) var(--tw-contrast) var(--tw-grayscale) var(--tw-hue-rotate) var(--tw-invert) var(--tw-saturate) var(--tw-sepia) var(--tw-drop-shadow)}.drop-shadow-\[0_10px_14px_rgba\(0\2c 0\2c 0\2c 0\.58\)\]{--tw-drop-shadow:drop-shadow(0 10px 14px rgba(0,0,0,.58))}.drop-shadow-lg{--tw-drop-shadow:drop-shadow(0 10px 8px rgba(0,0,0,.04)) drop-shadow(0 4px 3px rgba(0,0,0,.1))}.drop-shadow-lg,.grayscale{filter:var(--tw-blur) var(--tw-brightness) var(--tw-contrast) var(--tw-grayscale) var(--tw-hue-rotate) var(--tw-invert) var(--tw-saturate) var(--tw-sepia) var(--tw-drop-shadow)}.grayscale{--tw-grayscale:grayscale(100%)}.filter{filter:var(--tw-blur) var(--tw-brightness) var(--tw-contrast) var(--tw-grayscale) var(--tw-hue-rotate) var(--tw-invert) var(--tw-saturate) var(--tw-sepia) var(--tw-drop-shadow)}.backdrop-blur-md{--tw-backdrop-blur:blur(12px)}.backdrop-blur-md,.backdrop-blur-sm{-webkit-backdrop-filter:var(--tw-backdrop-blur) var(--tw-backdrop-brightness) var(--tw-backdrop-contrast) var(--tw-backdrop-grayscale) var(--tw-backdrop-hue-rotate) var(--tw-backdrop-invert) var(--tw-backdrop-opacity) var(--tw-backdrop-saturate) var(--tw-backdrop-sepia);backdrop-filter:var(--tw-backdrop-blur) var(--tw-backdrop-brightness) var(--tw-backdrop-contrast) var(--tw-backdrop-grayscale) var(--tw-backdrop-hue-rotate) var(--tw-backdrop-invert) var(--tw-backdrop-opacity) var(--tw-backdrop-saturate) var(--tw-backdrop-sepia)}.backdrop-blur-sm{--tw-backdrop-blur:blur(4px)}.transition{transition-property:color,background-color,border-color,text-decoration-color,fill,stroke,opacity,box-shadow,transform,filter,-webkit-backdrop-filter;transition-property:color,background-color,border-color,text-decoration-color,fill,stroke,opacity,box-shadow,transform,filter,backdrop-filter;transition-property:color,background-color,border-color,text-decoration-color,fill,stroke,opacity,box-shadow,transform,filter,backdrop-filter,-webkit-backdrop-filter;transition-timing-function:cubic-bezier(.4,0,.2,1);transition-duration:.15s}.transition-all{transition-property:all;transition-timing-function:cubic-bezier(.4,0,.2,1);transition-duration:.15s}.transition-opacity{transition-property:opacity;transition-timing-function:cubic-bezier(.4,0,.2,1);transition-duration:.15s}.transition-transform{transition-property:transform;transition-timing-function:cubic-bezier(.4,0,.2,1);transition-duration:.15s}.duration-300{transition-duration:.3s}.duration-500{transition-duration:.5s}.duration-700{transition-duration:.7s}.duration-75{transition-duration:75ms}.selection\:bg-amberwarm-400\/30 ::-moz-selection{background-color:hsla(34,55%,62%,.3)}.selection\:bg-amberwarm-400\/30 ::selection{background-color:hsla(34,55%,62%,.3)}.selection\:text-linen-50 ::-moz-selection{--tw-text-opacity:1;color:rgb(252 248 242/var(--tw-text-opacity,1))}.selection\:text-linen-50 ::selection{--tw-text-opacity:1;color:rgb(252 248 242/var(--tw-text-opacity,1))}.selection\:bg-amberwarm-400\/30::-moz-selection{background-color:hsla(34,55%,62%,.3)}.selection\:bg-amberwarm-400\/30::selection{background-color:hsla(34,55%,62%,.3)}.selection\:text-linen-50::-moz-selection{--tw-text-opacity:1;color:rgb(252 248 242/var(--tw-text-opacity,1))}.selection\:text-linen-50::selection{--tw-text-opacity:1;color:rgb(252 248 242/var(--tw-text-opacity,1))}.hover\:border-amberwarm-300:hover{--tw-border-opacity:1;border-color:rgb(229 196 150/var(--tw-border-opacity,1))}.hover\:bg-amberwarm-300:hover{--tw-bg-opacity:1;background-color:rgb(229 196 150/var(--tw-bg-opacity,1))}.hover\:bg-amberwarm-600\/60:hover{background-color:rgba(142,95,45,.6)}.hover\:bg-espresso-700:hover{--tw-bg-opacity:1;background-color:rgb(53 40 31/var(--tw-bg-opacity,1))}.hover\:bg-espresso-800:hover{--tw-bg-opacity:1;background-color:rgb(36 27 21/var(--tw-bg-opacity,1))}.hover\:bg-espresso-900:hover{--tw-bg-opacity:1;background-color:rgb(24 18 14/var(--tw-bg-opacity,1))}.hover\:bg-linen-200:hover{--tw-bg-opacity:1;background-color:rgb(234 224 206/var(--tw-bg-opacity,1))}.hover\:text-white:hover{--tw-text-opacity:1;color:rgb(255 255 255/var(--tw-text-opacity,1))}.focus\:border-amberwarm-300:focus{--tw-border-opacity:1;border-color:rgb(229 196 150/var(--tw-border-opacity,1))}.focus\:outline-none:focus{outline:2px solid transparent;outline-offset:2px}.focus\:ring-2:focus{--tw-ring-offset-shadow:var(--tw-ring-inset) 0 0 0 var(--tw-ring-offset-width) var(--tw-ring-offset-color);--tw-ring-shadow:var(--tw-ring-inset) 0 0 0 calc(2px + var(--tw-ring-offset-width)) var(--tw-ring-color);box-shadow:var(--tw-ring-offset-shadow),var(--tw-ring-shadow),var(--tw-shadow,0 0 #0000)}.focus\:ring-amberwarm-200:focus{--tw-ring-opacity:1;--tw-ring-color:rgb(245 228 202/var(--tw-ring-opacity,1))}.focus\:ring-amberwarm-300:focus{--tw-ring-opacity:1;--tw-ring-color:rgb(229 196 150/var(--tw-ring-opacity,1))}.focus\:ring-linen-50:focus{--tw-ring-opacity:1;--tw-ring-color:rgb(252 248 242/var(--tw-ring-opacity,1))}.focus-visible\:ring-2:focus-visible{--tw-ring-offset-shadow:var(--tw-ring-inset) 0 0 0 var(--tw-ring-offset-width) var(--tw-ring-offset-color);--tw-ring-shadow:var(--tw-ring-inset) 0 0 0 calc(2px + var(--tw-ring-offset-width)) var(--tw-ring-color);box-shadow:var(--tw-ring-offset-shadow),var(--tw-ring-shadow),var(--tw-shadow,0 0 #0000)}.focus-visible\:ring-amberwarm-300:focus-visible{--tw-ring-opacity:1;--tw-ring-color:rgb(229 196 150/var(--tw-ring-opacity,1))}.focus-visible\:ring-offset-4:focus-visible{--tw-ring-offset-width:4px}.focus-visible\:ring-offset-espresso-950:focus-visible{--tw-ring-offset-color:#100c09}.active\:scale-\[0\.98\]:active{--tw-scale-x:0.98;--tw-scale-y:0.98}.active\:scale-\[0\.98\]:active,.active\:scale-\[0\.99\]:active{transform:translate(var(--tw-translate-x),var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y))}.active\:scale-\[0\.99\]:active{--tw-scale-x:0.99;--tw-scale-y:0.99}.disabled\:pointer-events-none:disabled{pointer-events:none}.disabled\:opacity-35:disabled{opacity:.35}.group:hover .group-hover\:scale-105{--tw-scale-x:1.05;--tw-scale-y:1.05;transform:translate(var(--tw-translate-x),var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y))}.group:hover .group-hover\:opacity-100{opacity:1}@media (min-width:640px){.sm\:my-8{margin-top:2rem;margin-bottom:2rem}.sm\:flex{display:flex}.sm\:h-12{height:3rem}.sm\:h-32{height:8rem}.sm\:h-36{height:9rem}.sm\:h-\[82px\]{height:82px}.sm\:min-h-\[400px\]{min-height:400px}.sm\:w-12{width:3rem}.sm\:w-32{width:8rem}.sm\:w-36{width:9rem}.sm\:w-\[82px\]{width:82px}.sm\:min-w-\[205px\]{min-width:205px}.sm\:max-w-\[410px\]{max-width:410px}.sm\:max-w-md{max-width:28rem}.sm\:flex-initial{flex:0 1 auto}.sm\:grid-cols-2{grid-template-columns:repeat(2,minmax(0,1fr))}.sm\:grid-cols-3{grid-template-columns:repeat(3,minmax(0,1fr))}.sm\:flex-row{flex-direction:row}.sm\:items-center{align-items:center}.sm\:space-y-12>:not([hidden])~:not([hidden]){--tw-space-y-reverse:0;margin-top:calc(3rem*(1 - var(--tw-space-y-reverse)));margin-bottom:calc(3rem*var(--tw-space-y-reverse))}.sm\:space-y-3>:not([hidden])~:not([hidden]){--tw-space-y-reverse:0;margin-top:calc(.75rem*(1 - var(--tw-space-y-reverse)));margin-bottom:calc(.75rem*var(--tw-space-y-reverse))}.sm\:rounded-2xl{border-radius:1rem}.sm\:rounded-3xl{border-radius:1.5rem}.sm\:p-3\.5{padding:.875rem}.sm\:p-4{padding:1rem}.sm\:p-6{padding:1.5rem}.sm\:px-5{padding-left:1.25rem;padding-right:1.25rem}.sm\:px-6{padding-left:1.5rem;padding-right:1.5rem}.sm\:px-8{padding-left:2rem;padding-right:2rem}.sm\:px-9{padding-left:2.25rem;padding-right:2.25rem}.sm\:py-12{padding-top:3rem;padding-bottom:3rem}.sm\:py-7{padding-top:1.75rem;padding-bottom:1.75rem}.sm\:py-9{padding-top:2.25rem;padding-bottom:2.25rem}.sm\:pb-24{padding-bottom:6rem}.sm\:pt-10{padding-top:2.5rem}.sm\:text-left{text-align:left}.sm\:text-2xl{font-size:1.5rem;line-height:2rem}.sm\:text-3xl{font-size:1.875rem;line-height:2.25rem}.sm\:text-4xl{font-size:2.25rem;line-height:2.5rem}.sm\:text-6xl{font-size:3.75rem;line-height:1}.sm\:text-7xl{font-size:4.5rem;line-height:1}.sm\:text-\[1\.24rem\]{font-size:1.24rem}.sm\:text-base{font-size:1rem;line-height:1.5rem}.sm\:text-lg{font-size:1.125rem;line-height:1.75rem}.sm\:text-sm{font-size:.875rem;line-height:1.25rem}.sm\:text-xl{font-size:1.25rem;line-height:1.75rem}.sm\:text-xs{font-size:.75rem;line-height:1rem}}@media (min-width:768px){.md\:text-8xl{font-size:6rem;line-height:1}.md\:text-\[2\.65rem\]{font-size:2.65rem}}</style>
+
+  <style>
+    /* =========================================================================
+       ESTILOS ARTESANAIS: CAFÉ & OURO CHAMPANHE, ENVELOPE 3D E VITROLA
+       ========================================================================= */
+    :root {
+      color-scheme: dark;
+    }
+
+    html, body {
+      background-color: #100C09;
+      color: #FCF8F2;
+      min-height: 100vh;
+      min-height: 100dvh;
+      overflow-x: hidden;
+      -webkit-font-smoothing: antialiased;
+      -moz-osx-font-smoothing: grayscale;
+      -webkit-tap-highlight-color: rgba(212, 166, 106, 0.22);
+    }
+
+    /* Iluminação atmosférica quente de fim de tarde e estúdio analógico */
+    .ambient-backdrop {
+      background:
+        radial-gradient(ellipse 88% 52% at 50% 8%, rgba(212, 166, 106, 0.16) 0%, rgba(36, 27, 21, 0.48) 48%, rgba(16, 12, 9, 0.99) 100%),
+        linear-gradient(180deg, #18120E 0%, #100C09 100%);
+    }
+
+    /* Papel linho nobre pontilhado com grãos sutis de pó de café */
+    .noble-linen {
+      background-color: #F8F2E8;
+      background-image:
+        radial-gradient(rgba(92, 56, 28, 0.09) 1px, transparent 0),
+        radial-gradient(rgba(142, 95, 45, 0.06) 1.2px, transparent 0),
+        linear-gradient(180deg, rgba(255, 255, 255, 0.65) 0%, rgba(235, 223, 202, 0.48) 100%);
+      background-size: 22px 22px, 37px 37px, 100% 100%;
+      background-position: 0 0, 11px 13px, 0 0;
+      box-shadow:
+        0 28px 70px -15px rgba(0, 0, 0, 0.82),
+        0 0 0 1px rgba(212, 166, 106, 0.35),
+        inset 0 0 40px rgba(184, 131, 70, 0.08);
+    }
+
+    /* Brilho metálico champanhe para o número 72 */
+    .gold-numeral {
+      background: linear-gradient(180deg, #FAF0D7 0%, #E2BA82 48%, #A6733A 100%);
+      -webkit-background-clip: text;
+      background-clip: text;
+      color: transparent;
+      filter: drop-shadow(0 4px 18px rgba(212, 166, 106, 0.22));
+    }
+
+    /* Estrutura 3D realista do envelope artesanal */
+    .envelope-perspective {
+      perspective: 1400px;
+    }
+
+    .envelope-flap {
+      transform-origin: top center;
+      transform-style: preserve-3d;
+      transition: transform 1.05s cubic-bezier(0.32, 0.72, 0, 1), z-index 0s linear 0.35s;
+      will-change: transform;
+    }
+
+    .envelope-card-preview {
+      transition: transform 0.95s cubic-bezier(0.22, 1, 0.36, 1), opacity 0.6s ease;
+      will-change: transform;
+    }
+
+    .wax-seal-wrapper {
+      transition: transform 0.45s cubic-bezier(0.34, 1.56, 0.64, 1), opacity 0.42s ease;
+      will-change: transform, opacity;
+    }
+
+    /* Estados da coreografia de abertura do envelope */
+    .is-opening .wax-seal-wrapper {
+      transform: translate(-50%, -50%) scale(1.12);
+      opacity: 0;
+      pointer-events: none;
+    }
+
+    .is-flap-open .envelope-flap {
+      transform: rotateX(180deg);
+      z-index: 5;
+    }
+
+    .is-letter-rising .envelope-card-preview {
+      transform: translateY(-44%);
+    }
+
+    /* Pulsação suave do selo de cera */
+    @keyframes subtleAura {
+      0%, 100% { box-shadow: 0 0 0 0 rgba(212, 166, 106, 0.34), 0 10px 25px rgba(0, 0, 0, 0.55); }
+      50% { box-shadow: 0 0 0 12px rgba(212, 166, 106, 0), 0 12px 28px rgba(0, 0, 0, 0.65); }
+    }
+
+    .seal-pulse {
+      animation: subtleAura 3.2s infinite ease-in-out;
+    }
+
+    /* Pulsação delicada do coração dourado */
+    @keyframes gentleHeartbeat {
+      0%, 100% { transform: scale(1); filter: drop-shadow(0 0 10px rgba(212, 166, 106, 0.25)); }
+      18% { transform: scale(1.1); filter: drop-shadow(0 0 18px rgba(212, 166, 106, 0.5)); }
+      34% { transform: scale(1); filter: drop-shadow(0 0 10px rgba(212, 166, 106, 0.25)); }
+      52% { transform: scale(1.07); filter: drop-shadow(0 0 15px rgba(212, 166, 106, 0.42)); }
+      70% { transform: scale(1); filter: drop-shadow(0 0 10px rgba(212, 166, 106, 0.25)); }
+    }
+
+    .heart-pulse {
+      animation: gentleHeartbeat 2.8s infinite ease-in-out;
+    }
+
+    /* Disco de vinil artesanal e braço da vitrola */
+    @keyframes spinVinyl {
+      from { transform: rotate(0deg); }
+      to { transform: rotate(360deg); }
+    }
+
+    .vinyl-disc {
+      background:
+        radial-gradient(circle at center, #D4A66A 0%, #B88346 13%, #14100D 14%, #241B15 26%, #120E0B 27%, #261D17 44%, #110D0A 45%, #261D17 64%, #120E0B 65%, #1F1813 100%);
+      box-shadow:
+        0 18px 45px rgba(0, 0, 0, 0.78),
+        inset 0 0 0 1px rgba(229, 196, 150, 0.22);
+      animation: spinVinyl 7.5s linear infinite;
+      animation-play-state: paused;
+    }
+
+    .is-playing-beat .vinyl-disc {
+      animation-play-state: running;
+    }
+
+    .tonearm {
+      transform-origin: 78% 18%;
+      transform: rotate(-26deg);
+      transition: transform 0.75s cubic-bezier(0.22, 1, 0.36, 1);
+    }
+
+    .is-playing-beat .tonearm {
+      transform: rotate(4deg);
+    }
+
+    .beat-halo {
+      transition: transform 0.14s ease-out, opacity 0.18s ease-out;
+    }
+
+    /* Entrada suave de elementos e das partes picadas da carta */
+    @keyframes softReveal {
+      from { opacity: 0; transform: translateY(14px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+
+    .animate-soft-reveal {
+      animation: softReveal 0.7s cubic-bezier(0.22, 1, 0.36, 1) forwards;
+    }
+
+    @keyframes unfoldPiece {
+      from { opacity: 0; transform: translateY(8px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+
+    .piece-reveal {
+      animation: unfoldPiece 0.45s cubic-bezier(0.22, 1, 0.36, 1) forwards;
+    }
+
+    /* Slider de volume âmbar acessível */
+    input[type="range"].amber-slider {
+      -webkit-appearance: none;
+      appearance: none;
+      background: rgba(212, 166, 106, 0.24);
+      height: 6px;
+      border-radius: 999px;
+      outline: none;
+    }
+
+    input[type="range"].amber-slider::-webkit-slider-thumb {
+      -webkit-appearance: none;
+      appearance: none;
+      width: 18px;
+      height: 18px;
+      border-radius: 50%;
+      background: #E5C496;
+      border: 2px solid #18120E;
+      cursor: pointer;
+      box-shadow: 0 2px 6px rgba(0, 0, 0, 0.45);
+    }
+
+    input[type="range"].amber-slider::-moz-range-thumb {
+      width: 18px;
+      height: 18px;
+      border-radius: 50%;
+      background: #E5C496;
+      border: 2px solid #18120E;
+      cursor: pointer;
+      box-shadow: 0 2px 6px rgba(0, 0, 0, 0.45);
+    }
+
+    /* Respeito integral às preferências de redução de movimento */
+    [hidden] { display: none !important; }
+    .letter-page:focus { outline: none; }
+    .page-dot {
+      position: relative;
+      width: 32px !important;
+      height: 28px !important;
+      background: transparent !important;
+      flex-shrink: 0;
+    }
+    .page-dot::after {
+      content: "";
+      position: absolute;
+      left: 50%;
+      top: 50%;
+      width: 10px;
+      height: 10px;
+      border-radius: 999px;
+      background: rgba(142, 95, 45, .35);
+      transform: translate(-50%, -50%);
+    }
+    .page-dot[aria-current="true"]::after { width: 25px; background: #18120E; }
+
+    /* Ajustes de encaixe no celular; a composição original permanece. */
+    @media (max-width: 639px) {
+      #audio-topbar { position: fixed; top: 0; left: 0; }
+      #stage-arrival { min-height: 100svh; padding: 22px 18px; }
+      #stage-tribute { padding-left: 12px; padding-right: 12px; }
+      #carta-interativa { scroll-margin-top: 76px; }
+      #carta-interativa > div:first-child { flex-wrap: nowrap; align-items: center; }
+      #carta-interativa h3 { font-size: 26px; }
+      #letter-progress-label { font-size: 11px; line-height: 1.45; max-width: 205px; }
+      #btn-toggle-full-letter { max-width: 110px; min-height: 44px; padding: 8px 10px; flex-shrink: 0; font-size: 11px; }
+      #letter-card-surface { padding: 8px; }
+      #letter-card-surface > div {
+        height: calc(100svh - 190px);
+        min-height: 340px;
+        padding: 14px 14px 12px;
+      }
+      #letter-card-surface > div > div:first-child {
+        padding-bottom: 10px;
+        font-size: 9px;
+        letter-spacing: .08em;
+        gap: 8px;
+        flex-shrink: 0;
+      }
+      #letter-pages-container {
+        min-height: 0;
+        overflow-y: auto;
+        overscroll-behavior-y: contain;
+        -webkit-overflow-scrolling: touch;
+        padding: 16px 2px;
+        justify-content: flex-start;
+      }
+      .letter-page { font-size: 18px; line-height: 1.7; margin-top: 0 !important; }
+      .letter-page > * + * { margin-top: 12px; }
+      #letter-pagination-nav { padding-top: 8px; flex-shrink: 0; }
+      #letter-pagination-nav > div + div { margin-top: 8px; }
+      #letter-pagination-nav > div:first-child { gap: 4px; }
+      #btn-prev-page, #btn-next-page { min-height: 48px; padding: 10px 12px; font-size: 13px; }
+      #letter-card-surface.full-letter-mode > div { height: auto; }
+      #letter-card-surface.full-letter-mode #letter-pages-container { overflow: visible; }
+    }
+
+    @media (prefers-reduced-motion: reduce) {
+      *, *::before, *::after {
+        animation-duration: 0.01ms !important;
+        animation-iteration-count: 1 !important;
+        transition-duration: 0.15s !important;
+        scroll-behavior: auto !important;
+      }
+      .seal-pulse, .heart-pulse, .vinyl-disc {
+        animation: none !important;
+      }
+    }
+  </style>
 </head>
-<body>
-  <a class="skip-link" href="#letter-title">Ir para a carta</a>
-  <header class="masthead">
-    <span class="dedication">De Israel, para o meu pai</span>
-    <time datetime="2026-11-26">26 de novembro de 2026</time>
+
+<body class="ambient-backdrop font-sans selection:bg-amberwarm-400/30 selection:text-linen-50 relative">
+
+  <!-- Canvas de partículas douradas e luz suave de fim de tarde -->
+  <canvas
+    id="sunbeam-particles"
+    aria-hidden="true"
+    class="fixed inset-0 w-full h-full pointer-events-none z-0"
+  ></canvas>
+
+  <!-- Notificação flutuante discreta (substitui qualquer alert nativo) -->
+  <div
+    id="toast-feedback"
+    role="status"
+    aria-live="polite"
+    class="fixed bottom-6 left-1/2 -translate-x-1/2 z-50 pointer-events-none opacity-0 translate-y-3 transition-all duration-300 max-w-[92vw] sm:max-w-md bg-espresso-800/95 backdrop-blur-md border border-amberwarm-400/45 text-linen-50 px-5 py-3.5 rounded-2xl shadow-2xl flex items-center gap-3 text-sm sm:text-base font-medium"
+  >
+    <span class="w-2.5 h-2.5 rounded-full bg-amberwarm-400 shrink-0"></span>
+    <span id="toast-text">Batida iniciada.</span>
+  </div>
+
+  <!-- =========================================================================
+       BARRA SUPERIOR DA TRILHA SONORA (Exibida após abrir o envelope)
+       ========================================================================= -->
+  <header
+    id="audio-topbar"
+    aria-label="Controles da trilha sonora"
+    class="hidden sticky top-0 z-40 w-full bg-espresso-950/90 backdrop-blur-md border-b border-amberwarm-400/20 transition-opacity duration-500"
+  >
+    <div class="max-w-2xl mx-auto px-4 py-2.5 flex items-center justify-between gap-2.5">
+      <!-- Equalizador ao vivo + nome da batida atual -->
+      <div class="flex items-center gap-3 min-w-0 flex-1">
+        <div class="w-9 h-9 rounded-full bg-amberwarm-400/12 border border-amberwarm-400/35 flex items-center justify-center shrink-0">
+          <div class="flex items-end gap-[2.5px] h-4 w-4 justify-center" aria-hidden="true">
+            <span id="mini-eq-0" class="w-1 bg-amberwarm-400 rounded-full transition-all duration-75" style="height: 32%"></span>
+            <span id="mini-eq-1" class="w-1 bg-amberwarm-200 rounded-full transition-all duration-75" style="height: 55%"></span>
+            <span id="mini-eq-2" class="w-1 bg-amberwarm-400 rounded-full transition-all duration-75" style="height: 36%"></span>
+          </div>
+        </div>
+        <div class="min-w-0">
+          <p id="header-track-title" class="text-xs sm:text-sm font-medium text-linen-50 truncate">
+            Batida Lo-Fi Soul &amp; Café
+          </p>
+          <p id="header-track-sub" class="text-[11px] sm:text-xs text-amberwarm-300/80 truncate">
+            78 BPM · Rhodes, baixo quente e batida macia
+          </p>
+        </div>
+      </div>
+
+      <!-- Controles: Volume, Mudo e Play/Pause -->
+      <div class="flex items-center gap-2 shrink-0">
+        <div class="hidden sm:flex items-center gap-2 pr-1">
+          <label for="beat-volume" class="text-[11px] text-amberwarm-300/80">Vol.</label>
+          <input
+            id="beat-volume"
+            type="range"
+            min="0"
+            max="1"
+            step="0.05"
+            value="0.8"
+            class="amber-slider w-20 cursor-pointer"
+          />
+        </div>
+
+        <button
+          id="btn-top-mute"
+          type="button"
+          class="min-h-[42px] min-w-[42px] p-2 rounded-xl bg-espresso-800/85 hover:bg-espresso-700 border border-amberwarm-400/25 text-linen-100 flex items-center justify-center transition focus:outline-none focus:ring-2 focus:ring-amberwarm-300"
+          aria-label="Silenciar ou ativar som"
+          title="Silenciar / Ativar som"
+        >
+          <svg id="icon-unmuted" class="w-4 h-4" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9">
+            <polygon points="11 5 6 9 2 9 2 15 6 15 11 19 11 5" />
+            <path stroke-linecap="round" d="M15.54 8.46a5 5 0 0 1 0 7.07M19.07 4.93a10 10 0 0 1 0 14.14" />
+          </svg>
+          <svg id="icon-muted" class="w-4 h-4 hidden text-amberwarm-300" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9">
+            <polygon points="11 5 6 9 2 9 2 15 6 15 11 19 11 5" />
+            <line x1="23" y1="9" x2="17" y2="15" stroke-linecap="round" />
+            <line x1="17" y1="9" x2="23" y2="15" stroke-linecap="round" />
+          </svg>
+        </button>
+
+        <button
+          id="btn-header-beat"
+          type="button"
+          class="min-h-[42px] px-4 py-1.5 rounded-xl bg-amberwarm-400 hover:bg-amberwarm-300 active:scale-[0.98] text-espresso-950 text-xs sm:text-sm font-semibold flex items-center gap-2 shadow-md transition focus:outline-none focus:ring-2 focus:ring-amberwarm-200"
+          aria-label="Reproduzir ou pausar a música"
+        >
+          <span id="header-play-icon" aria-hidden="true">▶</span>
+          <span id="header-play-label">Tocar</span>
+        </button>
+      </div>
+    </div>
   </header>
 
-  <main>
-    <section class="arrival" id="cover" aria-labelledby="cover-title" hidden>
-      <div class="arrival-copy">
-        <p class="recipient">José Randolfo de Lemos</p>
-        <h1 id="cover-title">Feliz 72 anos,<br>Paizão.</h1>
-        <p class="cover-note">Uma vida de histórias.<br>Um coração de pai.</p>
-        <p class="cover-invitation">Preparei uma carta e um som tranquilo<br class="desktop-break"> para você aproveitar sem pressa.</p>
-        <button class="button button-gold" id="open-letter" type="button" aria-controls="letter-section" aria-expanded="false">Abrir minha carta</button>
+  <!-- =========================================================================
+       CONTEÚDO PRINCIPAL DA EXPERIÊNCIA
+       ========================================================================= -->
+  <main class="relative z-10 w-full">
+
+    <!-- =======================================================================
+         ETAPA 1 & 2 — A CHEGADA E A ABERTURA DO ENVELOPE 3D COM SELO DE CERA
+         ======================================================================= -->
+    <section
+      id="stage-arrival"
+      aria-label="Chegada e envelope da homenagem"
+      class="min-h-[100dvh] w-full max-w-2xl mx-auto px-5 py-8 sm:py-12 flex flex-col items-center justify-between text-center transition-all duration-700"
+    >
+      <!-- Cabeçalho Comemorativo -->
+      <div class="w-full space-y-2 sm:space-y-3 pt-1">
+        <p class="text-xs sm:text-sm uppercase tracking-[0.24em] text-amberwarm-300/90 font-medium">
+          26 de novembro de 2026
+        </p>
+
+        <!-- Gatilho secreto para o autor (5 toques rápidos abre o Estúdio de Exportação) -->
+        <div class="flex items-center justify-center gap-3 select-none" id="secret-author-trigger">
+          <span class="h-[1px] w-8 sm:w-12 bg-gradient-to-r from-transparent to-amberwarm-400/60"></span>
+          <span class="font-display text-base sm:text-lg tracking-[0.2em] text-linen-200/85">
+            1954 — 2026
+          </span>
+          <span class="h-[1px] w-8 sm:w-12 bg-gradient-to-l from-transparent to-amberwarm-400/60"></span>
+        </div>
+
+        <!-- Destaque escultórico para os 72 anos -->
+        <div class="pt-1 pb-0.5 flex flex-col items-center justify-center">
+          <div class="inline-flex items-baseline gap-2.5">
+            <span class="font-display font-bold text-6xl sm:text-7xl md:text-8xl leading-none gold-numeral tracking-tight">
+              72
+            </span>
+            <span class="font-display italic text-2xl sm:text-3xl text-amberwarm-300 tracking-wide">
+              anos
+            </span>
+          </div>
+        </div>
+
+        <h1 class="font-display font-semibold text-3xl sm:text-4xl md:text-[2.65rem] text-linen-50 tracking-wide leading-tight pt-0.5">
+          José Randolfo de Lemos
+        </h1>
+
+        <p class="font-serif italic text-sm sm:text-base text-amberwarm-200/90 max-w-md mx-auto leading-relaxed pt-1">
+          Uma vida de histórias. Um coração de pai. Preparei um som tranquilo e algumas palavras para ler como quem toma um café sem pressa.
+        </p>
       </div>
 
-      <div class="envelope-area">
-        <button class="envelope-button" id="envelope-button" type="button" aria-label="Abrir a carta de aniversário" aria-controls="letter-section" aria-expanded="false">
-          <span class="envelope-scene" aria-hidden="true">
-            <span class="envelope-back"></span>
-            <span class="envelope-paper"><span>Com todo o meu carinho,</span><span class="paper-name">Pai.</span><span>Israel</span></span>
-            <span class="envelope-front"></span>
-            <span class="envelope-flap"></span>
-            <span class="envelope-seal">I</span>
+      <!-- Centro da Composição: Envelope Virtual Artesanal com Selo de Cera -->
+      <div class="w-full my-6 sm:my-8 flex flex-col items-center">
+        <button
+          id="envelope-trigger"
+          type="button"
+          aria-expanded="false"
+          aria-label="Pai, preparei algo especial para você. Toque para abrir a carta e soltar o som."
+          class="group relative w-full max-w-[350px] sm:max-w-[410px] focus:outline-none focus-visible:ring-2 focus-visible:ring-amberwarm-300 focus-visible:ring-offset-4 focus-visible:ring-offset-espresso-950 rounded-2xl cursor-pointer select-none"
+        >
+          <!-- Halo luminoso quente atrás do envelope -->
+          <div
+            aria-hidden="true"
+            class="absolute -inset-4 rounded-3xl bg-amberwarm-400/12 blur-2xl opacity-75 group-hover:opacity-100 transition duration-500"
+          ></div>
+
+          <!-- Palco 3D do Envelope -->
+          <div id="envelope-stage" class="envelope-perspective relative w-full aspect-[1.48/1] rounded-xl">
+
+            <!-- Fundo interno escuro e forro quente do envelope -->
+            <div class="absolute inset-0 rounded-xl bg-gradient-to-b from-[#332417] via-[#221811] to-[#120D0A] border border-amberwarm-400/45 shadow-2xl overflow-hidden">
+              <div class="absolute inset-2 border border-amberwarm-400/20 rounded-lg pointer-events-none"></div>
+            </div>
+
+            <!-- Folha de papel linho no interior (sobe suavemente ao abrir) -->
+            <div
+              class="envelope-card-preview absolute left-[6%] right-[6%] top-[10%] bottom-[10%] z-10 rounded-lg noble-linen px-5 py-4 flex flex-col items-center justify-start text-center border border-amberwarm-500/40 shadow-lg"
+              aria-hidden="true"
+            >
+              <div class="w-full border border-amberwarm-500/30 rounded-md py-3 px-3 h-full flex flex-col items-center justify-start">
+                <span class="text-[10px] uppercase tracking-[0.25em] text-amberwarm-600 font-semibold">
+                  26 · XI · 2026 · ☕
+                </span>
+                <p class="font-display italic text-lg sm:text-xl text-roast-900 mt-1">
+                  Feliz 72 anos, Paizão!
+                </p>
+                <div class="w-12 h-[1px] bg-amberwarm-500/50 my-2"></div>
+                <p class="font-serif text-xs text-roast-700">
+                  Com saudade e carinho, seu filho, Israel.
+                </p>
+              </div>
+            </div>
+
+            <!-- Dobras laterais e inferior do envelope em papel espresso nobre -->
+            <svg
+              class="absolute inset-0 w-full h-full z-20 pointer-events-none rounded-xl overflow-hidden"
+              viewBox="0 0 400 270"
+              preserveAspectRatio="none"
+              aria-hidden="true"
+            >
+              <defs>
+                <linearGradient id="envLeft" x1="0%" y1="0%" x2="100%" y2="100%">
+                  <stop offset="0%" stop-color="#2E2219" />
+                  <stop offset="100%" stop-color="#19120D" />
+                </linearGradient>
+                <linearGradient id="envRight" x1="100%" y1="0%" x2="0%" y2="100%">
+                  <stop offset="0%" stop-color="#2E2219" />
+                  <stop offset="100%" stop-color="#17110C" />
+                </linearGradient>
+                <linearGradient id="envBottom" x1="50%" y1="0%" x2="50%" y2="100%">
+                  <stop offset="0%" stop-color="#35271D" />
+                  <stop offset="100%" stop-color="#1A130E" />
+                </linearGradient>
+              </defs>
+
+              <polygon points="0,0 205,142 0,270" fill="url(#envLeft)" stroke="rgba(212,166,106,0.3)" stroke-width="1" />
+              <polygon points="400,0 195,142 400,270" fill="url(#envRight)" stroke="rgba(212,166,106,0.3)" stroke-width="1" />
+              <polygon points="0,270 200,132 400,270" fill="url(#envBottom)" stroke="rgba(212,166,106,0.45)" stroke-width="1.2" />
+              <polyline points="16,266 200,141 384,266" fill="none" stroke="rgba(212,166,106,0.22)" stroke-width="0.9" />
+            </svg>
+
+            <!-- Aba Superior Articulada (abre em 3D no toque) -->
+            <div class="envelope-flap absolute inset-x-0 top-0 h-[58%] z-30 pointer-events-none">
+              <svg class="w-full h-full drop-shadow-[0_10px_14px_rgba(0,0,0,0.58)]" viewBox="0 0 400 158" preserveAspectRatio="none" aria-hidden="true">
+                <defs>
+                  <linearGradient id="envTopFlap" x1="50%" y1="0%" x2="50%" y2="100%">
+                    <stop offset="0%" stop-color="#3D2D21" />
+                    <stop offset="100%" stop-color="#221912" />
+                  </linearGradient>
+                </defs>
+                <polygon points="0,0 400,0 200,154" fill="url(#envTopFlap)" stroke="rgba(212,166,106,0.52)" stroke-width="1.3" />
+                <polyline points="18,6 200,144 382,6" fill="none" stroke="rgba(212,166,106,0.25)" stroke-width="0.9" />
+              </svg>
+            </div>
+
+            <!-- Selo de Cera Artesanal Dourado-Âmbar no centro -->
+            <div
+              class="wax-seal-wrapper seal-pulse absolute left-1/2 top-[55%] -translate-x-1/2 -translate-y-1/2 z-40 w-[74px] h-[74px] sm:w-[82px] sm:h-[82px] rounded-full flex items-center justify-center group-hover:scale-105 transition-transform"
+              aria-hidden="true"
+            >
+              <svg viewBox="0 0 100 100" class="w-full h-full">
+                <defs>
+                  <radialGradient id="waxGold" cx="35%" cy="30%" r="70%">
+                    <stop offset="0%" stop-color="#F7E6C4" />
+                    <stop offset="45%" stop-color="#CC9B56" />
+                    <stop offset="85%" stop-color="#8C5D24" />
+                    <stop offset="100%" stop-color="#664114" />
+                  </radialGradient>
+                  <radialGradient id="waxInner" cx="60%" cy="65%" r="65%">
+                    <stop offset="0%" stop-color="#B88342" />
+                    <stop offset="100%" stop-color="#7A4F1C" />
+                  </radialGradient>
+                </defs>
+                <path
+                  d="M50 3 C63 2, 76 7, 85 16 C94 25, 98 37, 97 50 C98 64, 92 76, 83 85 C74 93, 62 98, 50 97 C37 98, 24 93, 15 84 C7 75, 2 63, 3 50 C2 36, 8 24, 17 15 C26 7, 38 4, 50 3 Z"
+                  fill="url(#waxGold)"
+                />
+                <circle cx="50" cy="50" r="35" fill="url(#waxInner)" stroke="#F5E2BC" stroke-opacity="0.58" stroke-width="1.5" />
+                <circle cx="50" cy="50" r="30.5" fill="none" stroke="#54340D" stroke-opacity="0.55" stroke-width="1" stroke-dasharray="2.5 2.5" />
+                <text x="50" y="54" text-anchor="middle" fill="#FCF6E8" font-family="Cormorant Garamond, Georgia, serif" font-weight="700" font-size="24" letter-spacing="1">
+                  JR
+                </text>
+                <text x="50" y="69" text-anchor="middle" fill="#F5E2BC" font-family="Inter, sans-serif" font-weight="600" font-size="8.5" letter-spacing="2">
+                  72
+                </text>
+              </svg>
+            </div>
+          </div>
+
+          <!-- Botão afetivo de abertura -->
+          <div class="mt-7 inline-flex items-center justify-center gap-2.5 px-6 py-3.5 rounded-2xl bg-amberwarm-400/18 group-hover:bg-amberwarm-400/28 border border-amberwarm-400/50 text-linen-50 shadow-xl transition">
+            <span class="text-base sm:text-lg font-medium leading-snug">
+              Pai, preparei algo especial para você. Toque para abrir.
+            </span>
+          </div>
+          <span class="block mt-2.5 text-xs text-amberwarm-300/75">
+            (Aumente o som do celular para ouvir a música junto com a carta)
           </span>
         </button>
-        <p class="envelope-caption">Uma carta para guardar no coração.</p>
       </div>
-      <div class="arrival-foot"><span>1954 — 2026</span><span>Feito com carinho, por Israel.</span></div>
+
+      <!-- Rodapé sutil de respiro na chegada -->
+      <div class="pb-1 text-xs text-linen-300/60 tracking-widest uppercase">
+        De seu filho, Israel
+      </div>
     </section>
 
-    <section class="letter-section" id="letter-section" aria-labelledby="letter-title">
-      <div class="letter-tools" id="letter-tools" hidden>
-        <button class="quiet-button" id="back-to-cover" type="button"><span aria-hidden="true">←</span> Voltar ao envelope</button>
-        <button class="quiet-button" id="increase-type" type="button" aria-pressed="false" aria-label="Aumentar o tamanho do texto"><span class="type-icon" aria-hidden="true">A+</span> Texto maior</button>
-      </div>
-
-      <article class="letter" id="letter">
-        <div class="letter-meta"><span>Para José Randolfo</span><time datetime="2026-11-26">26.11.2026</time></div>
-        <h2 id="letter-title" tabindex="-1">Feliz 72 anos,<br>Paizão!</h2>
-        <div class="letter-body" id="letter-body">
-          <p>Hoje é dia de parar um pouco a correria e celebrar com calma a vida de um homem que, à sua maneira, sempre fez do amor pelos filhos uma de suas maiores razões de viver.</p>
-          <p>Com suas virtudes, suas excentricidades, seus ocasionais rompantes de nervosismo e, claro, seu inabalável fanatismo pelo Lula — afinal, ninguém é perfeito! 😂</p>
-          <p>Brincadeiras à parte, meu velho, tenho muito orgulho de ser seu filho e de saber exatamente de onde eu vim.</p>
-          <p>Sei o quanto você se preocupa comigo e com nossa família. Reconheço de coração os seus esforços, suas renúncias silenciosas e todas as vezes em que colocou nossas necessidades à frente das suas.</p>
-          <p>Às vezes a vida corre, os dias vão espichando os silêncios e talvez eu nem sempre tenha conseguido estar tão perto ou demonstrar o quanto reconheço tudo isso.</p>
-          <p>Mas quero que saiba que, mesmo quando a gente se fala menos, você nunca sai das minhas lembranças. Sua presença, seu cuidado e seu amor têm um valor imensurável para mim.</p>
-          <p>Neste novo ciclo, desejo que você também se permita viver mais para si, com mais leveza. Que tenha tranquilidade, saúde, liberdade, um bom café passado na hora, boas conversas, muitas risadas e momentos felizes ao lado das pessoas que ama.</p>
-          <p>Você merece receber de volta todo o carinho que dedicou aos seus filhos durante a vida inteira.</p>
-          <p>Que Deus abençoe seus caminhos, cuide da sua saúde e nos permita encurtar distâncias e compartilhar muitos outros aniversários juntos.</p>
-          <p class="letter-emphasis">Parabéns, meu velho! Receba o meu abraço mais apertado.</p>
-          <p class="letter-love">Amo muito você, pai.</p>
-          <div class="signature"><p>Com saudade e muito carinho,</p><p class="signature-name">Seu filho, Israel.</p></div>
+    <!-- =======================================================================
+         ETAPA 3 & 4 — A HOMENAGEM: VITROLA, FOTO, CARTA EM 5 PARTES E FINAL
+         ======================================================================= -->
+    <section
+      id="stage-tribute"
+      aria-label="Homenagem aberta de aniversário"
+      class="hidden opacity-0 transition-opacity duration-700 w-full max-w-2xl mx-auto px-4 sm:px-6 pt-7 pb-16 sm:pt-10 sm:pb-24 space-y-10 sm:space-y-12"
+    >
+      <!-- Cabeçalho da Homenagem Aberta -->
+      <div class="text-center animate-soft-reveal">
+        <p class="text-xs sm:text-sm uppercase tracking-[0.24em] text-amberwarm-300/90 font-medium">
+          1954 — 2026
+        </p>
+        <div class="mt-1 flex items-center justify-center gap-3">
+          <span class="h-[1px] w-10 bg-gradient-to-r from-transparent to-amberwarm-400/60"></span>
+          <span class="font-display font-bold text-5xl sm:text-6xl gold-numeral leading-none">72</span>
+          <span class="font-display italic text-xl sm:text-2xl text-amberwarm-300">anos</span>
+          <span class="h-[1px] w-10 bg-gradient-to-l from-transparent to-amberwarm-400/60"></span>
         </div>
-      </article>
+        <h2 class="font-display font-semibold text-3xl sm:text-4xl text-linen-50 mt-1.5">
+          José Randolfo de Lemos
+        </h2>
+      </div>
 
-      <div class="closing">
-        <p>Que venham muitos outros<br>capítulos dessa história.</p>
-        <span>Feliz vida, Pai!</span>
+      <!-- MOLDURA DA FOTOGRAFIA ORIGINAL (aparece automaticamente se assets/images/pai.jpg existir) -->
+      <figure
+        id="father-photo-container"
+        class="hidden mx-auto max-w-md animate-soft-reveal"
+      >
+        <div class="p-2.5 sm:p-3.5 rounded-2xl bg-gradient-to-b from-linen-50 to-linen-200 border border-amberwarm-400/60 shadow-[0_22px_50px_rgba(0,0,0,0.68)]">
+          <div class="rounded-xl overflow-hidden border border-amberwarm-500/35 bg-espresso-900/10">
+            <img
+              id="father-photo"
+              src="assets/images/pai.jpg"
+              alt="Fotografia de José Randolfo de Lemos"
+              class="w-full max-h-[470px] h-auto object-contain mx-auto block"
+            />
+          </div>
+          <figcaption class="pt-2.5 pb-0.5 text-center font-display italic text-base sm:text-lg text-roast-800">
+            José Randolfo de Lemos · 26 de novembro de 2026
+          </figcaption>
+        </div>
+      </figure>
+
+      <!-- BRASÃO TIPOGRÁFICO ELEGANTE (exibido automaticamente caso não haja pai.jpg) -->
+      <div
+        id="typographic-crest"
+        class="mx-auto max-w-md rounded-2xl bg-espresso-900/80 border border-amberwarm-400/30 px-6 py-5 text-center shadow-xl animate-soft-reveal"
+      >
+        <div class="flex items-center justify-center gap-3 mb-2" aria-hidden="true">
+          <span class="h-[1px] w-12 bg-gradient-to-r from-transparent to-amberwarm-400/70"></span>
+          <svg class="w-4 h-4 text-amberwarm-400" viewBox="0 0 24 24" fill="currentColor">
+            <path d="M12 2L14.6 8.5L21.5 9.2L16.3 13.8L17.8 20.6L12 17L6.2 20.6L7.7 13.8L2.5 9.2L9.4 8.5L12 2Z" />
+          </svg>
+          <span class="h-[1px] w-12 bg-gradient-to-l from-transparent to-amberwarm-400/70"></span>
+        </div>
+        <p class="font-display italic text-lg sm:text-xl text-linen-100 leading-relaxed">
+          “Uma vida de histórias. Um coração de pai. Um amor que atravessa gerações.”
+        </p>
+        <p class="mt-2 text-xs uppercase tracking-[0.22em] text-amberwarm-300/80">
+          26 de novembro de 1954 — 26 de novembro de 2026
+        </p>
       </div>
-      <div class="share-actions" id="share-actions" hidden>
-        <button class="button button-outline" id="share-card" type="button">Compartilhar a homenagem</button>
-        <button class="quiet-button" id="copy-link" type="button">Copiar link</button>
+
+      <!-- =====================================================================
+           VITROLA INTERATIVA — 3 BATIDAS ORIGINAIS PARA ACOMPANHAR A LEITURA
+           ===================================================================== -->
+      <div
+        id="turntable-stage"
+        class="relative mx-auto max-w-md rounded-3xl bg-espresso-900/90 border border-amberwarm-400/30 p-5 sm:p-6 shadow-2xl space-y-4 animate-soft-reveal"
+      >
+        <div class="flex flex-col sm:flex-row items-center gap-5">
+          <!-- Disco de Vinil Tocável + Braço da Vitrola -->
+          <div class="relative w-32 h-32 sm:w-36 sm:h-36 shrink-0 flex items-center justify-center">
+            <div
+              id="beat-kick-halo"
+              aria-hidden="true"
+              class="beat-halo absolute -inset-2.5 rounded-full bg-amberwarm-400/15 blur-xl opacity-40 pointer-events-none"
+            ></div>
+
+            <button
+              id="btn-vinyl-disc"
+              type="button"
+              aria-label="Tocar ou pausar a música"
+              class="vinyl-disc relative w-28 h-28 sm:w-32 sm:h-32 rounded-full flex items-center justify-center cursor-pointer focus:outline-none focus:ring-2 focus:ring-amberwarm-300"
+            >
+              <div
+                aria-hidden="true"
+                class="absolute inset-0 rounded-full bg-gradient-to-tr from-transparent via-white/5 to-transparent pointer-events-none"
+              ></div>
+              <div class="w-11 h-11 sm:w-12 sm:h-12 rounded-full bg-gradient-to-b from-amberwarm-200 to-amberwarm-500 border-2 border-espresso-950 flex flex-col items-center justify-center text-espresso-950 shadow-inner">
+                <span class="font-display font-bold text-xs leading-none">72</span>
+                <span class="text-[7px] uppercase tracking-widest font-semibold mt-0.5">Lado A</span>
+                <span class="w-1.5 h-1.5 rounded-full bg-espresso-950 mt-0.5"></span>
+              </div>
+            </button>
+
+            <svg
+              aria-hidden="true"
+              class="tonearm absolute -right-2 -top-1 w-14 h-20 pointer-events-none drop-shadow-lg"
+              viewBox="0 0 80 110"
+              fill="none"
+            >
+              <circle cx="62" cy="20" r="10" fill="#35281F" stroke="#D4A66A" stroke-width="2" />
+              <circle cx="62" cy="20" r="4" fill="#E5C496" />
+              <path d="M62 20 L48 76 L34 92" stroke="#E5C496" stroke-width="3.2" stroke-linecap="round" stroke-linejoin="round" />
+              <rect x="27" y="88" width="12" height="8" rx="2" transform="rotate(-38 27 88)" fill="#D4A66A" />
+            </svg>
+          </div>
+
+          <!-- Informações da faixa + visualizador em tempo real -->
+          <div class="flex-1 w-full text-center sm:text-left space-y-2.5 min-w-0">
+            <div>
+              <p class="text-[11px] uppercase tracking-[0.2em] text-amberwarm-300/80 font-semibold">
+                Trilha Sonora da Carta
+              </p>
+              <p id="deck-track-name" class="font-display text-xl sm:text-2xl font-semibold text-linen-50 leading-tight truncate">
+                Batida Lo-Fi Soul &amp; Café
+              </p>
+              <p id="deck-track-desc" class="text-xs text-amberwarm-200/80 leading-snug">
+                78 BPM · Rhodes, baixo quente e batida macia
+              </p>
+            </div>
+
+            <canvas
+              id="beat-visualizer"
+              aria-hidden="true"
+              class="w-full h-9 rounded-xl bg-espresso-950/80 border border-amberwarm-400/15 block"
+            ></canvas>
+          </div>
+        </div>
+
+        <!-- Seletor das 3 batidas musicais -->
+        <div class="space-y-2 pt-1 border-t border-amberwarm-400/15">
+          <span class="block text-[11px] text-center uppercase tracking-[0.18em] text-amberwarm-300/75 font-medium">
+            Escolha a batida para acompanhar a leitura:
+          </span>
+          <div class="grid grid-cols-1 sm:grid-cols-3 gap-2" role="group" aria-label="Estilos musicais">
+            <button
+              type="button"
+              data-groove="0"
+              class="groove-btn min-h-[42px] px-3 py-2 rounded-xl bg-amberwarm-400 text-espresso-950 font-semibold text-xs transition border border-amberwarm-300 shadow"
+            >
+              1. Lo-Fi Soul &amp; Café
+            </button>
+            <button
+              type="button"
+              data-groove="1"
+              class="groove-btn min-h-[42px] px-3 py-2 rounded-xl bg-espresso-950/80 hover:bg-espresso-800 text-amberwarm-200 font-medium text-xs transition border border-amberwarm-400/30"
+            >
+              2. Bossa &amp; Saudade
+            </button>
+            <button
+              type="button"
+              data-groove="2"
+              class="groove-btn min-h-[42px] px-3 py-2 rounded-xl bg-espresso-950/80 hover:bg-espresso-800 text-amberwarm-200 font-medium text-xs transition border border-amberwarm-400/30"
+            >
+              3. Estrada &amp; Chuva
+            </button>
+          </div>
+        </div>
       </div>
-      <div class="copy-fallback" id="copy-fallback" hidden>
-        <label for="card-link">Selecione e copie este endereço:</label>
-        <input id="card-link" type="url" readonly>
+
+      <!-- =====================================================================
+           A CARTA EM PÁGINAS INTERATIVAS (1 CARTÃO POR PÁGINA)
+           ===================================================================== -->
+      <div id="carta-interativa" class="scroll-mt-20 space-y-4 animate-soft-reveal">
+        <div class="flex flex-wrap items-center justify-between gap-2 px-1">
+          <div>
+            <h3 class="font-display text-2xl sm:text-3xl font-semibold text-linen-50">
+              Para você, Pai
+            </h3>
+            <p id="letter-progress-label" class="text-xs text-amberwarm-300/90">
+              Página 1 de 5 · Use os botões abaixo para virar a página
+            </p>
+          </div>
+
+          <button
+            id="btn-toggle-full-letter"
+            type="button"
+            class="min-h-[40px] px-3.5 py-1.5 rounded-xl bg-espresso-800/90 hover:bg-espresso-700 border border-amberwarm-400/35 text-xs font-medium text-amberwarm-200 transition"
+          >
+            Ler tudo de uma vez
+          </button>
+        </div>
+
+        <!-- Papel artesanal com textura de linho e grãos sutis de café -->
+        <article
+          id="letter-card-surface"
+          aria-label="Carta de Israel para seu pai José Randolfo"
+          class="noble-linen text-roast-900 rounded-2xl sm:rounded-3xl p-3 sm:p-4"
+        >
+          <div class="rounded-xl sm:rounded-2xl border border-amberwarm-600/35 px-5 py-6 sm:px-9 sm:py-9 flex flex-col justify-between min-h-[370px] sm:min-h-[400px]">
+
+            <!-- Ornamento no topo da folha -->
+            <div class="flex items-center justify-between text-[11px] sm:text-xs uppercase tracking-[0.2em] text-amberwarm-600 font-semibold pb-4 border-b border-amberwarm-600/20">
+              <span>26 · Novembro · 2026</span>
+              <span id="letter-sheet-counter">Página 1 de 5 · ☕</span>
+            </div>
+
+            <!-- Container das 5 Páginas (exibe 1 por vez, ou todas no modo contínuo) -->
+            <div id="letter-pages-container" class="py-6 sm:py-7 flex-1 flex flex-col justify-center space-y-6">
+
+              <!-- PÁGINA 1 -->
+              <div data-page="0" class="letter-page piece-reveal space-y-4 font-serif text-[1.14rem] sm:text-[1.24rem] leading-[1.85] text-roast-900">
+                <span class="block text-[11px] font-sans uppercase tracking-[0.18em] text-amberwarm-600 font-semibold">
+                  Página 1 · Celebração
+                </span>
+                <p class="font-display font-bold text-3xl sm:text-4xl text-espresso-900 pb-0.5 leading-tight">
+                  Feliz 72 anos, Paizão!
+                </p>
+                <p>
+                  Hoje é dia de parar um pouco a correria e celebrar com calma a vida de um homem que, à sua maneira, sempre fez do amor pelos filhos uma de suas maiores razões de viver.
+                </p>
+                <p>
+                  Com suas virtudes, suas excentricidades, seus ocasionais rompantes de nervosismo e, claro, seu inabalável fanatismo pelo Lula — afinal, ninguém é perfeito! 😂
+                </p>
+              </div>
+
+              <!-- PÁGINA 2 -->
+              <div data-page="1" class="letter-page hidden space-y-4 font-serif text-[1.14rem] sm:text-[1.24rem] leading-[1.85] text-roast-900">
+                <span class="block text-[11px] font-sans uppercase tracking-[0.18em] text-amberwarm-600 font-semibold">
+                  Página 2 · Orgulho e raízes
+                </span>
+                <p>
+                  Brincadeiras à parte, meu velho, tenho muito orgulho de ser seu filho e de saber exatamente de onde eu vim.
+                </p>
+                <p>
+                  Sei o quanto você se preocupa comigo e com nossa família. Reconheço de coração os seus esforços, suas renúncias silenciosas e todas as vezes em que colocou nossas necessidades à frente das suas.
+                </p>
+              </div>
+
+              <!-- PÁGINA 3 -->
+              <div data-page="2" class="letter-page hidden space-y-4 font-serif text-[1.14rem] sm:text-[1.24rem] leading-[1.85] text-roast-900">
+                <span class="block text-[11px] font-sans uppercase tracking-[0.18em] text-amberwarm-600 font-semibold">
+                  Página 3 · O que o tempo não apaga
+                </span>
+                <p>
+                  Às vezes a vida corre, os dias vão espichando os silêncios e talvez eu nem sempre tenha conseguido estar tão perto ou demonstrar o quanto reconheço tudo isso.
+                </p>
+                <p>
+                  Mas quero que saiba que, mesmo quando a gente se fala menos, você nunca sai das minhas lembranças. Sua presença, seu cuidado e seu amor têm um valor imensurável para mim.
+                </p>
+              </div>
+
+              <!-- PÁGINA 4 -->
+              <div data-page="3" class="letter-page hidden space-y-4 font-serif text-[1.14rem] sm:text-[1.24rem] leading-[1.85] text-roast-900">
+                <span class="block text-[11px] font-sans uppercase tracking-[0.18em] text-amberwarm-600 font-semibold">
+                  Página 4 · Desejos para este novo ciclo
+                </span>
+                <p>
+                  Neste novo ciclo, desejo que você também se permita viver mais para si, com mais leveza. Que tenha tranquilidade, saúde, liberdade, um bom café passado na hora, boas conversas, muitas risadas e momentos felizes ao lado das pessoas que ama.
+                </p>
+                <p>
+                  Você merece receber de volta todo o carinho que dedicou aos seus filhos durante a vida inteira.
+                </p>
+              </div>
+
+              <!-- PÁGINA 5 -->
+              <div data-page="4" class="letter-page hidden space-y-4 font-serif text-[1.14rem] sm:text-[1.24rem] leading-[1.85] text-roast-900">
+                <span class="block text-[11px] font-sans uppercase tracking-[0.18em] text-amberwarm-600 font-semibold">
+                  Página 5 · O abraço final
+                </span>
+                <p>
+                  Que Deus abençoe seus caminhos, cuide da sua saúde e nos permita encurtar distâncias e compartilhar muitos outros aniversários juntos.
+                </p>
+                <p class="font-semibold text-espresso-900 pt-1">
+                  Parabéns, meu velho! Receba o meu abraço mais apertado.
+                </p>
+                <p class="font-semibold text-espresso-900">
+                  Amo muito você, pai.
+                </p>
+                <div class="pt-5 mt-5 border-t border-amberwarm-600/30 space-y-0.5">
+                  <p class="italic text-roast-700">
+                    Com saudade e muito carinho,
+                  </p>
+                  <p class="font-display font-bold text-2xl sm:text-3xl text-espresso-900">
+                    Seu filho, Israel.
+                  </p>
+                </div>
+              </div>
+
+            </div>
+
+            <!-- Navegação de Páginas da Carta (Anterior / Indicadores / Próxima) -->
+            <div id="letter-pagination-nav" class="pt-5 border-t border-amberwarm-600/25 space-y-4">
+              <!-- Bolinhas indicadoras de página (clicáveis) -->
+              <div class="flex items-center justify-center gap-2.5" role="group" aria-label="Páginas da carta">
+                <button type="button" data-goto="0" class="page-dot h-2.5 w-7 rounded-full bg-espresso-900 transition-all" aria-label="Ir para página 1"></button>
+                <button type="button" data-goto="1" class="page-dot h-2.5 w-2.5 rounded-full bg-amberwarm-600/35 hover:bg-amberwarm-600/60 transition-all" aria-label="Ir para página 2"></button>
+                <button type="button" data-goto="2" class="page-dot h-2.5 w-2.5 rounded-full bg-amberwarm-600/35 hover:bg-amberwarm-600/60 transition-all" aria-label="Ir para página 3"></button>
+                <button type="button" data-goto="3" class="page-dot h-2.5 w-2.5 rounded-full bg-amberwarm-600/35 hover:bg-amberwarm-600/60 transition-all" aria-label="Ir para página 4"></button>
+                <button type="button" data-goto="4" class="page-dot h-2.5 w-2.5 rounded-full bg-amberwarm-600/35 hover:bg-amberwarm-600/60 transition-all" aria-label="Ir para página 5"></button>
+              </div>
+
+              <!-- Botões grandes de navegação -->
+              <div class="flex items-center justify-between gap-3">
+                <button
+                  id="btn-prev-page"
+                  type="button"
+                  disabled
+                  class="min-h-[52px] px-4 sm:px-5 py-3 rounded-2xl border border-amberwarm-600/40 bg-linen-100 hover:bg-linen-200 disabled:opacity-35 disabled:pointer-events-none text-espresso-900 font-semibold text-sm sm:text-base flex items-center justify-center gap-2 transition"
+                >
+                  <span aria-hidden="true">←</span>
+                  <span>Anterior</span>
+                </button>
+
+                <button
+                  id="btn-next-page"
+                  type="button"
+                  class="min-h-[52px] flex-1 sm:flex-initial sm:min-w-[205px] px-5 py-3 rounded-2xl bg-espresso-900 hover:bg-espresso-800 active:scale-[0.99] text-amberwarm-200 font-semibold text-sm sm:text-base flex items-center justify-center gap-2 shadow-md transition"
+                >
+                  <span id="label-next-page">Próxima página</span>
+                  <span id="arrow-next-page" aria-hidden="true">→</span>
+                </button>
+              </div>
+            </div>
+
+          </div>
+        </article>
       </div>
-      <footer class="letter-footer">Uma homenagem de Israel Faria de Lemos.</footer>
+
+      <!-- =====================================================================
+           ENCERRAMENTO AFETIVO E BOTÕES DE AÇÃO
+           ===================================================================== -->
+      <footer
+        aria-label="Encerramento e opções da homenagem"
+        class="pt-9 pb-7 px-5 sm:px-8 rounded-3xl bg-espresso-900/85 border border-amberwarm-400/30 text-center shadow-2xl space-y-6"
+      >
+        <!-- Coração dourado com pulsação delicada -->
+        <div class="flex justify-center pt-1" aria-hidden="true">
+          <div class="heart-pulse w-14 h-14 rounded-full bg-amberwarm-400/12 border border-amberwarm-400/35 flex items-center justify-center">
+            <svg class="w-7 h-7 text-amberwarm-300 fill-current" viewBox="0 0 24 24">
+              <path d="M12 21.35l-1.45-1.32C5.4 15.36 2 12.28 2 8.5 2 5.42 4.42 3 7.5 3c1.74 0 3.41.81 4.5 2.09C13.09 3.81 14.76 3 16.5 3 19.58 3 22 5.42 22 8.5c0 3.78-3.4 6.86-8.55 11.54L12 21.35z"/>
+            </svg>
+          </div>
+        </div>
+
+        <div class="space-y-2 max-w-lg mx-auto">
+          <p class="font-serif text-lg sm:text-xl text-linen-100 leading-relaxed">
+            Que venham muitos outros capítulos dessa história.
+          </p>
+          <p class="font-display font-semibold text-3xl sm:text-4xl text-amberwarm-300 pt-1">
+            Feliz vida, Pai!
+          </p>
+          <p id="secret-footer-trigger" class="text-xs sm:text-sm uppercase tracking-[0.22em] text-amberwarm-200/75 pt-1 select-none">
+            26 de novembro de 2026
+          </p>
+        </div>
+
+        <div class="w-24 h-[1px] bg-gradient-to-r from-transparent via-amberwarm-400/50 to-transparent mx-auto"></div>
+
+        <!-- Botões grandes e confortáveis para celular -->
+        <div class="grid grid-cols-1 sm:grid-cols-2 gap-3.5 pt-1 max-w-lg mx-auto">
+          <button
+            id="btn-replay"
+            type="button"
+            class="min-h-[54px] w-full px-5 py-3.5 rounded-2xl bg-espresso-800/90 hover:bg-espresso-700 active:scale-[0.99] border border-amberwarm-400/35 text-linen-50 font-medium text-base flex items-center justify-center gap-3 transition focus:outline-none focus:ring-2 focus:ring-amberwarm-300"
+          >
+            <svg class="w-5 h-5 text-amberwarm-300 shrink-0" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" aria-hidden="true">
+              <path stroke-linecap="round" stroke-linejoin="round" d="M3 12a9 9 0 1 0 3-6.7L3 8" />
+              <path stroke-linecap="round" stroke-linejoin="round" d="M3 3v5h5" />
+            </svg>
+            <span>Rever do envelope</span>
+          </button>
+
+          <button
+            id="btn-footer-music"
+            type="button"
+            class="min-h-[54px] w-full px-5 py-3.5 rounded-2xl bg-amberwarm-400 hover:bg-amberwarm-300 active:scale-[0.99] text-espresso-950 font-semibold text-base flex items-center justify-center gap-3 shadow-lg transition focus:outline-none focus:ring-2 focus:ring-linen-50"
+          >
+            <span id="icon-footer-music" class="shrink-0" aria-hidden="true">▶</span>
+            <span id="label-footer-music">Tocar a música</span>
+          </button>
+        </div>
+      </footer>
     </section>
   </main>
 
-  <aside class="music-bar" id="music-bar" aria-label="Controles da música" hidden>
-    <div class="music-content">
-      <span class="music-mark" aria-hidden="true">♫</span>
-      <div class="music-description"><span id="track-name">Jingle do cartão</span><span id="track-status">Um som tranquilo para a sua leitura</span></div>
-      <button class="music-toggle" id="music-toggle" type="button" aria-label="Tocar música"><span id="play-symbol" aria-hidden="true" hidden>▶</span><span id="play-text">Tocar</span></button>
-      <button class="music-settings-toggle" id="music-settings-toggle" type="button" aria-expanded="false" aria-controls="music-settings">Som</button>
-    </div>
-    <div class="music-settings" id="music-settings" hidden>
-      <div class="track-options" id="track-options" aria-label="Escolher música" hidden>
-        <button class="track-option" id="choose-jingle" type="button" aria-pressed="true">Jingle do cartão</button>
-        <button class="track-option" id="choose-roberto" type="button" aria-pressed="false">Roberto Carlos</button>
+  <!-- =========================================================================
+       PAINEL DE PREPARAÇÃO DO AUTOR (EXCLUSIVO PARA ISRAEL — OCULTO AO PAI)
+       Permite testar a foto pai.jpg e baixar o ZIP pronto para o GitHub Pages
+       ========================================================================= -->
+  <aside
+    id="author-studio-modal"
+    role="dialog"
+    aria-modal="true"
+    aria-labelledby="author-studio-title"
+    class="hidden fixed inset-0 z-50 bg-black/80 backdrop-blur-sm p-4 overflow-y-auto flex items-start sm:items-center justify-center"
+  >
+    <div class="w-full max-w-2xl rounded-3xl bg-espresso-900 border border-amberwarm-400/40 shadow-2xl overflow-hidden my-4">
+      <div class="px-6 py-4 bg-espresso-950 border-b border-amberwarm-400/25 flex items-center justify-between gap-4">
+        <div>
+          <span class="text-[11px] uppercase tracking-[0.2em] text-amberwarm-300 font-semibold">
+            Modo Exclusivo do Autor (Invisível ao Homenageado)
+          </span>
+          <h3 id="author-studio-title" class="font-display text-2xl text-linen-50 font-semibold">
+            Preparação &amp; Exportação para GitHub Pages
+          </h3>
+        </div>
+        <button
+          id="btn-close-studio"
+          type="button"
+          class="min-h-[42px] min-w-[42px] rounded-xl bg-espresso-800 border border-amberwarm-400/30 text-linen-100 hover:text-white flex items-center justify-center"
+          aria-label="Fechar painel do autor"
+        >
+          ✕
+        </button>
       </div>
-      <div class="volume-row"><label for="music-volume">Volume</label><input id="music-volume" type="range" min="0" max="100" step="5" value="35"><button class="quiet-button" id="mute-music" type="button" aria-pressed="false">Silenciar</button></div>
-      <button class="quiet-button stop-button" id="close-music" type="button">Parar e fechar música</button>
+
+      <div class="p-6 space-y-6 text-sm text-linen-100 leading-relaxed max-h-[78vh] overflow-y-auto">
+        <!-- 1. Testar Foto Local -->
+        <div class="rounded-2xl bg-espresso-800/70 border border-amberwarm-400/25 p-4 space-y-3">
+          <h4 class="font-semibold text-amberwarm-300 text-base">
+            1. Adicionar Fotografia do seu Pai (Opcional)
+          </h4>
+          <p class="text-xs text-linen-200/85">
+            A foto escolhida abaixo fica apenas no seu navegador para pré-visualização imediata e já entra automaticamente como <code>assets/images/pai.jpg</code> no pacote <code>.zip</code>. A música já é 100% embutida no código (sem precisar subir MP3!).
+          </p>
+
+          <label class="block p-3.5 rounded-xl bg-espresso-950 border border-amberwarm-400/30 hover:border-amberwarm-300 cursor-pointer transition">
+            <span class="block text-xs font-semibold text-amberwarm-200 mb-1.5">Escolher foto original do seu pai (JPG/PNG)</span>
+            <input id="input-test-photo" type="file" accept="image/jpeg,image/png,image/webp" class="text-xs text-linen-200 w-full" />
+          </label>
+        </div>
+
+        <!-- 2. Exportação do Pacote ZIP para GitHub Pages -->
+        <div class="rounded-2xl bg-espresso-800/70 border border-amberwarm-400/25 p-4 space-y-4">
+          <h4 class="font-semibold text-amberwarm-300 text-base">
+            2. Baixar Pacote ZIP Pronto para o GitHub (`aniversario-pai.zip`)
+          </h4>
+          <p class="text-xs text-linen-200/85">
+            Gera a pasta completa com <code>index.html</code>, <code>README.md</code>, <code>.nojekyll</code>, a imagem <code>assets/images/compartilhamento.jpg</code> (1200×630 para WhatsApp) e a foto do seu pai caso selecionada acima.
+          </p>
+
+          <div>
+            <label for="input-gh-url" class="block text-xs text-linen-200 mb-1">
+              URL futura no GitHub Pages (opcional — garante miniatura perfeita no WhatsApp):
+            </label>
+            <input
+              id="input-gh-url"
+              type="url"
+              placeholder="Ex.: https://seu-usuario.github.io/aniversario-pai/"
+              class="w-full px-3.5 py-2.5 rounded-xl bg-espresso-950 border border-amberwarm-400/30 text-linen-50 text-xs focus:outline-none focus:border-amberwarm-300"
+            />
+          </div>
+
+          <div class="flex flex-wrap gap-3">
+            <button
+              id="btn-download-zip"
+              type="button"
+              class="min-h-[46px] px-5 py-2.5 rounded-xl bg-amberwarm-400 hover:bg-amberwarm-300 text-espresso-950 font-semibold text-sm flex items-center gap-2 transition"
+            >
+              <span>Baixar aniversario-pai.zip completo</span>
+            </button>
+
+            <button
+              id="btn-download-og-image"
+              type="button"
+              class="min-h-[46px] px-4 py-2.5 rounded-xl bg-espresso-950 hover:bg-espresso-900 border border-amberwarm-400/35 text-amberwarm-200 text-xs sm:text-sm font-medium transition"
+            >
+              <span>Baixar apenas compartilhamento.jpg</span>
+            </button>
+          </div>
+        </div>
+
+        <!-- 3. Guia Rápido GitHub Pages -->
+        <div class="rounded-2xl bg-espresso-800/70 border border-amberwarm-400/25 p-4 space-y-2.5 text-xs text-linen-200">
+          <h4 class="font-semibold text-amberwarm-300 text-base">
+            3. Como publicar no seu GitHub (pelo navegador ou VS Code)
+          </h4>
+          <ol class="list-decimal list-inside space-y-1.5">
+            <li>Extraia o <code>aniversario-pai.zip</code> (ou use apenas o arquivo <code>index.html</code> se não for incluir foto).</li>
+            <li>No GitHub, crie um repositório público chamado <code>aniversario-pai</code> e faça upload dos arquivos (ou dê push pelo VS Code).</li>
+            <li>Vá em <strong>Settings → Pages</strong>, selecione Branch <code>main</code> e pasta <code>/ (root)</code> e clique em <strong>Save</strong>.</li>
+            <li>Aguarde 1 a 2 minutos, teste o link primeiro no seu próprio WhatsApp e depois mande para o seu pai!</li>
+          </ol>
+        </div>
+      </div>
     </div>
   </aside>
-  <button class="music-reopen" id="music-reopen" type="button" hidden>♫ Música</button>
-  <div class="toast" id="toast" role="status" aria-live="polite" hidden></div>
-  <script type="module" src="./assets/app.js"></script>
+
+  <!-- =========================================================================
+       ENGENHARIA JAVASCRIPT NATIVA:
+       • Envelope 3D + Partículas douradas
+       • Estúdio Musical Web Audio (Lo-Fi Soul, Bossa & Estrada/Chuva)
+       • Visualizador de áudio em tempo real + Vitrola animada
+       • Carta em 5 partes clicáveis + Gerador de ZIP para GitHub Pages
+       ========================================================================= -->
+  <script>
+    (function () {
+      'use strict';
+
+      /* Snapshot limpo do HTML antes de qualquer mutação do DOM (para gerar o ZIP) */
+      const CLEAN_SOURCE_TEMPLATE = '<!DOCTYPE html>\n' + document.documentElement.outerHTML;
+
+      const prefersReducedMotion = window.matchMedia('(prefers-reduced-motion: reduce)');
+
+      /* Referências do DOM */
+      const stageArrival = document.getElementById('stage-arrival');
+      const stageTribute = document.getElementById('stage-tribute');
+      const envelopeTrigger = document.getElementById('envelope-trigger');
+      const envelopeStage = document.getElementById('envelope-stage');
+
+      const audioTopbar = document.getElementById('audio-topbar');
+      const btnHeaderBeat = document.getElementById('btn-header-beat');
+      const headerPlayIcon = document.getElementById('header-play-icon');
+      const headerPlayLabel = document.getElementById('header-play-label');
+      const headerTrackTitle = document.getElementById('header-track-title');
+      const headerTrackSub = document.getElementById('header-track-sub');
+      const btnTopMute = document.getElementById('btn-top-mute');
+      const iconUnmuted = document.getElementById('icon-unmuted');
+      const iconMuted = document.getElementById('icon-muted');
+      const beatVolumeInput = document.getElementById('beat-volume');
+
+      const turntableStage = document.getElementById('turntable-stage');
+      const btnVinylDisc = document.getElementById('btn-vinyl-disc');
+      const deckTrackName = document.getElementById('deck-track-name');
+      const deckTrackDesc = document.getElementById('deck-track-desc');
+      const grooveButtons = document.querySelectorAll('.groove-btn');
+      const miniEq0 = document.getElementById('mini-eq-0');
+      const miniEq1 = document.getElementById('mini-eq-1');
+      const miniEq2 = document.getElementById('mini-eq-2');
+
+      const fatherPhotoContainer = document.getElementById('father-photo-container');
+      const fatherPhoto = document.getElementById('father-photo');
+      const typographicCrest = document.getElementById('typographic-crest');
+
+      const btnReplay = document.getElementById('btn-replay');
+      const btnFooterMusic = document.getElementById('btn-footer-music');
+      const iconFooterMusic = document.getElementById('icon-footer-music');
+      const labelFooterMusic = document.getElementById('label-footer-music');
+
+      const toastFeedback = document.getElementById('toast-feedback');
+      const toastText = document.getElementById('toast-text');
+
+      /* Estado central */
+      const appState = {
+        isOpening: false,
+        isOpened: false,
+        particleBoost: 1,
+        toastTimer: null,
+        customPhotoFile: null
+      };
+
+      /* -----------------------------------------------------------------------
+         1. FEEDBACK VISUAL ACESSÍVEL (SEM ALERT / CONFIRM)
+         ----------------------------------------------------------------------- */
+      function showToast(message) {
+        if (!toastFeedback || !toastText) return;
+        toastText.textContent = message;
+        toastFeedback.classList.remove('opacity-0', 'translate-y-3');
+        toastFeedback.classList.add('opacity-100', 'translate-y-0');
+
+        if (appState.toastTimer) clearTimeout(appState.toastTimer);
+        appState.toastTimer = setTimeout(function () {
+          toastFeedback.classList.remove('opacity-100', 'translate-y-0');
+          toastFeedback.classList.add('opacity-0', 'translate-y-3');
+        }, 3200);
+      }
+
+      /* -----------------------------------------------------------------------
+         2. VERIFICAÇÃO DA FOTOGRAFIA ORIGINAL (assets/images/pai.jpg)
+         ----------------------------------------------------------------------- */
+      function showFatherPhoto() {
+        fatherPhotoContainer.classList.remove('hidden');
+        typographicCrest.classList.add('hidden');
+      }
+
+      function hideFatherPhoto() {
+        fatherPhotoContainer.classList.add('hidden');
+        typographicCrest.classList.remove('hidden');
+      }
+
+      fatherPhoto.addEventListener('load', function () {
+        if (fatherPhoto.naturalWidth > 0) showFatherPhoto();
+        else hideFatherPhoto();
+      });
+
+      fatherPhoto.addEventListener('error', hideFatherPhoto);
+
+      if (fatherPhoto.complete) {
+        if (fatherPhoto.naturalWidth > 0) showFatherPhoto();
+        else hideFatherPhoto();
+      }
+
+      /* -----------------------------------------------------------------------
+         3. MOTOR MUSICAL WEB AUDIO (3 BATIDAS ORIGINAIS: LO-FI, BOSSA E CHUVA)
+         ----------------------------------------------------------------------- */
+      const GROOVES = [
+        {
+          name: 'Batida Lo-Fi Soul & Café',
+          subtitle: '78 BPM · Rhodes, baixo quente e batida macia',
+          bpm: 78,
+          swing: 0.26,
+          rainLevel: 0.004,
+          chords: [
+            [174.61, 220.00, 261.63, 329.63, 392.00],
+            [164.81, 246.94, 293.66, 392.00, 440.00],
+            [146.83, 220.00, 261.63, 329.63, 349.23],
+            [130.81, 174.61, 220.00, 261.63, 329.63]
+          ],
+          bassRoots: [87.31, 82.41, 73.42, 65.41],
+          bassFifths: [130.81, 123.47, 110.00, 98.00],
+          kick:    [1, 0, 0, 0,  0, 0, 0, 0.72,  0, 0, 0.95, 0,  0, 0, 0, 0],
+          rim:     [0, 0, 0, 0,  0.9, 0, 0, 0,   0, 0, 0, 0,     0.92, 0, 0, 0.32],
+          shaker:  [0.65, 0.25, 0.48, 0.3,  0.65, 0.25, 0.52, 0.3,  0.65, 0.25, 0.48, 0.3,  0.65, 0.3, 0.55, 0.35],
+          melody: [
+            { bar: 0, step: 2, freq: 523.25, dur: 0.85 },
+            { bar: 0, step: 6, freq: 659.25, dur: 0.95 },
+            { bar: 0, step: 11, freq: 587.33, dur: 1.1 },
+            { bar: 1, step: 3, freq: 523.25, dur: 0.8 },
+            { bar: 1, step: 8, freq: 440.00, dur: 1.3 },
+            { bar: 2, step: 2, freq: 440.00, dur: 0.7 },
+            { bar: 2, step: 6, freq: 523.25, dur: 0.8 },
+            { bar: 2, step: 10, freq: 587.33, dur: 1.25 },
+            { bar: 3, step: 4, freq: 523.25, dur: 1.5 }
+          ]
+        },
+        {
+          name: 'Bossa & Saudade de Domingo',
+          subtitle: '74 BPM · Surdo suave, violão elétrico e brisa de tarde',
+          bpm: 74,
+          swing: 0.12,
+          rainLevel: 0.004,
+          chords: [
+            [220.00, 261.63, 329.63, 392.00, 493.88],
+            [146.83, 220.00, 261.63, 329.63, 349.23],
+            [196.00, 246.94, 329.63, 349.23, 440.00],
+            [130.81, 196.00, 246.94, 293.66, 329.63]
+          ],
+          bassRoots: [110.00, 73.42, 98.00, 65.41],
+          bassFifths: [82.41, 110.00, 73.42, 98.00],
+          kick:    [0.95, 0, 0, 0.5,  0, 0, 0.82, 0,  0.95, 0, 0, 0.5,  0, 0, 0.85, 0],
+          rim:     [0, 0, 0.65, 0,  0, 0.65, 0, 0,  0, 0.65, 0, 0,  0.68, 0, 0, 0],
+          shaker:  [0.55, 0.32, 0.45, 0.32,  0.55, 0.32, 0.45, 0.32,  0.55, 0.32, 0.45, 0.32,  0.55, 0.32, 0.45, 0.35],
+          melody: [
+            { bar: 0, step: 0, freq: 493.88, dur: 1.1 },
+            { bar: 0, step: 6, freq: 523.25, dur: 0.8 },
+            { bar: 0, step: 10, freq: 659.25, dur: 1.1 },
+            { bar: 1, step: 3, freq: 587.33, dur: 0.9 },
+            { bar: 1, step: 9, freq: 523.25, dur: 1.2 },
+            { bar: 2, step: 2, freq: 493.88, dur: 0.8 },
+            { bar: 2, step: 8, freq: 440.00, dur: 1.2 },
+            { bar: 3, step: 3, freq: 392.00, dur: 1.6 }
+          ]
+        },
+        {
+          name: 'Estrada & Chuva Fina',
+          subtitle: '68 BPM · Batida contemplativa, chuva mansa e acordes quentes',
+          bpm: 68,
+          swing: 0.22,
+          rainLevel: 0.025,
+          chords: [
+            [146.83, 220.00, 277.18, 329.63, 369.99],
+            [123.47, 185.00, 220.00, 277.18, 329.63],
+            [196.00, 246.94, 293.66, 369.99, 440.00],
+            [110.00, 196.00, 246.94, 293.66, 329.63]
+          ],
+          bassRoots: [73.42, 61.74, 98.00, 55.00],
+          bassFifths: [110.00, 92.50, 73.42, 82.41],
+          kick:    [1, 0, 0, 0,  0, 0, 0, 0,  0.82, 0, 0.65, 0,  0, 0, 0, 0],
+          rim:     [0, 0, 0, 0,  0.75, 0, 0, 0,  0, 0, 0, 0,  0.78, 0, 0, 0],
+          shaker:  [0.45, 0, 0.35, 0,  0.45, 0, 0.35, 0.22,  0.45, 0, 0.35, 0,  0.45, 0, 0.38, 0.25],
+          melody: [
+            { bar: 0, step: 4, freq: 554.37, dur: 1.3 },
+            { bar: 0, step: 10, freq: 587.33, dur: 1.2 },
+            { bar: 1, step: 4, freq: 493.88, dur: 1.5 },
+            { bar: 2, step: 4, freq: 440.00, dur: 1.1 },
+            { bar: 2, step: 10, freq: 493.88, dur: 1.2 },
+            { bar: 3, step: 2, freq: 440.00, dur: 1.8 }
+          ]
+        }
+      ];
+
+      let audioCtx = null;
+      let masterGain = null;
+      let warmBus = null;
+      let reverbNode = null;
+      let analyser = null;
+      let noiseBuffer = null;
+      let rainGainNode = null;
+
+      let currentGrooveIdx = 0;
+      let isPlayingBeat = false;
+      let isMuted = false;
+      let userVolume = 0.8;
+
+      let schedulerTimer = null;
+      let nextNoteTime = 0;
+      let currentStep = 0;
+      let currentBar = 0;
+
+      function initAudioStudio() {
+        try {
+          if (!audioCtx) {
+            const Ctx = window.AudioContext || window.webkitAudioContext;
+            if (!Ctx) return;
+            audioCtx = new Ctx();
+
+            const compressor = audioCtx.createDynamicsCompressor();
+            compressor.threshold.value = -16;
+            compressor.ratio.value = 3;
+
+            warmBus = audioCtx.createBiquadFilter();
+            warmBus.type = 'lowpass';
+            warmBus.frequency.value = 3900;
+            warmBus.Q.value = 0.55;
+
+            masterGain = audioCtx.createGain();
+            masterGain.gain.value = isMuted ? 0 : userVolume;
+
+            analyser = audioCtx.createAnalyser();
+            analyser.fftSize = 64;
+            analyser.smoothingTimeConstant = 0.82;
+
+            // Buffer de ruído macio (shaker, rimshot, chiado de vinil e chuva fina)
+            const bufLen = audioCtx.sampleRate * 3;
+            noiseBuffer = audioCtx.createBuffer(1, bufLen, audioCtx.sampleRate);
+            const data = noiseBuffer.getChannelData(0);
+            for (let i = 0; i < bufLen; i++) {
+              data[i] = Math.random() * 2 - 1;
+            }
+
+            // Reverb quente para piano elétrico e melodia
+            const revLen = Math.floor(audioCtx.sampleRate * 1.9);
+            const revBuf = audioCtx.createBuffer(2, revLen, audioCtx.sampleRate);
+            for (let ch = 0; ch < 2; ch++) {
+              const chData = revBuf.getChannelData(ch);
+              for (let i = 0; i < revLen; i++) {
+                chData[i] = (Math.random() * 2 - 1) * Math.pow(1 - i / revLen, 2.7);
+              }
+            }
+            reverbNode = audioCtx.createConvolver();
+            reverbNode.buffer = revBuf;
+
+            const revGain = audioCtx.createGain();
+            revGain.gain.value = 0.24;
+            reverbNode.connect(revGain);
+            revGain.connect(warmBus);
+
+            // Textura ambiente contínua (vinil / chuva fina)
+            const rainSource = audioCtx.createBufferSource();
+            rainSource.buffer = noiseBuffer;
+            rainSource.loop = true;
+
+            const rainFilter = audioCtx.createBiquadFilter();
+            rainFilter.type = 'bandpass';
+            rainFilter.frequency.value = 1150;
+            rainFilter.Q.value = 0.65;
+
+            rainGainNode = audioCtx.createGain();
+            rainGainNode.gain.value = 0.0;
+
+            rainSource.connect(rainFilter);
+            rainFilter.connect(rainGainNode);
+            rainGainNode.connect(warmBus);
+            rainSource.start();
+
+            warmBus.connect(compressor);
+            compressor.connect(masterGain);
+            masterGain.connect(analyser);
+            analyser.connect(audioCtx.destination);
+          }
+
+          if (audioCtx.state === 'suspended') {
+            audioCtx.resume();
+          }
+        } catch (err) {
+          // Navegador sem suporte a Web Audio API
+        }
+      }
+
+      function syncMasterVolume() {
+        if (!masterGain || !audioCtx) return;
+        const target = (isMuted || !isPlayingBeat) ? 0 : userVolume;
+        masterGain.gain.setTargetAtTime(target, audioCtx.currentTime, 0.08);
+      }
+
+      function syncRainTexture() {
+        if (!rainGainNode || !audioCtx) return;
+        const level = isPlayingBeat ? (GROOVES[currentGrooveIdx].rainLevel || 0.004) : 0;
+        rainGainNode.gain.setTargetAtTime(level, audioCtx.currentTime, 0.3);
+      }
+
+      function triggerKick(time, velocity) {
+        const osc = audioCtx.createOscillator();
+        const gain = audioCtx.createGain();
+        osc.type = 'sine';
+        osc.frequency.setValueAtTime(126, time);
+        osc.frequency.exponentialRampToValueAtTime(47, time + 0.085);
+        osc.frequency.exponentialRampToValueAtTime(38, time + 0.28);
+
+        gain.gain.setValueAtTime(0.0001, time);
+        gain.gain.linearRampToValueAtTime(0.42 * velocity, time + 0.008);
+        gain.gain.exponentialRampToValueAtTime(0.001, time + 0.30);
+
+        osc.connect(gain);
+        gain.connect(warmBus);
+        osc.start(time);
+        osc.stop(time + 0.32);
+
+        // Pulso visual sincronizado com o bumbo no halo da vitrola
+        const delayMs = Math.max(0, (time - audioCtx.currentTime) * 1000);
+        setTimeout(function () {
+          const halo = document.getElementById('beat-kick-halo');
+          if (halo && isPlayingBeat && !prefersReducedMotion.matches) {
+            halo.style.transform = 'scale(1.12)';
+            halo.style.opacity = '0.85';
+            setTimeout(function () {
+              halo.style.transform = 'scale(1)';
+              halo.style.opacity = '0.38';
+            }, 130);
+          }
+        }, delayMs);
+      }
+
+      function triggerRimshot(time, velocity) {
+        const bodyOsc = audioCtx.createOscillator();
+        const bodyGain = audioCtx.createGain();
+        bodyOsc.type = 'triangle';
+        bodyOsc.frequency.setValueAtTime(395, time);
+        bodyOsc.frequency.exponentialRampToValueAtTime(210, time + 0.045);
+
+        bodyGain.gain.setValueAtTime(0.001, time);
+        bodyGain.gain.linearRampToValueAtTime(0.18 * velocity, time + 0.003);
+        bodyGain.gain.exponentialRampToValueAtTime(0.001, time + 0.065);
+
+        bodyOsc.connect(bodyGain);
+        bodyGain.connect(warmBus);
+        bodyOsc.start(time);
+        bodyOsc.stop(time + 0.075);
+
+        const snap = audioCtx.createBufferSource();
+        snap.buffer = noiseBuffer;
+        const filter = audioCtx.createBiquadFilter();
+        filter.type = 'bandpass';
+        filter.frequency.value = 1450;
+        filter.Q.value = 1.6;
+
+        const snapGain = audioCtx.createGain();
+        snapGain.gain.setValueAtTime(0.14 * velocity, time);
+        snapGain.gain.exponentialRampToValueAtTime(0.001, time + 0.075);
+
+        snap.connect(filter);
+        filter.connect(snapGain);
+        snapGain.connect(warmBus);
+        snap.connect(reverbNode);
+        snap.start(time, Math.random() * 1.5, 0.09);
+      }
+
+      function triggerShaker(time, velocity) {
+        const src = audioCtx.createBufferSource();
+        src.buffer = noiseBuffer;
+        const hp = audioCtx.createBiquadFilter();
+        hp.type = 'bandpass';
+        hp.frequency.value = 6400;
+        hp.Q.value = 1.3;
+
+        const gain = audioCtx.createGain();
+        gain.gain.setValueAtTime(0.0001, time);
+        gain.gain.linearRampToValueAtTime(0.055 * velocity, time + 0.006);
+        gain.gain.exponentialRampToValueAtTime(0.0008, time + 0.055);
+
+        src.connect(hp);
+        hp.connect(gain);
+        gain.connect(warmBus);
+        src.start(time, Math.random() * 2.0, 0.07);
+      }
+
+      function triggerBass(time, freq, duration) {
+        const osc = audioCtx.createOscillator();
+        const sub = audioCtx.createOscillator();
+        const filter = audioCtx.createBiquadFilter();
+        const gain = audioCtx.createGain();
+
+        osc.type = 'triangle';
+        osc.frequency.setValueAtTime(freq, time);
+        sub.type = 'sine';
+        sub.frequency.setValueAtTime(freq, time);
+
+        filter.type = 'lowpass';
+        filter.frequency.setValueAtTime(420, time);
+        filter.frequency.exponentialRampToValueAtTime(170, time + duration);
+
+        gain.gain.setValueAtTime(0.0001, time);
+        gain.gain.linearRampToValueAtTime(0.22, time + 0.025);
+        gain.gain.exponentialRampToValueAtTime(0.002, time + duration);
+
+        osc.connect(filter);
+        sub.connect(filter);
+        filter.connect(gain);
+        gain.connect(warmBus);
+
+        osc.start(time);
+        sub.start(time);
+        osc.stop(time + duration + 0.03);
+        sub.stop(time + duration + 0.03);
+      }
+
+      function triggerRhodesChord(time, notes, duration, gainScale) {
+        for (let i = 0; i < notes.length; i++) {
+          const noteTime = time + i * 0.018;
+          const freq = notes[i];
+
+          const oscMain = audioCtx.createOscillator();
+          const oscTine = audioCtx.createOscillator();
+          const tineGain = audioCtx.createGain();
+          const voiceGain = audioCtx.createGain();
+
+          oscMain.type = 'sine';
+          oscMain.frequency.setValueAtTime(freq, noteTime);
+
+          oscTine.type = 'triangle';
+          oscTine.frequency.setValueAtTime(freq * 2, noteTime);
+          tineGain.gain.setValueAtTime(0.016 * (gainScale || 1), noteTime);
+          tineGain.gain.exponentialRampToValueAtTime(0.0001, noteTime + 0.35);
+
+          voiceGain.gain.setValueAtTime(0.0001, noteTime);
+          voiceGain.gain.linearRampToValueAtTime(0.052 * (gainScale || 1), noteTime + 0.03);
+          voiceGain.gain.exponentialRampToValueAtTime(0.0012, noteTime + duration);
+
+          oscMain.connect(voiceGain);
+          oscTine.connect(tineGain);
+          tineGain.connect(voiceGain);
+
+          voiceGain.connect(warmBus);
+          voiceGain.connect(reverbNode);
+
+          oscMain.start(noteTime);
+          oscTine.start(noteTime);
+          oscMain.stop(noteTime + duration + 0.05);
+          oscTine.stop(noteTime + duration + 0.05);
+        }
+      }
+
+      function triggerWarmLead(time, freq, duration) {
+        const osc = audioCtx.createOscillator();
+        const overtone = audioCtx.createOscillator();
+        const filter = audioCtx.createBiquadFilter();
+        const gain = audioCtx.createGain();
+
+        osc.type = 'triangle';
+        osc.frequency.setValueAtTime(freq * 0.988, time);
+        osc.frequency.exponentialRampToValueAtTime(freq, time + 0.045);
+
+        overtone.type = 'sine';
+        overtone.frequency.setValueAtTime(freq, time);
+
+        filter.type = 'lowpass';
+        filter.frequency.setValueAtTime(1650, time);
+        filter.frequency.exponentialRampToValueAtTime(620, time + duration);
+
+        gain.gain.setValueAtTime(0.0001, time);
+        gain.gain.linearRampToValueAtTime(0.072, time + 0.035);
+        gain.gain.exponentialRampToValueAtTime(0.001, time + duration);
+
+        osc.connect(filter);
+        overtone.connect(filter);
+        filter.connect(gain);
+        gain.connect(warmBus);
+        gain.connect(reverbNode);
+
+        osc.start(time);
+        overtone.start(time);
+        osc.stop(time + duration + 0.06);
+        overtone.stop(time + duration + 0.06);
+      }
+
+      function scheduleStep(bar, step, stepTime, stepDur, groove) {
+        const kickVel = groove.kick[step];
+        if (kickVel > 0) {
+          triggerKick(stepTime, kickVel);
+        } else if (bar === 3 && step === 13) {
+          triggerKick(stepTime, 0.55);
+        }
+
+        const rimVel = groove.rim[step];
+        if (rimVel > 0) {
+          triggerRimshot(stepTime, rimVel);
+        } else if (bar === 3 && step === 15) {
+          triggerRimshot(stepTime, 0.45);
+        }
+
+        const shakerVel = groove.shaker[step];
+        if (shakerVel > 0) {
+          triggerShaker(stepTime, shakerVel);
+        }
+
+        const chord = groove.chords[bar];
+        const root = groove.bassRoots[bar];
+        const fifth = groove.bassFifths[bar];
+
+        if (currentGrooveIdx === 1) {
+          if (step === 0) triggerRhodesChord(stepTime, chord, stepDur * 5.5, 0.95);
+          if (step === 6) triggerRhodesChord(stepTime, chord, stepDur * 4.0, 0.72);
+          if (step === 11) triggerRhodesChord(stepTime, chord, stepDur * 4.2, 0.68);
+          if (step === 0) triggerBass(stepTime, root, stepDur * 6.5);
+          if (step === 8) triggerBass(stepTime, fifth, stepDur * 6.5);
+        } else {
+          if (step === 0) {
+            triggerRhodesChord(stepTime, chord, stepDur * 13.5, 1.0);
+            triggerBass(stepTime, root, stepDur * 6.8);
+          }
+          if (step === 10) {
+            triggerRhodesChord(stepTime, chord.slice(1), stepDur * 5.2, 0.52);
+            triggerBass(stepTime, fifth, stepDur * 4.5);
+          }
+          if (step === 14 && bar % 2 === 1) {
+            triggerBass(stepTime, root * 1.122, stepDur * 1.9);
+          }
+        }
+
+        for (let m = 0; m < groove.melody.length; m++) {
+          const note = groove.melody[m];
+          if (note.bar === bar && note.step === step) {
+            triggerWarmLead(stepTime, note.freq, note.dur);
+          }
+        }
+      }
+
+      function runLookaheadScheduler() {
+        if (!isPlayingBeat || !audioCtx) return;
+        const groove = GROOVES[currentGrooveIdx];
+        const secondsPerBeat = 60.0 / groove.bpm;
+        const baseStepDur = secondsPerBeat / 4.0;
+
+        while (nextNoteTime < audioCtx.currentTime + 0.12) {
+          const swingOffset = (currentStep % 2 === 1) ? baseStepDur * groove.swing : 0;
+          scheduleStep(currentBar, currentStep, nextNoteTime + swingOffset, baseStepDur, groove);
+
+          nextNoteTime += baseStepDur;
+          currentStep += 1;
+          if (currentStep >= 16) {
+            currentStep = 0;
+            currentBar = (currentBar + 1) % 4;
+          }
+        }
+      }
+
+      function refreshPlayerUI() {
+        const g = GROOVES[currentGrooveIdx];
+        headerTrackTitle.textContent = g.name;
+        headerTrackSub.textContent = isPlayingBeat ? g.subtitle : 'Pausado · Toque para ouvir';
+        deckTrackName.textContent = g.name;
+        deckTrackDesc.textContent = isPlayingBeat ? g.subtitle : 'Toque no disco de vinil para soltar o som';
+
+        if (isPlayingBeat) {
+          turntableStage.classList.add('is-playing-beat');
+          headerPlayIcon.textContent = '❚❚';
+          headerPlayLabel.textContent = 'Pausar';
+          iconFooterMusic.textContent = '❚❚';
+          labelFooterMusic.textContent = 'Pausar a música';
+        } else {
+          turntableStage.classList.remove('is-playing-beat');
+          headerPlayIcon.textContent = '▶';
+          headerPlayLabel.textContent = 'Tocar';
+          iconFooterMusic.textContent = '▶';
+          labelFooterMusic.textContent = 'Tocar a música';
+        }
+
+        if (isMuted) {
+          iconUnmuted.classList.add('hidden');
+          iconMuted.classList.remove('hidden');
+        } else {
+          iconUnmuted.classList.remove('hidden');
+          iconMuted.classList.add('hidden');
+        }
+
+        grooveButtons.forEach(function (btn, idx) {
+          if (idx === currentGrooveIdx) {
+            btn.className = 'groove-btn min-h-[42px] px-3 py-2 rounded-xl bg-amberwarm-400 text-espresso-950 font-semibold text-xs transition border border-amberwarm-300 shadow';
+          } else {
+            btn.className = 'groove-btn min-h-[42px] px-3 py-2 rounded-xl bg-espresso-950/80 hover:bg-espresso-800 text-amberwarm-200 font-medium text-xs transition border border-amberwarm-400/30';
+          }
+        });
+      }
+
+      function startBeat() {
+        initAudioStudio();
+        if (!audioCtx || isPlayingBeat) return;
+        isPlayingBeat = true;
+        currentStep = 0;
+        currentBar = 0;
+        nextNoteTime = audioCtx.currentTime + 0.06;
+        syncRainTexture();
+        syncMasterVolume();
+        refreshPlayerUI();
+
+        schedulerTimer = setInterval(runLookaheadScheduler, 30);
+      }
+
+      function stopBeat() {
+        isPlayingBeat = false;
+        if (schedulerTimer) {
+          clearInterval(schedulerTimer);
+          schedulerTimer = null;
+        }
+        syncRainTexture();
+        syncMasterVolume();
+        refreshPlayerUI();
+      }
+
+      function toggleBeat(withToast) {
+        if (isPlayingBeat) {
+          stopBeat();
+          if (withToast) showToast('Música pausada.');
+        } else {
+          startBeat();
+          if (withToast) showToast('Tocando: ' + GROOVES[currentGrooveIdx].name);
+        }
+      }
+
+      btnHeaderBeat.addEventListener('click', function () { toggleBeat(true); });
+      btnVinylDisc.addEventListener('click', function () { toggleBeat(true); });
+      btnFooterMusic.addEventListener('click', function () { toggleBeat(true); });
+
+      btnTopMute.addEventListener('click', function () {
+        isMuted = !isMuted;
+        syncMasterVolume();
+        refreshPlayerUI();
+      });
+
+      beatVolumeInput.addEventListener('input', function (e) {
+        userVolume = parseFloat(e.target.value);
+        isMuted = userVolume === 0;
+        syncMasterVolume();
+        refreshPlayerUI();
+      });
+
+      grooveButtons.forEach(function (btn) {
+        btn.addEventListener('click', function () {
+          const idx = parseInt(btn.getAttribute('data-groove'), 10) || 0;
+          currentGrooveIdx = idx;
+          if (!isPlayingBeat) {
+            startBeat();
+          } else {
+            currentStep = 0;
+            currentBar = 0;
+            syncRainTexture();
+            refreshPlayerUI();
+          }
+          showToast('Estilo escolhido: ' + GROOVES[currentGrooveIdx].name);
+        });
+      });
+
+      /* Visualizador de frequências responsivo em Canvas */
+      const vizCanvas = document.getElementById('beat-visualizer');
+      const vizCtx = vizCanvas ? vizCanvas.getContext('2d') : null;
+
+      function resizeVizCanvas() {
+        if (!vizCanvas || !vizCtx) return;
+        const rect = vizCanvas.getBoundingClientRect();
+        if (rect.width > 0 && rect.height > 0) {
+          const dpr = Math.min(window.devicePixelRatio || 1, 2);
+          vizCanvas.width = Math.floor(rect.width * dpr);
+          vizCanvas.height = Math.floor(rect.height * dpr);
+          vizCtx.setTransform(dpr, 0, 0, dpr, 0, 0);
+        }
+      }
+
+      function renderBeatVisualizer() {
+        if (vizCtx && vizCanvas && !stageTribute.classList.contains('hidden')) {
+          const rect = vizCanvas.getBoundingClientRect();
+          const w = rect.width || 260;
+          const h = rect.height || 36;
+          vizCtx.clearRect(0, 0, w, h);
+
+          const bars = 24;
+          const gap = 4;
+          const padX = 8;
+          const barW = Math.max(2, (w - padX * 2 - gap * (bars - 1)) / bars);
+
+          if (analyser && isPlayingBeat && !isMuted && !prefersReducedMotion.matches) {
+            const freqData = new Uint8Array(analyser.frequencyBinCount);
+            analyser.getByteFrequencyData(freqData);
+
+            for (let i = 0; i < bars; i++) {
+              const val = freqData[i % freqData.length] / 255;
+              const barH = Math.max(4, val * (h - 8));
+              const x = padX + i * (barW + gap);
+              const y = (h - barH) / 2;
+              vizCtx.fillStyle = 'rgba(229, 196, 150, ' + (0.35 + val * 0.65).toFixed(2) + ')';
+              vizCtx.fillRect(x, y, barW, barH);
+            }
+
+            if (miniEq0 && miniEq1 && miniEq2) {
+              miniEq0.style.height = Math.max(25, (freqData[1] / 255) * 100) + '%';
+              miniEq1.style.height = Math.max(30, (freqData[4] / 255) * 100) + '%';
+              miniEq2.style.height = Math.max(25, (freqData[8] / 255) * 100) + '%';
+            }
+          } else {
+            for (let i = 0; i < bars; i++) {
+              const x = padX + i * (barW + gap);
+              vizCtx.fillStyle = 'rgba(212, 166, 106, 0.24)';
+              vizCtx.fillRect(x, h / 2 - 2, barW, 4);
+            }
+            if (miniEq0 && miniEq1 && miniEq2) {
+              miniEq0.style.height = '28%';
+              miniEq1.style.height = '45%';
+              miniEq2.style.height = '32%';
+            }
+          }
+        }
+        requestAnimationFrame(renderBeatVisualizer);
+      }
+
+      /* -----------------------------------------------------------------------
+         4. COREOGRAFIA DE ABERTURA DO ENVELOPE 3D E REVER DO INÍCIO
+         ----------------------------------------------------------------------- */
+      function openEnvelopeExperience() {
+        if (appState.isOpening || appState.isOpened) return;
+        appState.isOpening = true;
+        envelopeTrigger.setAttribute('aria-expanded', 'true');
+
+        // Inicia a batida suave imediatamente no toque legítimo do envelope
+        startBeat();
+
+        if (prefersReducedMotion.matches) {
+          stageArrival.classList.add('hidden');
+          audioTopbar.classList.remove('hidden');
+          stageTribute.classList.remove('hidden', 'opacity-0');
+          stageTribute.classList.add('opacity-100');
+          window.scrollTo(0, 0);
+          resizeVizCanvas();
+          appState.isOpening = false;
+          appState.isOpened = true;
+          positionMobileSlide();
+          return;
+        }
+
+        // Coreografia em 3 tempos: Selo -> Aba 3D -> Folha subindo -> Transição
+        appState.particleBoost = 2.4;
+        envelopeStage.classList.add('is-opening');
+
+        setTimeout(function () {
+          envelopeStage.classList.add('is-flap-open');
+        }, 250);
+
+        setTimeout(function () {
+          envelopeStage.classList.add('is-letter-rising');
+        }, 700);
+
+        setTimeout(function () {
+          stageArrival.classList.add('opacity-0', 'scale-[0.98]');
+        }, 1480);
+
+        setTimeout(function () {
+          stageArrival.classList.add('hidden');
+          stageArrival.classList.remove('opacity-0', 'scale-[0.98]');
+
+          audioTopbar.classList.remove('hidden');
+          stageTribute.classList.remove('hidden');
+          window.scrollTo({ top: 0, behavior: 'auto' });
+
+          requestAnimationFrame(function () {
+            resizeVizCanvas();
+            stageTribute.classList.remove('opacity-0');
+            stageTribute.classList.add('opacity-100');
+            positionMobileSlide();
+          });
+
+          appState.particleBoost = 1;
+          appState.isOpening = false;
+          appState.isOpened = true;
+        }, 1980);
+      }
+
+      function replayFromEnvelope() {
+        stopBeat();
+        stageTribute.classList.remove('opacity-100');
+        stageTribute.classList.add('opacity-0');
+
+        setTimeout(function () {
+          stageTribute.classList.add('hidden');
+          audioTopbar.classList.add('hidden');
+
+          // Volta para a Página 1 da carta ao rever do envelope
+          currentPage = 0;
+          isFullLetterMode = false;
+          renderLetterPages(false);
+
+          envelopeStage.classList.remove('is-opening', 'is-flap-open', 'is-letter-rising');
+          envelopeTrigger.setAttribute('aria-expanded', 'false');
+
+          stageArrival.classList.remove('hidden');
+          window.scrollTo({ top: 0, behavior: 'auto' });
+
+          appState.isOpened = false;
+          appState.isOpening = false;
+          envelopeTrigger.focus({ preventScroll: true });
+        }, prefersReducedMotion.matches ? 50 : 420);
+      }
+
+      envelopeTrigger.addEventListener('click', openEnvelopeExperience);
+      btnReplay.addEventListener('click', replayFromEnvelope);
+
+      /* -----------------------------------------------------------------------
+         5. CARTA EM PÁGINAS SEPARADAS (1 CARTÃO POR PÁGINA + MODO COMPLETO)
+         ----------------------------------------------------------------------- */
+      const letterCardSurface = document.getElementById('letter-card-surface');
+      const letterPages = Array.from(document.querySelectorAll('.letter-page'));
+      const pageDots = Array.from(document.querySelectorAll('.page-dot'));
+      const progressLabel = document.getElementById('letter-progress-label');
+      const sheetCounter = document.getElementById('letter-sheet-counter');
+      const paginationNav = document.getElementById('letter-pagination-nav');
+      const btnToggleFullLetter = document.getElementById('btn-toggle-full-letter');
+      const btnPrevPage = document.getElementById('btn-prev-page');
+      const btnNextPage = document.getElementById('btn-next-page');
+      const labelNextPage = document.getElementById('label-next-page');
+      const arrowNextPage = document.getElementById('arrow-next-page');
+
+      const gentleNotes = [349.23, 440.00, 523.25, 587.33, 659.25];
+      let currentPage = 0;
+      let isFullLetterMode = false;
+
+      function positionMobileSlide() {
+        if (!window.matchMedia('(max-width: 639px)').matches) return;
+        const container = document.getElementById('letter-pages-container');
+        container.scrollTop = 0;
+        document.getElementById('carta-interativa').scrollIntoView({ block: 'start', behavior: 'instant' });
+      }
+
+      function renderLetterPages(playChime) {
+        const total = letterPages.length;
+        letterCardSurface.classList.toggle('full-letter-mode', isFullLetterMode);
+
+        if (isFullLetterMode) {
+          letterPages.forEach(function (pageEl, idx) {
+            pageEl.classList.remove('hidden');
+            pageEl.classList.add('piece-reveal');
+            if (idx > 0) {
+              pageEl.classList.add('pt-6', 'border-t', 'border-amberwarm-600/20');
+            }
+          });
+          paginationNav.classList.add('hidden');
+          progressLabel.textContent = 'Exibindo a carta inteira de uma vez';
+          sheetCounter.textContent = 'Carta Completa · ☕';
+          btnToggleFullLetter.textContent = 'Voltar para páginas';
+          return;
+        }
+
+        // Modo paginado: apenas a página atual aparece no cartão
+        paginationNav.classList.remove('hidden');
+        letterPages.forEach(function (pageEl, idx) {
+          pageEl.classList.remove('pt-6', 'border-t', 'border-amberwarm-600/20', 'piece-reveal');
+          if (idx === currentPage) {
+            pageEl.classList.remove('hidden');
+            // Força reflow rápido para suavizar a troca de página
+            void pageEl.offsetWidth;
+            pageEl.classList.add('piece-reveal');
+          } else {
+            pageEl.classList.add('hidden');
+          }
+        });
+
+        pageDots.forEach(function (dot, idx) {
+          if (idx === currentPage) {
+            dot.className = 'page-dot h-2.5 w-7 rounded-full bg-espresso-900 transition-all';
+            dot.setAttribute('aria-current', 'true');
+          } else {
+            dot.className = 'page-dot h-2.5 w-2.5 rounded-full bg-amberwarm-600/35 hover:bg-amberwarm-600/60 transition-all';
+            dot.removeAttribute('aria-current');
+          }
+        });
+
+        progressLabel.textContent = 'Página ' + (currentPage + 1) + ' de ' + total + ' · Toque nos botões para virar a página';
+        sheetCounter.textContent = 'Página ' + (currentPage + 1) + ' de ' + total + ' · ☕';
+        btnToggleFullLetter.textContent = 'Ler tudo de uma vez';
+
+        btnPrevPage.disabled = currentPage === 0;
+
+        if (currentPage >= total - 1) {
+          labelNextPage.textContent = 'Voltar à 1ª página';
+          arrowNextPage.textContent = '↺';
+        } else {
+          labelNextPage.textContent = 'Próxima página';
+          arrowNextPage.textContent = '→';
+        }
+
+        if (playChime && isPlayingBeat && !isMuted) {
+          initAudioStudio();
+          if (audioCtx) {
+            triggerWarmLead(audioCtx.currentTime, gentleNotes[currentPage % gentleNotes.length], 0.8);
+          }
+        }
+      }
+
+      function goToPage(pageIdx, playChime) {
+        const total = letterPages.length;
+        const clamped = Math.max(0, Math.min(total - 1, pageIdx));
+        if (clamped === currentPage && !isFullLetterMode) return;
+        currentPage = clamped;
+        isFullLetterMode = false;
+        renderLetterPages(playChime);
+        positionMobileSlide();
+        letterPages[currentPage].setAttribute('tabindex', '-1');
+        letterPages[currentPage].focus({ preventScroll: true });
+      }
+
+      btnPrevPage.addEventListener('click', function () {
+        if (currentPage > 0) goToPage(currentPage - 1, true);
+      });
+
+      btnNextPage.addEventListener('click', function () {
+        if (currentPage < letterPages.length - 1) {
+          goToPage(currentPage + 1, true);
+        } else {
+          goToPage(0, true);
+        }
+      });
+
+      pageDots.forEach(function (dot) {
+        dot.addEventListener('click', function () {
+          const target = parseInt(dot.getAttribute('data-goto'), 10) || 0;
+          goToPage(target, true);
+        });
+      });
+
+      btnToggleFullLetter.addEventListener('click', function () {
+        isFullLetterMode = !isFullLetterMode;
+        renderLetterPages(false);
+      });
+
+      // Suporte a gesto de deslizar (swipe) na carta em celulares
+      let touchStartX = 0;
+      let touchStartY = 0;
+      if (letterCardSurface) {
+        letterCardSurface.addEventListener('touchstart', function (e) {
+          if (!e.touches || e.touches.length !== 1) return;
+          touchStartX = e.touches[0].clientX;
+          touchStartY = e.touches[0].clientY;
+        }, { passive: true });
+
+        letterCardSurface.addEventListener('touchend', function (e) {
+          if (isFullLetterMode || !e.changedTouches || e.changedTouches.length !== 1) return;
+          const dx = e.changedTouches[0].clientX - touchStartX;
+          const dy = e.changedTouches[0].clientY - touchStartY;
+          if (Math.abs(dx) > 55 && Math.abs(dx) > Math.abs(dy) * 1.4) {
+            if (dx < 0 && currentPage < letterPages.length - 1) {
+              goToPage(currentPage + 1, true);
+            } else if (dx > 0 && currentPage > 0) {
+              goToPage(currentPage - 1, true);
+            }
+          }
+        }, { passive: true });
+      }
+
+      // Navegação por setas do teclado quando a carta está aberta
+      window.addEventListener('keydown', function (e) {
+        if (!appState.isOpened || isFullLetterMode) return;
+        if (authorStudioModal && !authorStudioModal.classList.contains('hidden')) return;
+        if (e.key === 'ArrowRight' && currentPage < letterPages.length - 1) {
+          goToPage(currentPage + 1, true);
+        } else if (e.key === 'ArrowLeft' && currentPage > 0) {
+          goToPage(currentPage - 1, true);
+        }
+      });
+
+      /* -----------------------------------------------------------------------
+         6. PARTÍCULAS DOURADAS SUTIS DE FIM DE TARDE EM CANVAS RESPONSIVO
+         ----------------------------------------------------------------------- */
+      const particleCanvas = document.getElementById('sunbeam-particles');
+      const pCtx = particleCanvas ? particleCanvas.getContext('2d') : null;
+      let particles = [];
+      let canvasWidth = 0;
+      let canvasHeight = 0;
+
+      function createParticles() {
+        const count = window.innerWidth < 640 ? 26 : 46;
+        particles = [];
+        for (let i = 0; i < count; i++) {
+          particles.push({
+            x: Math.random() * canvasWidth,
+            y: Math.random() * canvasHeight,
+            radius: Math.random() * 1.7 + 0.5,
+            speedY: -(Math.random() * 0.22 + 0.05),
+            speedX: (Math.random() - 0.5) * 0.14,
+            alpha: Math.random() * 0.42 + 0.1,
+            phase: Math.random() * Math.PI * 2
+          });
+        }
+      }
+
+      function resizeAllCanvases() {
+        if (particleCanvas && pCtx) {
+          const dpr = Math.min(window.devicePixelRatio || 1, 2);
+          canvasWidth = window.innerWidth;
+          canvasHeight = window.innerHeight;
+          particleCanvas.width = Math.floor(canvasWidth * dpr);
+          particleCanvas.height = Math.floor(canvasHeight * dpr);
+          pCtx.setTransform(dpr, 0, 0, dpr, 0, 0);
+          createParticles();
+          drawParticlesFrame(true);
+        }
+        resizeVizCanvas();
+      }
+
+      function drawParticlesFrame(staticOnly) {
+        if (!pCtx) return;
+        pCtx.clearRect(0, 0, canvasWidth, canvasHeight);
+
+        for (let i = 0; i < particles.length; i++) {
+          const p = particles[i];
+          if (!staticOnly && !prefersReducedMotion.matches) {
+            p.y += p.speedY * appState.particleBoost;
+            p.x += p.speedX * appState.particleBoost;
+            p.phase += 0.015;
+
+            if (p.y < -10) {
+              p.y = canvasHeight + 10;
+              p.x = Math.random() * canvasWidth;
+            }
+            if (p.x < -10) p.x = canvasWidth + 10;
+            if (p.x > canvasWidth + 10) p.x = -10;
+          }
+
+          const twinkle = staticOnly ? p.alpha : p.alpha * (0.65 + 0.35 * Math.sin(p.phase));
+          pCtx.beginPath();
+          pCtx.arc(p.x, p.y, p.radius, 0, Math.PI * 2);
+          pCtx.fillStyle = 'rgba(229, 196, 150, ' + twinkle.toFixed(3) + ')';
+          pCtx.fill();
+        }
+      }
+
+      function animateParticles() {
+        drawParticlesFrame(false);
+        if (!prefersReducedMotion.matches) {
+          requestAnimationFrame(animateParticles);
+        }
+      }
+
+      window.addEventListener('resize', resizeAllCanvases);
+      document.addEventListener('visibilitychange', function () {
+        if (document.hidden && isPlayingBeat) stopBeat();
+      });
+      window.addEventListener('pagehide', stopBeat);
+
+      /* -----------------------------------------------------------------------
+         8. ESTÚDIO SECRETO DO AUTOR (TESTE DE FOTO + GERADOR DE ZIP GITHUB)
+         Ativável por ?preparar=1, Alt+P ou 5 toques em "1954 — 2026"
+         ----------------------------------------------------------------------- */
+      const authorStudioModal = document.getElementById('author-studio-modal');
+      const btnCloseStudio = document.getElementById('btn-close-studio');
+      const secretAuthorTrigger = document.getElementById('secret-author-trigger');
+      const secretFooterTrigger = document.getElementById('secret-footer-trigger');
+      const inputTestPhoto = document.getElementById('input-test-photo');
+      const inputGhUrl = document.getElementById('input-gh-url');
+      const btnDownloadZip = document.getElementById('btn-download-zip');
+      const btnDownloadOgImage = document.getElementById('btn-download-og-image');
+
+      let secretTapCount = 0;
+      let secretTapTimer = null;
+
+      function openAuthorStudio() {
+        authorStudioModal.classList.remove('hidden');
+      }
+
+      function closeAuthorStudio() {
+        authorStudioModal.classList.add('hidden');
+      }
+
+      function registerSecretTap() {
+        secretTapCount += 1;
+        if (secretTapTimer) clearTimeout(secretTapTimer);
+        if (secretTapCount >= 5) {
+          secretTapCount = 0;
+          openAuthorStudio();
+          return;
+        }
+        secretTapTimer = setTimeout(function () {
+          secretTapCount = 0;
+        }, 1600);
+      }
+
+      secretAuthorTrigger.addEventListener('click', registerSecretTap);
+      secretFooterTrigger.addEventListener('click', registerSecretTap);
+      btnCloseStudio.addEventListener('click', closeAuthorStudio);
+
+      window.addEventListener('keydown', function (e) {
+        if (e.altKey && (e.key === 'p' || e.key === 'P')) {
+          e.preventDefault();
+          openAuthorStudio();
+        } else if (e.key === 'Escape' && !authorStudioModal.classList.contains('hidden')) {
+          closeAuthorStudio();
+        }
+      });
+
+      try {
+        const params = new URLSearchParams(window.location.search);
+        if (params.get('preparar') === '1' || params.get('autor') === '1') {
+          openAuthorStudio();
+        }
+      } catch (e) {}
+
+      inputTestPhoto.addEventListener('change', function (e) {
+        const file = e.target.files && e.target.files[0];
+        if (!file) return;
+        appState.customPhotoFile = file;
+        fatherPhoto.src = URL.createObjectURL(file);
+        showFatherPhoto();
+        showToast('Fotografia carregada para pré-visualização e ZIP!');
+      });
+
+      /* Geração da imagem de compartilhamento 1200x630 (WhatsApp OG) */
+      function generateShareCardJpegBytes() {
+        return new Promise(function (resolve) {
+          const canvas = document.createElement('canvas');
+          canvas.width = 1200;
+          canvas.height = 630;
+          const ctx = canvas.getContext('2d');
+
+          const bgGrad = ctx.createRadialGradient(600, 260, 40, 600, 315, 680);
+          bgGrad.addColorStop(0, '#35271D');
+          bgGrad.addColorStop(0.55, '#1A130E');
+          bgGrad.addColorStop(1, '#0F0B08');
+          ctx.fillStyle = bgGrad;
+          ctx.fillRect(0, 0, 1200, 630);
+
+          ctx.strokeStyle = 'rgba(212, 166, 106, 0.55)';
+          ctx.lineWidth = 2.5;
+          ctx.strokeRect(42, 42, 1116, 546);
+
+          ctx.strokeStyle = 'rgba(212, 166, 106, 0.25)';
+          ctx.lineWidth = 1;
+          ctx.strokeRect(56, 56, 1088, 518);
+
+          ctx.textAlign = 'center';
+          ctx.fillStyle = '#E5C496';
+          ctx.font = '600 24px Inter, sans-serif';
+          ctx.fillText('26 DE NOVEMBRO DE 2026', 600, 155);
+
+          ctx.fillStyle = '#FAF0D7';
+          ctx.font = 'bold 148px Georgia, serif';
+          ctx.fillText('72', 600, 305);
+
+          ctx.strokeStyle = 'rgba(212, 166, 106, 0.45)';
+          ctx.beginPath();
+          ctx.moveTo(350, 260);
+          ctx.lineTo(485, 260);
+          ctx.moveTo(715, 260);
+          ctx.lineTo(850, 260);
+          ctx.stroke();
+
+          ctx.fillStyle = '#FCF8F2';
+          ctx.font = 'bold 56px Georgia, serif';
+          ctx.fillText('Feliz 72 anos, Paizão!', 600, 405);
+
+          ctx.fillStyle = '#E5C496';
+          ctx.font = 'italic 30px Georgia, serif';
+          ctx.fillText('Uma homenagem especial de um filho ao seu pai.', 600, 468);
+
+          canvas.toBlob(
+            function (blob) {
+              if (!blob) {
+                resolve(new Uint8Array(0));
+                return;
+              }
+              const reader = new FileReader();
+              reader.onload = function () {
+                resolve(new Uint8Array(reader.result));
+              };
+              reader.readAsArrayBuffer(blob);
+            },
+            'image/jpeg',
+            0.92
+          );
+        });
+      }
+
+      function buildReadmeMarkdown() {
+        return [
+          '# Cartão Interativo de Aniversário — José Randolfo de Lemos (72 Anos)',
+          '',
+          'Homenagem preparada por **Israel Faria de Lemos** para os **72 anos** de seu pai (**26 de novembro de 2026**).',
+          '',
+          '## O que está incluso',
+          '- **Envelope 3D artesanal** com selo de cera dourado.',
+          '- **Vitrola interativa** com 3 batidas originais geradas em tempo real via Web Audio API (*Lo-Fi Soul & Café*, *Bossa & Saudade* e *Estrada & Chuva*), sem necessidade de subir arquivos MP3.',
+          '- **Carta em 5 partes clicáveis** em papel linho com textura suave de café.',
+          '- **Moldura automática para fotografia** (`assets/images/pai.jpg`), com brasão tipográfico elegante caso não seja usada foto.',
+          '',
+          '## Como publicar no GitHub Pages',
+          '1. Crie um repositório público no GitHub (ex.: `aniversario-pai`).',
+          '2. Suba todos os arquivos desta pasta (`index.html`, `README.md`, `.nojekyll` e `assets/`).',
+          '3. Acesse **Settings → Pages**, escolha **Branch: `main`** e pasta **`/ (root)`**, e clique em **Save**.',
+          '4. Aguarde cerca de 1 a 2 minutos, teste o link no seu celular e envie para o seu pai pelo WhatsApp!',
+          ''
+        ].join('\n');
+      }
+
+      /* Gerador PKZIP nativo (CRC32 + STORE) */
+      const crcTable = (function () {
+        const table = new Uint32Array(256);
+        for (let n = 0; n < 256; n++) {
+          let c = n;
+          for (let k = 0; k < 8; k++) {
+            c = c & 1 ? 0xedb88320 ^ (c >>> 1) : c >>> 1;
+          }
+          table[n] = c >>> 0;
+        }
+        return table;
+      })();
+
+      function crc32(bytes) {
+        let crc = 0xffffffff;
+        for (let i = 0; i < bytes.length; i++) {
+          crc = crcTable[(crc ^ bytes[i]) & 0xff] ^ (crc >>> 8);
+        }
+        return (crc ^ 0xffffffff) >>> 0;
+      }
+
+      function createZipBlob(entries) {
+        const encoder = new TextEncoder();
+        const localParts = [];
+        const centralParts = [];
+        let offset = 0;
+
+        for (let i = 0; i < entries.length; i++) {
+          const nameBytes = encoder.encode(entries[i].path);
+          const dataBytes = entries[i].data;
+          const crc = crc32(dataBytes);
+          const size = dataBytes.length;
+
+          const localHeader = new Uint8Array(30 + nameBytes.length);
+          const lv = new DataView(localHeader.buffer);
+          lv.setUint32(0, 0x04034b50, true);
+          lv.setUint16(4, 20, true);
+          lv.setUint16(6, 0x0800, true);
+          lv.setUint16(8, 0, true);
+          lv.setUint16(10, 0, true);
+          lv.setUint16(12, 0x5d7a, true);
+          lv.setUint32(14, crc, true);
+          lv.setUint32(18, size, true);
+          lv.setUint32(22, size, true);
+          lv.setUint16(26, nameBytes.length, true);
+          lv.setUint16(28, 0, true);
+          localHeader.set(nameBytes, 30);
+
+          localParts.push(localHeader, dataBytes);
+
+          const centralHeader = new Uint8Array(46 + nameBytes.length);
+          const cv = new DataView(centralHeader.buffer);
+          cv.setUint32(0, 0x02014b50, true);
+          cv.setUint16(4, 20, true);
+          cv.setUint16(6, 20, true);
+          cv.setUint16(8, 0x0800, true);
+          cv.setUint16(10, 0, true);
+          cv.setUint16(12, 0, true);
+          cv.setUint16(14, 0x5d7a, true);
+          cv.setUint32(16, crc, true);
+          cv.setUint32(20, size, true);
+          cv.setUint32(24, size, true);
+          cv.setUint16(28, nameBytes.length, true);
+          cv.setUint16(30, 0, true);
+          cv.setUint16(32, 0, true);
+          cv.setUint16(34, 0, true);
+          cv.setUint16(36, 0, true);
+          cv.setUint32(38, 0, true);
+          cv.setUint32(42, offset, true);
+          centralHeader.set(nameBytes, 46);
+
+          centralParts.push(centralHeader);
+          offset += localHeader.length + size;
+        }
+
+        let centralSize = 0;
+        for (let j = 0; j < centralParts.length; j++) {
+          centralSize += centralParts[j].length;
+        }
+
+        const endRecord = new Uint8Array(22);
+        const ev = new DataView(endRecord.buffer);
+        ev.setUint32(0, 0x06054b50, true);
+        ev.setUint16(4, 0, true);
+        ev.setUint16(6, 0, true);
+        ev.setUint16(8, entries.length, true);
+        ev.setUint16(10, entries.length, true);
+        ev.setUint32(12, centralSize, true);
+        ev.setUint32(16, offset, true);
+        ev.setUint16(20, 0, true);
+
+        return new Blob([].concat(localParts, centralParts, [endRecord]), {
+          type: 'application/zip'
+        });
+      }
+
+      function readFileAsUint8Array(file) {
+        return new Promise(function (resolve, reject) {
+          const reader = new FileReader();
+          reader.onload = function () { resolve(new Uint8Array(reader.result)); };
+          reader.onerror = reject;
+          reader.readAsArrayBuffer(file);
+        });
+      }
+
+      function triggerDownloadBlob(blob, filename) {
+        const url = URL.createObjectURL(blob);
+        const a = document.createElement('a');
+        a.href = url;
+        a.download = filename;
+        document.body.appendChild(a);
+        a.click();
+        document.body.removeChild(a);
+        setTimeout(function () { URL.revokeObjectURL(url); }, 2500);
+      }
+
+      btnDownloadOgImage.addEventListener('click', function () {
+        generateShareCardJpegBytes().then(function (bytes) {
+          triggerDownloadBlob(new Blob([bytes], { type: 'image/jpeg' }), 'compartilhamento.jpg');
+          showToast('Imagem compartilhamento.jpg gerada!');
+        });
+      });
+
+      btnDownloadZip.addEventListener('click', async function () {
+        try {
+          btnDownloadZip.disabled = true;
+          const encoder = new TextEncoder();
+          let cleanHtml = CLEAN_SOURCE_TEMPLATE;
+          const customBaseUrl = (inputGhUrl.value || '').trim().replace(/\/+$/, '');
+
+          if (/^https?:\/\//i.test(customBaseUrl)) {
+            const fullOgImage = customBaseUrl + '/assets/images/compartilhamento.jpg';
+            cleanHtml = cleanHtml.replace(
+              /content="assets\/images\/compartilhamento\.jpg"/g,
+              'content="' + fullOgImage + '"'
+            );
+          }
+
+          const shareJpgBytes = await generateShareCardJpegBytes();
+          const zipEntries = [
+            { path: 'aniversario-pai/index.html', data: encoder.encode(cleanHtml) },
+            { path: 'aniversario-pai/README.md', data: encoder.encode(buildReadmeMarkdown()) },
+            { path: 'aniversario-pai/.nojekyll', data: new Uint8Array(0) },
+            { path: 'aniversario-pai/assets/images/compartilhamento.jpg', data: shareJpgBytes }
+          ];
+
+          if (appState.customPhotoFile) {
+            const photoBytes = await readFileAsUint8Array(appState.customPhotoFile);
+            zipEntries.push({ path: 'aniversario-pai/assets/images/pai.jpg', data: photoBytes });
+          } else {
+            zipEntries.push({
+              path: 'aniversario-pai/assets/images/COLOQUE-AQUI-pai.txt',
+              data: encoder.encode('Opcional: coloque nesta pasta a fotografia original com o nome exato pai.jpg\n')
+            });
+          }
+
+          const zipBlob = createZipBlob(zipEntries);
+          triggerDownloadBlob(zipBlob, 'aniversario-pai.zip');
+          showToast('Pacote aniversario-pai.zip pronto para o GitHub!');
+        } catch (err) {
+          showToast('Não foi possível gerar o pacote ZIP neste navegador.');
+        } finally {
+          btnDownloadZip.disabled = false;
+        }
+      });
+
+      /* -----------------------------------------------------------------------
+         9. INICIALIZAÇÃO APÓS O CARREGAMENTO DA PÁGINA
+         ----------------------------------------------------------------------- */
+      window.onload = function () {
+        resizeAllCanvases();
+        animateParticles();
+        renderBeatVisualizer();
+        refreshPlayerUI();
+        renderLetterPages(false);
+      };
+    })();
+  </script>
 </body>
 </html>

@@ -1,6 +1,6 @@
-﻿# Mapa do Projeto - Outros Versionados
+# Mapa do Projeto - Outros Versionados
 
-Atualizado em: 2026-05-20 12:10:42
+Atualizado em: 2026-11-26
 
 ## Resumo executivo
 
@@ -9,7 +9,7 @@ Atualizado em: 2026-05-20 12:10:42
 - Objetivo: Manter materiais legados ou avulsos que foram versionados separadamente.
 - Responsavel operacional: IFL / Israel
 - Controle Git: sim, tratar este projeto com status/diff/commit independentes.
-- Arquivos mapeados: 2
+- Subprojetos mapeados: `namora` e `Niver_papai`
 - Arquivos raiz principais: Nenhum arquivo raiz principal listado ou nomes omitidos por seguranca.
 
 ## Fluxo profissional
@@ -29,6 +29,7 @@ Atualizado em: 2026-05-20 12:10:42
 | Pasta | Funcao | Conteudo encontrado | Uso correto |
 |---|---|---|---|
 | `namora` | Subarea do projeto; usar conforme conteudo interno e manter finalidade registrada. | cartao | Manter coeso; mover conteudo fora de contexto para a pasta correta. |
+| `Niver_papai` | Homenagem de 72 anos a José Randolfo, de Israel. | Site estático, fontes locais, jingle e áudio real opcional. | Publicação GitHub Pages em `/outros/Niver_papai/`; preservar a carta escolhida. |
 
 ## Entradas e saidas
 
